@@ -1,0 +1,88 @@
+/*-----------------------------------------------------------------------------
+
+	-	Revolution Slider 1.5.3 -
+
+		Screen Stylesheet
+
+version:   	2.1
+date:      	09/18/11
+last update: 06.12.2012
+author:		themepunch
+email:     	info@themepunch.com
+website:   	http://www.themepunch.com
+-----------------------------------------------------------------------------*/
+
+
+/*-----------------------------------------------------------------------------
+
+	-	Revolution Slider 2.0 Captions -
+
+		Screen Stylesheet
+
+version:   	1.4.5
+date:      	09/18/11
+last update: 06.12.2012
+author:		themepunch
+email:     	info@themepunch.com
+website:   	http://www.themepunch.com
+-----------------------------------------------------------------------------*/
+/*************************
+	-	CAPTIONS	-
+**************************/
+
+.tp-hide-revslider,.tp-caption.tp-hidden-caption	{	visibility:hidden !important; display:none !important;}
+.tp-caption { z-index:1;}
+.tp-caption.noshadow {text-shadow: none; }
+.tp-caption a {
+	color: #ff7302; text-shadow: none;
+	-webkit-transition: all 0.2s ease-out;
+	-moz-transition: all 0.2s ease-out;
+	-o-transition: all 0.2s ease-out;
+	-ms-transition: all 0.2s ease-out;
+}
+
+.tp-caption a:hover { color: #ffa902; }
+
+.tp_inner_padding	{	box-sizing:border-box;
+						-webkit-box-sizing:border-box;
+						-moz-box-sizing:border-box;
+						max-height:none !important;	}
+
+
+.tp-caption .frontcorner		{
+										width: 0;
+										height: 0;
+										border-left: 40px solid transparent;
+										border-right: 0px solid transparent;
+										border-top: 40px solid #00A8FF;
+										position: absolute;left:-40px;top:0px;
+									}
+
+.tp-caption .backcorner		{
+										width: 0;
+										height: 0;
+										border-left: 0px solid transparent;
+										border-right: 40px solid transparent;
+										border-bottom: 40px solid #00A8FF;
+										position: absolute;right:0px;top:0px;
+									}
+
+.tp-caption .frontcornertop		{
+										width: 0;
+										height: 0;
+										border-left: 40px solid transparent;
+										border-right: 0px solid transparent;
+										border-bottom: 40px solid #00A8FF;
+										position: absolute;left:-40px;top:0px;
+									}
+
+.tp-caption .backcornertop		{
+										width: 0;
+										height: 0;
+										border-left: 0px solid transparent;
+										border-right: 40px solid transparent;
+										border-top: 40px solid #00A8FF;
+										position: absolute;right:0px;top:0px;
+									}
+
+

@@ -1,0 +1,434 @@
+/* 
+	style.css
+	
+	CSS Dowload Buttons
+	
+	v1.2
+	
+	Created by eucalyptuss
+	Copyright 2012 Mikolaj Dobrucki. All rights reserved.
+*/
+
+.dropbutton { /* main class */
+ height: 48px;
+ width: 200px;
+ font: bold 16px/48px arial, sans-serif;
+ margin: 20px;
+ position: relative;
+ z-index: 0;
+}
+
+.dropbutton div:first-child, .dropbutton div:nth-child(2) {
+ float: left;
+ -webkit-box-shadow: 0 1px 1px rgba(0, 0, 0, 0.3), 0 1px 1px rgba(255, 255, 255, 0.8) inset;  
+ -moz-box-shadow: 0 1px 1px rgba(0, 0, 0, 0.3), 0 1px 1px rgba(255, 255, 255, 0.8) inset;  
+ box-shadow: 0 1px 1px rgba(0, 0, 0, 0.3), 0 1px 1px rgba(255, 255, 255, 0.8) inset;
+}
+
+.dropbutton a { text-decoration: none; color: #333; }
+
+.red a, .orange a, .blue a, .purple a, .black a { color: #fbfbfb; }
+
+.dropbutton div:first-child {
+ width: 40px;
+ height: 40px;
+ padding: 7px;
+/* border radius */
+ -webkit-border-radius: 4px 0 0 4px;  
+ -moz-border-radius: 4px 0 0 4px;  
+ border-radius: 4px 0 0 4px;
+ top: 10px;
+}
+
+.dropbutton div:nth-child(2) {
+ height: 42px;
+ width: 150px;
+ text-align: center;
+ border-left: 0;
+/* border radius */
+ -webkit-border-radius: 0 4px 4px 0;  
+ -moz-border-radius: 0 4px 4px 0;  
+ border-radius: 0 4px 4px 0;
+ margin-top: 0px; 
+ /* margin-left: 48px; */
+}
+
+.dropbutton div:last-child {
+ font: bold 12px/15px arial, sans-serif;
+ border-top: 0;
+ width: 130px;
+ height: 40px;
+ padding: 0px 6px;
+ margin-left: 58px;
+ position: absolute;
+ clear: both;
+ z-index: -1;
+ /* animation */
+ -webkit-transition: top .6s linear 0;
+ -moz-transition: top .6s linear 0;
+ -o-transition: top .6s linear 0;
+/* border radius */
+ -webkit-border-radius: 0 0 4px 4px;  
+ -moz-border-radius:0 0 4px 4px;  
+ border-radius: 0 0 4px 4px;
+ left: -5px;
+ margin-top: 6px;
+}
+
+.dropbutton:hover div:last-child { top: 38px; }
+
+div:last-child img { float: left; }
+
+div:last-child span { font-weight: normal; }
+
+/*
+   ===============================
+   ========== RED STYLE ==========
+   =============================== 
+*/
+
+.red  {
+ text-shadow: 0 1px 0 #c93f27;
+/* backgorund */
+ background: -webkit-gradient(linear, left top, left bottom, from(#ff9782), to(#d83c22));
+ background: -moz-linear-gradient(top, #ff9782, #d83c22);
+ background: -o-linear-gradient(top, #ff9782, #d83c22);
+ background: -ms-linear-gradient(top, #ff9782, #d83c22);
+ background: -webkit-linear-gradient(top, #ff9782, #d83c22);
+ background-color: #d83c22;
+/* border */
+ border: 1px solid #c93f27;
+}
+
+.dropbutton:hover .red  {
+ background: -webkit-gradient(linear, left top, left bottom, from(#ffbdb0), to(#ee6048));
+ background: -moz-linear-gradient(top, #ffbdb0, #ee6048);
+ background: -o-linear-gradient(top, #ffbdb0, #ee6048);
+ background: -ms-linear-gradient(top, #ffbdb0, #ee6048);
+ background: -webkit-linear-gradient(top, #ffbdb0, #ee6048);
+ background-color: #ee6048;
+}
+
+.dropbutton:active .red  {
+ background: -webkit-gradient(linear, left top, left bottom, from(#e75138), to(#ff7053));
+ background: -moz-linear-gradient(top, #e75138, #ff7053);
+ background: -o-linear-gradient(top, #e75138, #ff7053);
+ background: -ms-linear-gradient(top, #e75138, #ff7053);
+ background: -webkit-linear-gradient(top, #e75138, #ff7053);
+ background-color: #ff9782;
+}
+
+/*
+   ===============================
+   ======== ORANGE STYLE =========
+   =============================== 
+*/
+
+.orange  {
+ text-shadow: 0 1px 0 #db4706;
+/* backgorund */
+ background: -webkit-gradient(linear, left top, left bottom, from(#fe9f3a), to(#f65b17));
+ background: -moz-linear-gradient(top, #fe9f3a, #f65b17);
+ background: -o-linear-gradient(top, #fe9f3a, #f65b17);
+ background: -ms-linear-gradient(top, #fe9f3a, #f65b17);
+ background: -webkit-linear-gradient(top, #fe9f3a, #f65b17);
+ background-color: #f65b17;
+/* border */
+ border: 1px solid #db4706;
+}
+
+.dropbutton:hover .orange  {
+ background: -webkit-gradient(linear, left top, left bottom, from(#ffce79), to(#f47638));
+ background: -moz-linear-gradient(top, #ffce79, #f47638);
+ background: -o-linear-gradient(top, #ffce79, #f47638);
+ background: -ms-linear-gradient(top, #ffce79, #f47638);
+ background: -webkit-linear-gradient(top, #ffce79, #f47638);
+ background-color: #f47638;
+}
+
+.dropbutton:active .orange  {
+ background: -webkit-gradient(linear, left top, left bottom, from(#f47638), to(#fe9f3a));
+ background: -moz-linear-gradient(top, #f47638, #fe9f3a);
+ background: -o-linear-gradient(top, #f47638, #fe9f3a);
+ background: -ms-linear-gradient(top, #f47638, #fe9f3a);
+ background: -webkit-linear-gradient(top, #f47638, #fe9f3a);
+ background-color: #fe9f3a;
+}
+
+/*
+   ===============================
+   ======== YELLOW STYLE =========
+   =============================== 
+*/
+
+.yellow  {
+ text-shadow: 0 1px 0 #fff;
+/* backgorund */
+ background: -webkit-gradient(linear, left top, left bottom, from(#ffe468), to(#ffa41c));
+ background: -moz-linear-gradient(top, #ffe468, #ffa41c);
+ background: -o-linear-gradient(top, #ffe468, #ffa41c);
+ background: -ms-linear-gradient(top, #ffe468, #ffa41c);
+ background: -webkit-linear-gradient(top, #ffe468, #ffa41c);
+ background-color: #ffa41c;
+/* border */
+ border: 1px solid #ff9600;
+}
+
+.dropbutton:hover .yellow  {
+ background: -webkit-gradient(linear, left top, left bottom, from(#fff584), to(#ffbd20));
+ background: -moz-linear-gradient(top, #fff584, #ffbd20);
+ background: -o-linear-gradient(top, #fff584, #ffbd20);
+ background: -ms-linear-gradient(top, #fff584, #ffbd20);
+ background: -webkit-linear-gradient(top, #fff584, #ffbd20);
+ background-color: #ffbd20;
+}
+
+.dropbutton:active .yellow  {
+ background: -webkit-gradient(linear, left top, left bottom, from(#ffb71c), to(#ffe468));
+ background: -moz-linear-gradient(top, #ffb71c, #ffe468);
+ background: -o-linear-gradient(top, #ffb71c, #ffe468);
+ background: -ms-linear-gradient(top, #ffb71c, #ffe468);
+ background: -webkit-linear-gradient(top, #ffb71c, #ffe468);
+ background-color: #ffe468;
+}
+
+/*
+   ===============================
+   ========= GREEN STYLE =========
+   =============================== 
+*/
+
+.green  {
+ text-shadow: 0 1px 0 #e2ffa5;
+/* backgorund */
+ background: -webkit-gradient(linear, left top, left bottom, from(#c9f33c), to(#8ac70c));
+ background: -moz-linear-gradient(top, #c9f33c, #8ac70c);
+ background: -o-linear-gradient(top, #c9f33c, #8ac70c);
+ background: -ms-linear-gradient(top, #c9f33c, #8ac70c);
+ background: -webkit-linear-gradient(top, #c9f33c, #8ac70c);
+ background-color: #8ac70c;
+/* border */
+ border: 1px solid #7ab205;
+}
+
+.dropbutton:hover .green  {
+ background: -webkit-gradient(linear, left top, left bottom, from(#dbfa97), to(#9ad819));
+ background: -moz-linear-gradient(top, #dbfa97, #9ad819);
+ background: -o-linear-gradient(top, #dbfa97, #9ad819);
+ background: -ms-linear-gradient(top, #dbfa97, #9ad819);
+ background: -webkit-linear-gradient(top, #dbfa97, #9ad819);
+ background-color: #9ad819;
+}
+
+.dropbutton:active .green  {
+ background: -webkit-gradient(linear, left top, left bottom, from(#99d41e), to(#bbe52c));
+ background: -moz-linear-gradient(top, #99d41e, #bbe52c);
+ background: -o-linear-gradient(top, #99d41e, #bbe52c);
+ background: -ms-linear-gradient(top, #99d41e, #bbe52c);
+ background: -webkit-linear-gradient(top, #99d41e, #bbe52c);
+ background-color: #c9f33c;
+}
+
+/*
+   ===============================
+   ========= BLUE STYLE =========
+   =============================== 
+*/
+
+.blue  {
+ text-shadow: 0 1px 0 #008af5;
+/* backgorund */
+ background: -webkit-gradient(linear, left top, left bottom, from(#87deff), to(#40a9fd));
+ background: -moz-linear-gradient(top, #87deff, #40a9fd);
+ background: -o-linear-gradient(top, #87deff, #40a9fd);
+ background: -ms-linear-gradient(top, #87deff, #40a9fd);
+ background: -webkit-linear-gradient(top, #87deff, #40a9fd);
+ background-color: #87deff;
+/* border */
+ border: 1px solid #008af5;
+ transition: background-color 0.5s;
+}
+
+.dropbutton:hover .blue  {
+ background: -webkit-gradient(linear, left top, left bottom, from(#b1eaff), to(#68bcff));
+ background: -moz-linear-gradient(top, #b1eaff, #68bcff);
+ background: -o-linear-gradient(top, #b1eaff, #68bcff);
+ background: -ms-linear-gradient(top, #b1eaff, #68bcff);
+ background: -webkit-linear-gradient(top, #b1eaff, #68bcff);
+ background-color: #68bcff;
+}
+
+.dropbutton:active .blue  {
+ background: -webkit-gradient(linear, left top, left bottom, from(#68bcff), to(#87deff));
+ background: -moz-linear-gradient(top, #68bcff, #87deff);
+ background: -o-linear-gradient(top, #68bcff, #87deff);
+ background: -ms-linear-gradient(top, #68bcff, #87deff);
+ background: -webkit-linear-gradient(top, #68bcff, #87deff);
+ background-color: #87deff;
+}
+
+/*
+   ===============================
+   ======== PURPLE STYLE =========
+   =============================== 
+*/
+
+.purple  {
+ text-shadow: 0 1px 0 #6a14c3;
+/* backgorund */
+ background: -webkit-gradient(linear, left top, left bottom, from(#cba7f5), to(#9b45f4));
+ background: -moz-linear-gradient(top, #cba7f5, #9b45f4);
+ background: -o-linear-gradient(top, #cba7f5, #9b45f4);
+ background: -ms-linear-gradient(top, #cba7f5, #9b45f4);
+ background: -webkit-linear-gradient(top, #cba7f5, #9b45f4);
+ background-color: #9b45f4;
+/* border */
+ border: 1px solid #6a14c3;
+}
+
+.dropbutton:hover .purple  {
+ background: -webkit-gradient(linear, left top, left bottom, from(#dcbefe), to(#a75ff2));
+ background: -moz-linear-gradient(top, #dcbefe, #a75ff2);
+ background: -o-linear-gradient(top, #dcbefe, #a75ff2);
+ background: -ms-linear-gradient(top, #dcbefe, #a75ff2);
+ background: -webkit-linear-gradient(top, #dcbefe, #a75ff2);
+ background-color: #a75ff2;
+}
+
+.dropbutton:active .purple  {
+ background: -webkit-gradient(linear, left top, left bottom, from(#b97afc), to(#cba7f5));
+ background: -moz-linear-gradient(top, #b97afc, #cba7f5);
+ background: -o-linear-gradient(top, #b97afc, #cba7f5);
+ background: -ms-linear-gradient(top, #b97afc, #cba7f5);
+ background: -webkit-linear-gradient(top, #b97afc, #cba7f5);
+ background-color: #cba7f5;
+}
+
+/*
+   ===============================
+   ========= BLACK STYLE =========
+   =============================== 
+*/
+
+.black  {
+ text-shadow: 0 1px 0 #000;
+/* backgorund */
+ background: -webkit-gradient(linear, left top, left bottom, from(#818181), to(#242424));
+ background: -moz-linear-gradient(top, #818181, #242424);
+ background: -o-linear-gradient(top, #818181, #242424);
+ background: -ms-linear-gradient(top, #818181, #242424);
+ background: -webkit-linear-gradient(top, #818181, #242424);
+ background-color: #222;
+/* border */
+ border: 1px solid #000;
+}
+
+.dropbutton:hover .black  {
+ background: -webkit-gradient(linear, left top, left bottom, from(#a2a2a2), to(#3d3d3d));
+ background: -moz-linear-gradient(top, #a2a2a2, #3d3d3d);
+ background: -o-linear-gradient(top, #a2a2a2, #3d3d3d);
+ background: -ms-linear-gradient(top, #a2a2a2, #3d3d3d);
+ background: -webkit-linear-gradient(top, #a2a2a2, #3d3d3d);
+ background-color: #555;
+}
+
+.dropbutton:active .black  {
+ background: -webkit-gradient(linear, left top, left bottom, from(#3d3d3d), to(#818181));
+ background: -moz-linear-gradient(top, #3d3d3d, #818181);
+ background: -o-linear-gradient(top, #3d3d3d, #818181);
+ background: -ms-linear-gradient(top, #3d3d3d, #818181);
+ background: -webkit-linear-gradient(top, #3d3d3d, #818181);
+ background-color: #777;
+}
+
+/*
+   ===============================
+   ========= GREY STYLE ==========
+   =============================== 
+*/
+
+.grey  {
+ text-shadow: 0 1px 0 #fff;
+/* backgorund */
+ background: -webkit-gradient(linear, left top, left bottom, from(#fbfbfb), to(#c6c6c6));
+ background: -moz-linear-gradient(top, #fbfbfb, #c6c6c6);
+ background: -o-linear-gradient(top, #fbfbfb, #c6c6c6);
+ background: -ms-linear-gradient(top, #fbfbfb, #c6c6c6);
+ background: -webkit-linear-gradient(top, #fbfbfb, #c6c6c6);
+ background-color: #ccc;
+/* border */
+ border: 1px solid #bbb;
+}
+
+.dropbutton:hover .grey  {
+ background: -webkit-gradient(linear, left top, left bottom, from(#fdfdfd), to(#d5d5d5));
+ background: -moz-linear-gradient(top, #fdfdfd, #d5d5d5);
+ background: -o-linear-gradient(top, #fdfdfd, #d5d5d5);
+ background: -ms-linear-gradient(top, #fdfdfd, #d5d5d5);
+ background: -webkit-linear-gradient(top, #fdfdfd, #d5d5d5);
+ background-color: #ddd;
+}
+
+.dropbutton:active .grey  {
+ background: -webkit-gradient(linear, left top, left bottom, from(#d5d5d5), to(#fafafa));
+ background: -moz-linear-gradient(top, #d5d5d5, #fafafa);
+ background: -o-linear-gradient(top, #d5d5d5, #fafafa);
+ background: -ms-linear-gradient(top, #d5d5d5, #fafafa);
+ background: -webkit-linear-gradient(top, #d5d5d5, #fafafa);
+ background-color: #fbfbfb;
+}
+
+/*
+   ====================================
+   ====== LIGHT STYLE (DROPDOWN) ======
+   ====================================
+*/
+
+.light {
+/* text */
+ color: #333;
+ text-shadow: 0 1px 0 #fff;
+/* backgorund */
+ background: -webkit-gradient(linear, left top, left bottom, from(#bababa), color-stop(.1, #e4e4e4), to(#f2f2f2));
+ background: -moz-linear-gradient(top, #bababa, #e4e4e4 10%, #f2f2f2);
+ background: -o-linear-gradient(top, #bababa, #e4e4e4 10%, #f2f2f2);
+ background: -ms-linear-gradient(top, #bababa, #e4e4e4 10%, #f2f2f2);
+ background: -webkit-linear-gradient(top, #bababa, #e4e4e4 10%, #f2f2f2);
+ background-color: #ccc;
+/* shadows and highlights */
+ -webkit-box-shadow: 0 1px -1px rgba(255, 255, 255, 1) inset;  
+ -moz-box-shadow: 0 -1px 1px rgba(255, 255, 255, 1) inset;  
+ box-shadow: 0 1px -1px rgba(255, 255, 255, 0.8) inset;
+/* border */
+ border: 1px solid #bbb;
+}
+
+.light span { color: #555; }
+
+/*
+   ====================================
+   ====== DARK STYLE (DROPDOWN) =======
+   ====================================
+*/
+
+.dark {
+/* text */
+ color: #fbfbfb;
+ text-shadow: 0 1px 0 #000;
+/* backgorund */
+ background: -webkit-gradient(linear, left top, left bottom, from(#2b2b2b), color-stop(.1, #5c5c5c), to(#838383));
+ background: -moz-linear-gradient(top, #2b2b2b, #5c5c5c 10%, #838383);
+ background: -moz-linear-gradient(top, #2b2b2b, #5c5c5c 10%, #838383);
+ background: -o-linear-gradient(top, #2b2b2b, #5c5c5c 10%, #838383);
+ background: -ms-linear-gradient(top, #2b2b2b, #5c5c5c 10%, #838383);
+ background: -webkit-linear-gradient(top, #2b2b2b, #5c5c5c 10%, #838383);
+ background-color: #ccc;
+/* shadows and highlights */
+ -webkit-box-shadow: 0 -1px 1px rgba(255, 255, 255, 0.5) inset;  
+ -moz-box-shadow: 0 -1px 1px rgba(255, 255, 255, 0.5) inset;  
+ box-shadow: 0 1px -1px rgba(255, 255, 255, 0.4) inset;
+/* border */
+ border: 1px solid #000;
+}
+
+.dark span { color: #e5e5e5; }

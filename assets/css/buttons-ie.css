@@ -1,0 +1,24 @@
+
+/* Main Button - Capsule Shape */
+.button {
+  display: inline;
+width: 15em}
+
+/* Text Lines */
+.tagline1 {
+  display: block;
+  margin-right: 0px
+}
+.tagline2 {
+	display: block;
+	margin-right: 0px !important;
+	width: 90%;
+	text-align: left;
+}
+.tagline2 {
+	display: block;
+	margin-right: 0px
+}
+.reveal .tagline2 {display: none;
+}
+.reveal:hover .tagline2{display: block;}

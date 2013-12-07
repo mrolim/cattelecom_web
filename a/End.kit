@@ -1,0 +1,104 @@
+<!--  'Include JS' -->
+
+<!-- @import 'inc_js_global_bottom.kit' -->
+
+<!-- @import 'inc_js_google_map.kit' -->
+
+<!-- @import 'inc_js_slide_main_revolution.kit' -->
+
+<!-- @import 'inc_slider_royalslider.kit' -->
+
+<!-- @import 'inc_js_ui_tab.kit' -->
+
+<!-- @import 'inc_css_notifications.kit' -->
+
+<!--@import 'inc_js_notifications.kit' -->
+
+<!-- @import 'inc_js_showbiz.kit' -->
+
+<script src="<!--$assets_path-->/js/parallax.js" type="text/javascript"></script>
+<script src="<!--$assets_path-->/js/count.js" type="text/javascript"></script>
+<!--PRELOADER - add your images and text to preload here -->
+<script type="text/javascript" src="<!--$assets_path-->/js/royal_preloader.min.js"></script>
+
+
+<!--Custom JS -->
+<script src="<!--$assets_path-->/js/scripts-ck.js" type="text/javascript"></script>
+<!-- @import 'inc_js_ui_enhance.kit' -->
+
+<!-- @import '../templates/royalslider_content-slider/js.kit' -->
+<!-- @import '../templates/royalslider_animated-blocks/js.kit' -->
+<!-- @import '../templates/royalslider_ajax-sliders/js.kit' -->
+<!-- @import '../templates/royalslider_full-width/js.kit' -->
+<!-- @import '../templates/royalslider_simple-vertical/js.kit' -->
+
+<!-- @import '../templates/royalslider_gallery-with-deeplinking/js.kit' -->
+<!-- @import '../templates/royalslider_gallery-vertical-fade/js.kit' -->
+<!-- @import '../templates/royalslider_slider-in-laptop/js.kit' -->
+<!-- @import '../templates/royalslider_video-gallery/js.kit' -->
+<!-- @import '../templates/royalslider_visible-nearby/js.kit' -->
+<!-- @import '../templates/royalslider_gallery/js.kit' -->
+
+
+<!-- @import '../templates/showbiz_video_showcase/js.kit' -->
+<!-- @import '../templates/showbiz_retro_light/js.kit' -->
+<!-- @import '../templates/showbiz_retro_dark/js.kit' -->
+<!-- @import '../templates/showbiz_showcase_with_detail/js.kit' -->
+<!-- @import '../templates/showbiz_corousel_dark/js.kit' -->
+<!-- @import '../templates/showbiz_in_content/js.kit' -->
+<!-- @import '../templates/showbiz_simple_auto_play/js.kit' -->
+<!-- @import '../templates/showbiz_modern_skin/js.kit' -->
+<!-- @import '../templates/showbiz_simple_with_caption/js.kit' -->
+<!-- @import '../templates/showbiz_simple_with_attribute_rating/js.kit' -->
+<!-- @import '../templates/showbiz_teaser_slide/js.kit' -->
+<!-- @import '../templates/showbiz_corousel_light/js.kit' -->
+
+<script type="text/javascript">
+//<![CDATA[
+            var images = {
+               parallax1: '<!--$assets_path-->/img/parallax-1-1.jpg',
+			   parallax2: '<!--$assets_path-->/img/parallax-2-1.jpg',
+			   parallax3: '<!--$assets_path-->/img/parallax-3-1.jpg'
+            };
+
+            Royal_Preloader.config({
+                mode:           'logo', // 'number', "text, logo"
+                text:           '<!--$site_name--> ',
+                images:         images,
+                timeout:        10,
+                showInfo:       false,
+                showPercentage: true,
+                opacity:        1,
+                background:     ['#fff'], 
+               logo:           'assets/img/logo.png'
+            });
+		//]]>
+</script>
+
+<!--TICKER - add your text here -->
+ <script type="text/javascript">
+//<![CDATA[
+$(".ticker").airport([ "creating web sites","to stand out from the crowd","drinking cups of tea"  ]);
+ //<![CDATA[
+</script>
+
+
+<script>
+$('#openBtn').click(function(){
+	$('#myModal,#fullScreenModal').modal({show:true})
+});
+
+$('#customDialog').click(function(){
+	 BootstrapDialog.show({
+            title: 'Say-hello dialog',
+            message: 'Hi Apple!'
+        });
+        
+})
+</script>
+
+
+
+	 </body>
+</html>
+

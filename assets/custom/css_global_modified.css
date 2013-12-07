@@ -1,0 +1,29 @@
+/****************************************************************
+
+	-	SET THE ANIMATION EVEN MORE SMOOTHER ON ANDROID   -
+
+******************************************************************/
+
+.tp-simpleresponsive .slotholder *,
+.tp-simpleresponsive img			{ -webkit-transform: translateZ(0);
+										  -webkit-backface-visibility: hidden;
+										  -webkit-perspective: 1000;
+									}
+
+/************************************************
+	  - SOME CAPTION MODIFICATION AT START  -
+*************************************************/
+.tp-simpleresponsive .caption,
+.tp-simpleresponsive .tp-caption {
+	-ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=0)";	-moz-opacity: 0;	-khtml-opacity: 0;	opacity: 0; position:absolute; visibility: hidden;
+}
+
+.tp-simpleresponsive img	{	max-width:none;}
+
+
+/******************************
+	-	IE8 HACKS	-
+*******************************/
+.noFilterClass {
+	filter:none !important;
+}

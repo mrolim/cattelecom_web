@@ -1,0 +1,98 @@
+/**/
+/* main styles */
+/**/
+.pcss3t > .active {
+	cursor: default;
+}
+.pcss3t > ul > li {
+	top: 0 !important;
+	left: 0 !important;
+	display: none;
+}
+
+
+
+/*----------------------------------------------------------------------------*/
+/*                                   THEMES                                   */
+/*----------------------------------------------------------------------------*/
+
+/**/
+/* default */
+/**/
+.pcss3t > .active,
+.pcss3t > .active:hover {
+	background: #fff;
+}
+
+
+/**/
+/* theme 1 */
+/**/
+.pcss3t-theme-1 > .active {
+	margin-bottom: 0;
+	padding-bottom: 5px;
+	color: #2b82d9;
+}
+
+
+/**/
+/* theme 2 */
+/**/
+.pcss3t-theme-2 {
+	background: #bdcbe5;
+}
+.pcss3t-theme-2 > .active {
+	background: #fff;
+	color: #822bd9;
+}
+
+
+/**/
+/* theme 3 */
+/**/
+.pcss3t-theme-3 {
+	background: #25272a;
+}
+.pcss3t-theme-3 > label {
+	border-right: 1px dotted #808080;
+	color: #fff;
+}
+.pcss3t-theme-3 > label:hover {
+	color: #d9d92b;
+}
+.pcss3t-theme-3 > .active,
+.pcss3t-theme-3 > .active:hover {
+	background: #d9d92b;
+	color: #000;
+}
+
+
+/**/
+/* theme 4 */
+/**/
+.pcss3t-theme-4 > label {
+	background: #78c5fd;
+}
+.pcss3t-theme-4 > label:hover {
+	background: #90cffc;
+}
+.pcss3t-theme-4 > .active,
+.pcss3t-theme-4 > .active:hover {
+	background: #5f9dc9;
+}
+
+
+/**/
+/* theme 5 */
+/**/
+.pcss3t-theme-5 {
+	background: #ad6395;
+}
+.pcss3t-theme-5 > label:hover {
+	background: #b679a7;
+}
+.pcss3t-theme-5 > .active,
+.pcss3t-theme-5 > .active:hover {
+	background: #c491b5;
+	color: #000;
+}

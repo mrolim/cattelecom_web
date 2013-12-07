@@ -1,0 +1,27 @@
+	<script src="<!--$assets_path-->/libs/notifications/src/static/js/notification.js"></script>
+	
+	<script>
+	$(document).ready(function() {			
+			$('#standard1').click(function() {
+				$.notification( 
+					{
+						title: "This is the Owl plugin",
+						content: "Pretty cool, huh?",
+						img: "<!--$assets_path-->/libs/notifications/src/static/demo/thumb.png",
+						border: false
+					}
+				);
+			});
+			$('#standard').click(function() {
+				$.notification( 
+					{
+						title: "Timeout notification",
+						content: 'This notification will disappear in <strong>five seconds</strong>.',
+						timeout: 5000,
+						showTime: false,
+						icon: 'N'
+					}
+				);
+			});
+	});		
+</script>

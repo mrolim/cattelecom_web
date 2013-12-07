@@ -1,0 +1,34 @@
+<script type="text/javascript">
+
+				jQuery(document).ready(function() {
+
+
+
+					jQuery('#example5').showbizpro({
+						dragAndScroll:"off",
+						visibleElementsArray:[3,2,1,1],
+						carousel:"off",
+						ytMarkup:"<iframe src='http://www.youtube.com/embed/%%videoid%%?hd=1&amp;wmode=opaque&amp;autohide=1&amp;showinfo=0&amp;autoplay=1' height='260px'></iframe>",
+						vimeoMarkup:"<iframe src='http://player.vimeo.com/video/%%videoid%%?title=0&amp;byline=0&amp;portrait=0;api=1&amp;autoplay=1'></iframe>",
+						closeOtherOverlays:"on",
+						allEntryAtOnce:"on",
+						mediaMaxHeight:[450,300,340,260],
+						rewindFromEnd:"off",
+						autoPlay:"off",
+						delay:2000,
+						speed:550
+
+					});
+
+
+
+					// THE FANCYBOX PLUGIN INITALISATION
+					jQuery(".fancybox").fancybox();
+
+
+
+
+
+				});
+
+			</script>

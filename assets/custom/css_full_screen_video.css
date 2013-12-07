@@ -1,0 +1,10 @@
+/********************************
+	-	FULLSCREEN VIDEO	-
+*********************************/
+.caption.fullscreenvideo {	left:0px; top:0px; position:absolute;width:100%;height:100%;}
+.caption.fullscreenvideo iframe	{ width:100% !important; height:100% !important;}
+
+.tp-caption.fullscreenvideo {	left:0px; top:0px; position:absolute;width:100%;height:100%;}
+.tp-caption.fullscreenvideo iframe	{ width:100% !important; height:100% !important;}
+
+

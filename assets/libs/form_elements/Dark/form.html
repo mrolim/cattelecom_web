@@ -1,0 +1,171 @@
+<!doctype html>
+<html lang="fr">
+
+<head>
+
+    <meta charset="utf-8">
+    <title>CSS3 Form Elements Pack by Pixelworkshop</title>
+    
+    <link rel="stylesheet" href="form.css">
+
+    <!--[if lt IE 9]>
+    <link rel="stylesheet" href="ie/form_ie.css">
+    <script src="http://ie7-js.googlecode.com/svn/version/2.1(beta4)/IE9.js"></script>
+    <![endif]-->
+
+</head>
+
+<body>
+
+
+<h1>CSS3 Form Elements Pack<br /><span>by Pixelworkshop</span></h1>
+
+
+<form class="css_form">
+
+
+    <fieldset>
+    
+        <label for="text_field" class="left_element">Text Field <span class="required">*</span></label>
+        
+        <div class="tooltip">
+        
+            <input type="text" name="text_field" value="" size="30" id="text_field" placeholder="Random Name" class="tooltip">
+        	<span class="tooltip_content">
+                <strong>This is a tooltip message</strong><br />You can add here any description to help users fill the form.
+            </span>
+            
+        </div>
+        
+    </fieldset> 
+    
+    
+    <fieldset>
+    
+        <label for="another_field" class="left_element">Another Field <span class="required">*</span></label>
+        
+        <div class="tooltip">
+        
+            <input type="text" name="another_field" value="" size="30" id="another_field">
+        	<span class="tooltip_content">
+                <strong>This is a tooltip message</strong><br />You can add here any description to help users fill the form.
+            </span>
+            
+        </div>
+        
+    </fieldset>
+
+
+    <fieldset>
+    
+        <label class="left_element">Choose one or more options</label>
+        
+        <ul class="form_options">
+            <li><label><input type="checkbox"><span></span></label><span class="desc_text">Unchecked Button</span></li>
+            <li><label><input type="checkbox" checked="checked"><span></span></label><span class="desc_text">Checked Button</span></li>
+            <li><label><input type="checkbox" disabled="disabled" class="disabled"><span></span></label><span class="desc_text">Disabled Button</span></li>
+            <li><label><input type="checkbox" checked="checked" disabled="disabled" class="disabled checkeddisabled"><span></span></label><span class="desc_text">Checked Disabled Button</span></li>
+        </ul>
+        
+    </fieldset>
+    
+    
+    <fieldset>
+    
+        <label class="left_element">Choose a single option <span class="required">*</span></label>
+        
+        <ul class="form_options">
+            <li><label><input type="radio" checked="checked" name="radio-group"><span></span></label><span class="desc_text">Checked Radio Button</span></li>
+            <li><label><input type="radio" name="radio-group"><span></span></label><span class="desc_text">Radio Button</span></li>
+            <li><label><input type="radio" name="radio-group"><span></span></label><span class="desc_text">Radio Button</span></li>
+            <li><label><input type="radio" name="radio-group" disabled="disabled" class="disabled"><span></span></label><span class="desc_text">Disabled Radio Button</span></li>
+        </ul>
+        
+    </fieldset>
+
+
+    <fieldset>
+    
+		<label class="left_element">Select dropdown <span class="required">*</span></label>
+        
+		<div class="select_element">
+			<select name="select" required>
+				<option value="">Choose an option</option>
+				<option>This is another option</option>
+				<option>Lorem ipsum text</option>
+				<option>Last options available</option>
+			</select>
+		</div>
+        
+	</fieldset>
+
+
+    <fieldset>
+    
+        <label class="left_element">Do you like movies ?</label>
+        
+        <fieldset class="form_toggle">
+            <input id="toggle1" type="checkbox" checked />
+            <label class="toggle_label" for="toggle1"><span>YES</span><span>NO</span></label>
+            <span class="toggle_button"></span>
+        </fieldset>
+        
+    </fieldset>
+
+
+    <fieldset>
+    
+        <label class="left_element">Do you like music ?</label>
+        
+        <fieldset class="form_toggle">
+            <input id="toggle2" type="checkbox" checked />
+            <label class="toggle_label" for="toggle2"><span>YES</span><span>NO</span></label>
+            <span class="toggle_button"></span>
+        </fieldset>
+        
+    </fieldset>
+
+
+    <fieldset>
+    
+        <label class="left_element">Choose a value</label>
+        <input type="number" id="number" name="number" value="1" min="1" max="30" required>
+        
+    </fieldset>
+    
+    
+    <fieldset>
+    
+        <label for="password" class="left_element">Password</label>
+        <input type="password" name="password" value="" size="15" id="password">
+        
+    </fieldset>
+    
+    
+    <fieldset>
+    
+        <label for="comments" class="left_element">Comments</label>
+        <textarea name="comments" id="comments" rows="8" cols="30"></textarea>
+        
+    </fieldset>    
+    
+    
+    <fieldset>
+    
+	<ul class="form_buttons">
+        <li><input type="reset" value="Reset" /></li>	
+        <li><input type="submit" value="Submit" /></li>
+    </ul>
+        
+    </fieldset>
+
+    
+    <div class="clear"></div>   
+
+
+</form>     
+
+
+
+</body>
+</html>

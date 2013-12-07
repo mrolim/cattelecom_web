@@ -1,0 +1,39 @@
+
+/*************************************
+	-	TP ARROWS 	-
+**************************************/
+.tparrows												{	-ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=100)";
+															-moz-opacity: 1;
+															-khtml-opacity: 1;
+															opacity: 1;
+															-webkit-transition: opacity 0.2s ease-out; -moz-transition: opacity 0.2s ease-out; -o-transition: opacity 0.2s ease-out; -ms-transition: opacity 0.2s ease-out;
+
+														}
+.tparrows.hidearrows									{
+															-ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=0)";
+															-moz-opacity: 0;
+															-khtml-opacity: 0;
+															opacity: 0;
+														}
+.tp-leftarrow											{	z-index:100;cursor:pointer; position:relative;	width:40px;	height:40px;   }
+.tp-rightarrow											{	z-index:100;cursor:pointer; position:relative;	width:40px;	height:40px;   }
+
+
+.tp-leftarrow:hover,
+.tp-rightarrow:hover 									{	background-position:bottom left; }
+
+/************************************
+		-	TP BANNER TIMER		-
+*************************************/
+.tp-bannertimer								{	width:100%; height:10px; background:url(../timer.png);position:absolute; z-index:200;top:0px;}
+.tp-bannertimer.tp-bottom					{	bottom:0px;height:5px; top:auto;}
+
+
+/***************************************
+	-	RESPONSIVE SETTINGS 	-
+****************************************/
+
+@media only screen and (min-width: 0px) and (max-width: 479px) {
+.responsive .tparrows	{	display:none;}
+}
+

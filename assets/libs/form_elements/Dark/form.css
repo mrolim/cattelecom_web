@@ -1,0 +1,644 @@
+/*
+Item Name : CSS3 Form Elements Pack
+Author URI : http://codecanyon.net/user/Pixelworkshop/
+Version : 1.0
+*/
+
+/*
+
+TABLE OF CONTENTS
+
+00 PAGE AND GALLERY STYLING
+01 GENERAL FORM STYLING
+02 INPUT FIELDS & TEXT AREA
+03 CHECKBOXES & RADIO BUTTONS
+04 SELECT ELEMENT
+05 TOGGLE BUTTONS
+06 BUTTONS
+07 FEEDBACK MESSAGES
+08 TOOLTIPS
+
+*/
+
+
+
+/*  _______________________________________
+
+	00 PAGE AND GALLERY STYLING
+    _______________________________________  */
+
+
+
+body {
+	font-family:Arial, Helvetica, sans-serif;
+	background: url('img/pattern.png');
+	padding:20px 0 60px 0;
+}
+h1 {
+	text-align:center;
+	color:#ffffff;
+	text-shadow:1px 1px 1px #000000;
+	margin-bottom:42px;
+	line-height:44px;
+	font-family:"Droid Serif", Georgia, "Times New Roman", Times, serif;
+	font-style:italic;
+	font-weight:normal;
+}
+	h1 span {
+		font-size:26px;
+	}
+
+
+
+/*  _______________________________________
+
+	01 GENERAL FORM STYLING
+    _______________________________________  */
+
+
+
+.css_form {
+    position: relative;
+	color:#ffffff;
+	text-shadow:1px 1px 0px #000000;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 12px;
+    width: 600px;
+    margin: 0 auto;
+    padding: 20px 0 40px 0;
+    background: #121212;
+    border: 1px solid #0E0E0E;
+    -moz-border-radius: 5px;
+    -webkit-border-radius: 5px;
+    border-radius: 5px;
+    -moz-box-shadow: 0 1px 3px rgba(0, 0, 0, 0.7);
+    -webkit-box-shadow: 0 1px 3px rgba(0, 0, 0, 0.7);
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.7);
+}
+	.css_form fieldset {
+		border: none;
+		margin: 0 auto;
+		padding: 15px;
+		display: block;
+		width: 520px;
+		position: relative;
+		background-color: #121212;
+		-moz-border-radius: 6px;
+		-webkit-border-radius: 6px;
+		border-radius: 6px;
+		-moz-transition: all 0.3s;
+		-o-transition: all 0.3s;
+		-webkit-transition: all 0.3s;
+		transition: all 0.3s;
+	}
+		.css_form fieldset:hover {
+			background-color: #0E0E0E;
+			-moz-transition: all 0.3s;
+			-o-transition: all 0.3s;
+			-webkit-transition: all 0.3s;
+			transition: all 0.3s;
+		}
+	.css_form label {
+		display: block;
+		float: left;
+		width: auto;
+		text-align: right;
+		padding: 7px 0 6px 0;
+		vertical-align: baseline;
+	}
+	.css_form .left_element {
+		width: 180px;
+		margin-right: 20px;
+	}
+	.css_form ul {
+		list-style: none;
+		margin: 0;
+		padding: 0;
+	}
+	.css_form .required {
+		color: #C00;
+	}
+
+
+
+/*  _______________________________________
+
+	02 INPUT FIELDS & TEXT AREA
+    _______________________________________  */
+
+
+
+.css_form input, 
+.css_form textarea {
+	float: left;
+	width:290px;
+	resize:none;
+}     
+.css_form input,
+.css_form textarea {
+	position:relative;
+	font-family:Arial, Helvetica, sans-serif;
+	color:#888888;
+	padding:6px 9px;
+	border:1px solid #ffffff;
+	background-color: #fdfdfd;
+	background-image: -webkit-gradient(linear, left top, left bottom, from(#fdfdfd), to(#f4f4f4));
+	background-image: -webkit-linear-gradient(top, #fdfdfd, #f4f4f4);
+	background-image: -moz-linear-gradient(top, #fdfdfd, #f4f4f4);
+	background-image: -ms-linear-gradient(top, #fdfdfd, #f4f4f4);
+	background-image: -o-linear-gradient(top, #fdfdfd, #f4f4f4);
+	background-image: linear-gradient(top, #fdfdfd, #f4f4f4);
+	-moz-box-shadow: 0 1px 3px rgba(0,0,0,0.55), inset 0 1px 1px rgba(255,255,255,0.5);
+	-webkit-box-shadow: 0 1px 3px rgba(0,0,0,0.55), inset 0 1px 1px rgba(255,255,255,0.5);
+	box-shadow: 0 1px 3px rgba(0,0,0,0.55), inset 0 1px 1px rgba(255,255,255,0.5);
+	-moz-border-radius: 3px;
+	-webkit-border-radius: 3px;
+	border-radius: 3px;
+	-webkit-transition: all 0.2s;
+	-moz-transition: all 0.2s;
+	-o-transition: all 0.2s;
+	-ms-transition: all 0.2s;
+	transition: all 0.2s;
+}   
+	.css_form input:hover,
+	.css_form textarea:hover {
+		-moz-box-shadow: 0 1px 3px rgba(0,0,0,0.7), inset 0 1px 1px rgba(255,255,255,0.4);
+		-webkit-box-shadow: 0 1px 3px rgba(0,0,0,0.7), inset 0 1px 1px rgba(255,255,255,0.4);
+		box-shadow: 0 1px 3px rgba(0,0,0,0.7), inset 0 1px 1px rgba(255,255,255,0.4);
+	}
+	.css_form input:focus,
+	.css_form textarea:focus {
+		color:#111111;
+		outline:none;
+		-moz-box-shadow: 0 1px 4px rgba(0,0,0,0.8), inset 0 1px 1px rgba(255,255,255,0.4);
+		-webkit-box-shadow: 0 1px 4px rgba(0,0,0,0.8), inset 0 1px 1px rgba(255,255,255,0.4);
+		box-shadow: 0 1px 4px rgba(0,0,0,0.8), inset 0 1px 1px rgba(255,255,255,0.4);
+	}
+
+
+
+/*  _______________________________________
+
+	03 CHECKBOXES & RADIO BUTTONS
+    _______________________________________  */
+
+
+
+.css_form .form_options {
+	list-style: none; 
+	float: left;
+	padding: 0;
+	margin: 0;
+}
+	.css_form .form_options li {
+		line-height:23px;
+	}
+		.css_form .form_options li label {
+			width: auto;
+			text-align: left;
+			padding: 0;
+		}   
+	.css_form .form_options .desc_text {
+		line-height:30px;
+	}
+
+.css_form label input[type="checkbox"],
+.css_form label input[type="radio"],
+.css_form label input[type="checkbox"] + span,
+.css_form label input[type="radio"] + span,
+.css_form label input[type="checkbox"] + span::before,
+.css_form label input[type="radio"] + span::before {
+	vertical-align: middle;
+}
+.css_form label input[type="checkbox"], 
+.css_form label input[type="radio"] {
+    position: absolute;
+    -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=0)";
+    filter: alpha(opacity=0);
+    opacity: 0;
+    width: 12px;
+    height: 12px;
+}
+.css_form label input[type="checkbox"] + span,
+.css_form label input[type="radio"] + span,
+.css_form label input[type="checkbox"] + span::before,
+.css_form label input[type="radio"] + span::before {
+	text-shadow:1px 1px 1px #ffffff;
+	display: inline-block;
+}
+.css_form label input[type="checkbox"] + span,
+.css_form label input[type="radio"] + span {
+	font: normal 13px/13px arial, Sans-serif;
+}
+.css_form label input[type="checkbox"] + span::before {
+	content: "\2714";
+}
+.css_form label input[type="checkbox"] + span::before,
+.css_form label input[type="radio"] + span::before {
+	text-indent: -9999px;
+	width: 12px;
+	height: 12px;
+	padding:0;
+	margin: 0 12px 0 0;
+	font-family:Arial, Helvetica, sans-serif;
+	text-transform: uppercase;
+	border:1px solid #ffffff;
+	background-color: #fdfdfd;
+	background-image: -webkit-gradient(linear, left top, left bottom, from(#fdfdfd), to(#f4f4f4));
+	background-image: -webkit-linear-gradient(top, #fdfdfd, #f4f4f4);
+	background-image: -moz-linear-gradient(top, #fdfdfd, #f4f4f4);
+	background-image: -ms-linear-gradient(top, #fdfdfd, #f4f4f4);
+	background-image: -o-linear-gradient(top, #fdfdfd, #f4f4f4);
+	background-image: linear-gradient(top, #fdfdfd, #f4f4f4);
+	-moz-box-shadow: 0 1px 3px rgba(0,0,0,0.8);
+	-webkit-box-shadow: 0 1px 3px rgba(0,0,0,0.8);
+	box-shadow: 0 1px 3px rgba(0,0,0,0.8);
+	-moz-border-radius: 3px;
+	-webkit-border-radius: 3px;
+	border-radius: 3px;
+	-webkit-transition: all 0.3s;
+	-moz-transition: all 0.3s;
+	-o-transition: all 0.3s;
+	-ms-transition: all 0.3s;
+	transition: all 0.3s;
+}
+	.css_form label:hover input[type="checkbox"]:not(:disabled) + span::before,
+	.css_form label:hover input[type="radio"]:not(:disabled) + span::before {
+		-moz-box-shadow: 0 1px 3px rgba(0,0,0,0.7), inset 0 1px 1px rgba(255,255,255,0.4);
+		-webkit-box-shadow: 0 1px 3px rgba(0,0,0,0.7), inset 0 1px 1px rgba(255,255,255,0.4);
+		box-shadow: 0 1px 3px rgba(0,0,0,0.7), inset 0 1px 1px rgba(255,255,255,0.4);
+	}
+	.css_form label input[type="checkbox"]:checked + span::before,
+	.css_form label input[type="radio"]:checked + span::before {
+		text-indent: 2px;
+		color: #333333;
+	}
+	.css_form label input[type="radio"] + span::before {
+		content: "\2022";
+		font-size: 24px;
+		-moz-border-radius: 12px;
+		-webkit-border-radius: 12px;
+		border-radius: 12px;
+	}
+	.css_form label input[type="checkbox"]:disabled + span::before,
+	.css_form label input[type="radio"]:disabled + span::before {
+		filter: alpha(opacity=30);
+		-ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=30)";
+		opacity: 0.3;
+	}
+
+
+
+/*  _______________________________________
+
+	04 SELECT ELEMENT
+    _______________________________________  */
+
+
+
+.css_form .select_element {
+	float: left;
+	width:310px;
+	overflow: hidden;
+	position: relative;
+	border:1px solid #ffffff;
+	background-color: #fdfdfd;
+	background-image: -webkit-gradient(linear, left top, left bottom, from(#fdfdfd), to(#f4f4f4));
+	background-image: -webkit-linear-gradient(top, #fdfdfd, #f4f4f4);
+	background-image: -moz-linear-gradient(top, #fdfdfd, #f4f4f4);
+	background-image: -ms-linear-gradient(top, #fdfdfd, #f4f4f4);
+	background-image: -o-linear-gradient(top, #fdfdfd, #f4f4f4);
+	background-image: linear-gradient(top, #fdfdfd, #f4f4f4);
+	-moz-box-shadow: 0 1px 3px rgba(0,0,0,0.5), inset 0 1px 1px rgba(255,255,255,0.5);
+	-webkit-box-shadow: 0 1px 3px rgba(0,0,0,0.5), inset 0 1px 1px rgba(255,255,255,0.5);
+	box-shadow: 0 1px 3px rgba(0,0,0,0.5), inset 0 1px 1px rgba(255,255,255,0.5);
+	-moz-border-radius: 3px;
+	-webkit-border-radius: 3px;
+	border-radius: 3px;
+}
+	.css_form .select_element select {
+		width:100%;
+		height:30px;
+		font-size:12px;
+		padding: 6px 0 6px 10px;
+		border: 0;
+		background: none;
+		outline: none;
+	}
+	.css_form .select_element select option {
+		background: #fdfdfd;
+		width: 100%;
+	}
+	@media screen and (-webkit-min-device-pixel-ratio:0) {
+		.css_form .select_element:after {
+			content: '';
+			position: absolute;
+			top: 50%;
+			right: 10px;
+			margin-top: -3px;
+			border: 5px solid transparent;
+			border-top: 5px solid #333333;
+			pointer-events: none;
+		}
+		.css_form .select_element select {
+			-webkit-appearance: none;
+			appearance: none;
+		}
+		.css_form .select_element select option {
+			-webkit-appearance:none;
+			appearance:none;
+		}
+	}
+.css_form input[type="number"] {
+	width:34px;
+}
+
+
+
+/*  _______________________________________
+
+	05 TOGGLE BUTTONS
+    _______________________________________  */
+
+
+
+.css_form .form_toggle {
+	position: relative;
+	display:block;
+	width: 80px;
+	padding: 0;
+	margin: 6px 0;
+	font-family: sans-serif;
+	font-weight: bold;
+	font-size: 12px;
+	color: #fff;
+	text-shadow: 1px 1px 1px #191b1e;
+	border:none;
+	clear: none;
+	overflow: visible;
+}
+	.css_form .form_toggle .toggle_label {
+		position: relative;
+		z-index: 3;
+		display: block;
+		width: 100%;
+		padding: 3px 0;
+		margin-left: 4px;
+		-moz-border-radius: 2px;
+		-webkit-border-radius: 2px;
+		border-radius: 2px;
+		-moz-box-shadow: inset 0 1px 3px rgba(0, 0, 0, 0.17), 0 1px 0 rgba(0, 0, 0, 0.9);
+		-webkit-box-shadow: inset 0 1px 3px rgba(0, 0, 0, 0.17), 0 1px 0 rgba(0, 0, 0, 0.9);
+		box-shadow: inset 0 1px 3px rgba(0, 0, 0, 0.17), 0 1px 0 rgba(0, 0, 0, 0.9);
+		background-color: #b9412b;
+		border: 1px solid #b15b4d;
+		color: #4b1a11;
+		font-weight: bold;
+		text-align: center;
+		text-shadow: 0 1px 0 rgba(255, 255, 255, 0.2)
+	}
+		.css_form .form_toggle .toggle_label span {
+			width:50%;
+			text-align:center;
+			float:left;
+		}
+		.css_form .form_toggle .toggle_label:after {
+			position: absolute;
+			top: 0px;
+			right: 0;
+			z-index: 0;
+			display: block;
+			width: 80px;
+			height: 20px;
+			padding: 2px 0;
+			line-height:20px;
+		}
+	.css_form .form_toggle input {
+		position: absolute;
+		opacity: 0;
+		z-index: 5;
+	}
+		.css_form .form_toggle input:hover {
+			cursor:pointer;
+		}
+		.css_form .form_toggle input:checked + .toggle_label {
+			background-color: #7fab42;
+			border: 1px solid #87aa5b;
+			color: #36491c;
+		}
+	.css_form .form_toggle .toggle_button {
+		display: block;
+		position: absolute;
+		left: 0;
+		top: -4px;
+		z-index: 4;
+		width: 40px;
+		height: 28px;
+		border:1px solid #ffffff;
+		background-color: #fdfdfd;
+		background-image: -webkit-gradient(linear, left top, left bottom, from(#fdfdfd), to(#f4f4f4));
+		background-image: -webkit-linear-gradient(top, #fdfdfd, #f4f4f4);
+		background-image: -moz-linear-gradient(top, #fdfdfd, #f4f4f4);
+		background-image: -ms-linear-gradient(top, #fdfdfd, #f4f4f4);
+		background-image: -o-linear-gradient(top, #fdfdfd, #f4f4f4);
+		background-image: linear-gradient(top, #fdfdfd, #f4f4f4);
+		-moz-box-shadow: 0 1px 3px rgba(0,0,0,0.55), inset 0 1px 1px rgba(255,255,255,0.5);
+		-webkit-box-shadow: 0 1px 3px rgba(0,0,0,0.55), inset 0 1px 1px rgba(255,255,255,0.5);
+		box-shadow: 0 1px 3px rgba(0,0,0,0.55), inset 0 1px 1px rgba(255,255,255,0.5);
+		-moz-border-radius: 3px;
+		-webkit-border-radius: 3px;
+		border-radius: 3px;
+		-webkit-transition: all 0.3s ease-out;
+		-moz-transition: all 0.3s ease-out;
+		-o-transition: all 0.3s ease-out;
+		transition: all 0.3s ease-out;
+	}
+		.css_form .form_toggle input:checked ~ .toggle_button {
+			left: 45px;
+		}
+		.css_form .form_toggle input:focus ~ .toggle_button {
+			outline:none;
+		}
+
+
+
+/*  _______________________________________
+
+	06 BUTTONS
+    _______________________________________  */
+
+
+
+.css_form .form_buttons {
+	padding-left:200px;
+}
+	.css_form .form_buttons input {
+		position:relative;
+		display:block;
+		width:90px;
+		float:left;
+		margin-right:20px;
+	}
+		.css_form .form_buttons input:active {
+			top:1px;
+			-moz-box-shadow: 0 1px 4px rgba(0,0,0,0.3), inset 0 1px 1px rgba(255,255,255,0.5);
+			-webkit-box-shadow: 0 1px 4px rgba(0,0,0,0.3), inset 0 1px 1px rgba(255,255,255,0.5);
+			box-shadow: 0 1px 4px rgba(0,0,0,0.3), inset 0 1px 1px rgba(255,255,255,0.5);
+			-webkit-transition: all 0.1s;
+			-moz-transition: all 0.1s;
+			-o-transition: all 0.1s;
+			-ms-transition: all 0.1s;
+			transition: all 0.1s;
+		}
+
+
+
+/*  _______________________________________
+
+	07 FEEDBACK MESSAGES
+    _______________________________________  */
+
+
+
+.css_form .msg_error, 
+.css_form .msg_ok, 
+.css_form .msg_alert {
+	font-size:12px; 
+	text-shadow: 0 1px 0px rgba(255, 255, 255, 0.4);
+	line-height:12px;
+	width:93%;
+	clear:both;
+	float:left;
+	padding:10px 10px 10px 16px;
+	margin:28px auto 0 auto; 
+	-moz-border-radius: 3px;
+	-webkit-border-radius: 3px;
+	border-radius: 3px;
+	-moz-box-shadow: 0 0px 4px rgba(0,0,0,0.2), inset 0 1px 1px rgba(255,255,255,0.5);
+	-webkit-box-shadow: 0 0px 4px rgba(0,0,0,0.2), inset 0 1px 1px rgba(255,255,255,0.5);
+	box-shadow: 0 0px 4px rgba(0,0,0,0.2), inset 0 1px 1px rgba(255,255,255,0.5);
+}
+	.css_form .msg_error p, 
+	.css_form .msg_ok p, 
+	.css_form .msg_alert p {
+		padding:0 0 0 30px;
+		margin:0;
+	}
+.css_form .msg_error {
+	border:#f4afa6 solid 1px; 
+	color:#992213;
+	background:#f5bdb5; 
+	background: -webkit-gradient(linear, left top, left bottom, from(#f5bdb5), to(#f1a297));
+	background: -webkit-linear-gradient(top, #f5bdb5, #f1a297);
+	background: -moz-linear-gradient(top, #f5bdb5, #f1a297);
+	background: -ms-linear-gradient(top, #f5bdb5, #f1a297);
+	background: -o-linear-gradient(top, #f5bdb5, #f1a297);
+	background: linear-gradient(top, #f5bdb5, #f1a297);
+}
+	.css_form .msg_error p {
+		background:url("img/del.png") no-repeat 0 0; 
+	}
+.css_form .msg_ok {
+	border:#C6D880 solid 1px; 
+	color:#37620d;
+	background:#c7f29e; 
+	background: -webkit-gradient(linear, left top, left bottom, from(#c7f29e), to(#b6ee80));
+	background: -webkit-linear-gradient(top, #c7f29e, #b6ee80);
+	background: -moz-linear-gradient(top, #c7f29e, #b6ee80);
+	background: -ms-linear-gradient(top, #c7f29e, #b6ee80);
+	background: -o-linear-gradient(top, #c7f29e, #b6ee80);
+	background: linear-gradient(top, #c7f29e, #b6ee80);
+}
+	.css_form .msg_ok p {
+		background:url("img/ok.png") no-repeat 0 0; 
+	}
+.css_form .msg_alert {
+	border:#FFD324 solid 1px; 
+	color:#756730;
+	background:#ff8; 
+	background: -webkit-gradient(linear, left top, left bottom, from(#ff8), to(#ff6));
+	background: -webkit-linear-gradient(top, #ff8, #ff6);
+	background: -moz-linear-gradient(top, #ff8, #ff6);
+	background: -ms-linear-gradient(top, #ff8, #ff6);
+	background: -o-linear-gradient(top, #ff8, #ff6);
+	background: linear-gradient(top, #ff8, #ff6);
+}
+	.css_form .msg_alert p {
+		background:url("img/alert.png") no-repeat 0 0; 
+	}
+
+
+
+/*  _______________________________________
+
+	08 TOOLTIPS
+    _______________________________________  */
+
+
+
+.css_form .tooltip {
+	outline:none;
+}
+	.css_form .tooltip strong {
+		line-height:30px;
+	}
+	.css_form .tooltip .tooltip_content {
+		z-index: 10;
+		-ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=0)";
+		filter: alpha(opacity=0);
+		opacity: 0;
+		left:-9999em;
+		padding: 9px 12px 15px 12px;
+		margin-top: -30px;
+		margin-left: 15px;
+		width: 210px;
+		line-height: 16px;
+		position: absolute;
+		color: #FFF;
+		text-shadow:1px 1px 0px #000000;
+		border: 1px solid #000;
+		background: #000000;
+		-moz-border-radius: 4px;
+		-webkit-border-radius: 4px;
+		border-radius: 4px;
+		-moz-transition: opacity 0.3s;
+		-o-transition: opacity 0.3s;
+		-webkit-transition: opacity 0.3s;
+		transition: opacity 0.3s;
+	}
+		.css_form .tooltip:hover .tooltip_content {
+			-ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=100)";
+			filter: alpha(opacity=100);
+			opacity: 1;
+			left:auto;
+			right:-230px;
+		}
+
+
+/*
+Uncomment the following markup to make the tooltips
+disappear when the field is clicked
+*/
+
+/*
+.css_form .tooltip input:focus ~ .tooltip_content {
+    -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=0)";
+    filter: alpha(opacity=0);
+    opacity: 0;
+}
+*/
+
+
+.css_form,
+.css_form > fieldset > input,
+.css_form div > input,
+.css_form textarea,
+.css_form .select_element,
+.css_form .toggle_button,
+.css_form .tooltip .tooltip_content,
+.css_form .form_buttons input {
+	behavior:url(ie/PIE.htc);
+}
+.css_form .select_element {
+	*behavior:none;
+}

@@ -1,0 +1,478 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <title>Bootstrap enhance with CSS3 animation</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <link href="css/animate.css" rel="stylesheet">
+    <!-- HTML5 shim, for IE6-8 support of HTML5 elements -->
+    <!--[if lt IE 9]>
+      <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+  </head>
+
+  <body>
+    <div class="container">
+
+      <!-- The modal examples -->
+      <div class="modExample">
+      <h4>Modal with CSS3 animation</h4>
+      <a href="#myModal1" role="button" class="btn" data-toggle="modal">fade InLeft | OutLeft</a>
+      <div id="myModal1" class="modal hide" data-easein="fadeInLeft" data-easeout="fadeOutLeft" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+        <div class="modal-header">
+          <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
+          <h3 id="myModalLabel">Modal header 1</h3>
+        </div>
+        <div class="modal-body">
+          <p>One fine body…</p>
+        </div>
+        <div class="modal-footer">
+          <button class="btn" data-dismiss="modal" aria-hidden="true">Close</button>
+          <button class="btn btn-primary">Save changes</button>
+        </div>
+      </div>
+
+      <a href="#myModal2" role="button" class="btn" data-toggle="modal">fade InRight | OutRight</a>
+      <div id="myModal2" class="modal hide" data-easein="fadeInRight" data-easeout="fadeOutRight" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+        <div class="modal-header">
+          <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
+          <h3 id="myModalLabel">Modal header 2</h3>
+        </div>
+        <div class="modal-body">
+          <p>One fine body…</p>
+        </div>
+        <div class="modal-footer">
+          <button class="btn" data-dismiss="modal" aria-hidden="true">Close</button>
+          <button class="btn btn-primary">Save changes</button>
+        </div>
+      </div>
+
+      <a href="#myModal3" role="button" class="btn" data-toggle="modal">fade InUp | OutUp</a>
+      <div id="myModal3" class="modal hide" data-easein="fadeInUp" data-easeout="fadeOutUp" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+        <div class="modal-header">
+          <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
+          <h3 id="myModalLabel">Modal header</h3>
+        </div>
+        <div class="modal-body">
+          <p>One fine body…</p>
+        </div>
+        <div class="modal-footer">
+          <button class="btn" data-dismiss="modal" aria-hidden="true">Close</button>
+        </div>
+      </div>
+
+      <a href="#myModal4" role="button" class="btn" data-toggle="modal">fade InDown | OutDown</a>
+      <div id="myModal4" class="modal hide" data-easein="fadeInDown" data-easeout="fadeOutDown" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+        <div class="modal-header">
+          <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
+          <h3 id="myModalLabel">Modal header</h3>
+        </div>
+        <div class="modal-body">
+          <p>One fine body…</p>
+        </div>
+        <div class="modal-footer">
+          <button class="btn" data-dismiss="modal" aria-hidden="true">Close</button>
+        </div>
+      </div>
+
+      <br />
+
+      <a href="#myModal5" role="button" class="btn" data-toggle="modal">fade InLeftBig | OutLeftBig</a>
+      <div id="myModal5" class="modal hide" data-easein="fadeInLeftBig" data-easeout="fadeOutLeftBig" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+        <div class="modal-header">
+          <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
+          <h3 id="myModalLabel">Modal header 1</h3>
+        </div>
+        <div class="modal-body">
+          <p>One fine body…</p>
+        </div>
+        <div class="modal-footer">
+          <button class="btn" data-dismiss="modal" aria-hidden="true">Close</button>
+          <button class="btn btn-primary">Save changes</button>
+        </div>
+      </div>
+
+      <a href="#myModal6" role="button" class="btn" data-toggle="modal">fade InRightBig | OutRightBig</a>
+      <div id="myModal6" class="modal hide" data-easein="fadeInRightBig" data-easeout="fadeOutRightBig" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+        <div class="modal-header">
+          <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
+          <h3 id="myModalLabel">Modal header 2</h3>
+        </div>
+        <div class="modal-body">
+          <p>One fine body…</p>
+        </div>
+        <div class="modal-footer">
+          <button class="btn" data-dismiss="modal" aria-hidden="true">Close</button>
+          <button class="btn btn-primary">Save changes</button>
+        </div>
+      </div>
+
+      <a href="#myModal7" role="button" class="btn" data-toggle="modal">fade InUpBig | OutUpBig</a>
+      <div id="myModal7" class="modal hide" data-easein="fadeInUpBig" data-easeout="fadeOutUpBig" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+        <div class="modal-header">
+          <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
+          <h3 id="myModalLabel">Modal header</h3>
+        </div>
+        <div class="modal-body">
+          <p>One fine body…</p>
+        </div>
+        <div class="modal-footer">
+          <button class="btn" data-dismiss="modal" aria-hidden="true">Close</button>
+        </div>
+      </div>
+
+      <a href="#myModal8" role="button" class="btn" data-toggle="modal">fade InDownBig | OutDownBig</a>
+      <div id="myModal8" class="modal hide" data-easein="fadeInDownBig" data-easeout="fadeOutDownBig" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+        <div class="modal-header">
+          <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
+          <h3 id="myModalLabel">Modal header</h3>
+        </div>
+        <div class="modal-body">
+          <p>One fine body…</p>
+        </div>
+        <div class="modal-footer">
+          <button class="btn" data-dismiss="modal" aria-hidden="true">Close</button>
+        </div>
+      </div>
+
+      <a href="#myModal9" role="button" class="btn" data-toggle="modal">bounce InLeft | OutLeft</a>
+      <div id="myModal9" class="modal hide" data-easein="bounceInLeft" data-easeout="fadeOutLeftBig" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+        <div class="modal-header">
+          <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
+          <h3 id="myModalLabel">Modal header 1</h3>
+        </div>
+        <div class="modal-body">
+          <p>One fine body…</p>
+        </div>
+        <div class="modal-footer">
+          <button class="btn" data-dismiss="modal" aria-hidden="true">Close</button>
+          <button class="btn btn-primary">Save changes</button>
+        </div>
+      </div>
+
+      <a href="#myModal10" role="button" class="btn" data-toggle="modal">bounce InRight | OutRight</a>
+      <div id="myModal10" class="modal hide" data-easein="bounceInRight" data-easeout="bounceOutRight" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+        <div class="modal-header">
+          <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
+          <h3 id="myModalLabel">Modal header 2</h3>
+        </div>
+        <div class="modal-body">
+          <p>One fine body…</p>
+        </div>
+        <div class="modal-footer">
+          <button class="btn" data-dismiss="modal" aria-hidden="true">Close</button>
+          <button class="btn btn-primary">Save changes</button>
+        </div>
+      </div>
+
+      <a href="#myModal11" role="button" class="btn" data-toggle="modal">bounce InUp | OutUp</a>
+      <div id="myModal11" class="modal hide" data-easein="bounceInUp" data-easeout="bounceOutUp" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+        <div class="modal-header">
+          <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
+          <h3 id="myModalLabel">Modal header</h3>
+        </div>
+        <div class="modal-body">
+          <p>One fine body…</p>
+        </div>
+        <div class="modal-footer">
+          <button class="btn" data-dismiss="modal" aria-hidden="true">Close</button>
+        </div>
+      </div>
+
+      <a href="#myModal12" role="button" class="btn" data-toggle="modal">bounce InDown | OutDown</a>
+      <div id="myModal12" class="modal hide" data-easein="bounceInDown" data-easeout="bounceOutDown" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+        <div class="modal-header">
+          <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
+          <h3 id="myModalLabel">Modal header</h3>
+        </div>
+        <div class="modal-body">
+          <p>One fine body…</p>
+        </div>
+        <div class="modal-footer">
+          <button class="btn" data-dismiss="modal" aria-hidden="true">Close</button>
+        </div>
+      </div>
+
+      <a href="#myModal13" role="button" class="btn" data-toggle="modal">bounce In | Out</a>
+      <div id="myModal13" class="modal hide" data-easein="bounceIn" data-easeout="bounceOut" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+        <div class="modal-header">
+          <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
+          <h3 id="myModalLabel">Modal header</h3>
+        </div>
+        <div class="modal-body">
+          <p>One fine body…</p>
+        </div>
+        <div class="modal-footer">
+          <button class="btn" data-dismiss="modal" aria-hidden="true">Close</button>
+        </div>
+      </div>
+
+      <a href="#myModal15" role="button" class="btn" data-toggle="modal">rotate InDownLeft | OutDownLeft</a>
+      <div id="myModal15" class="modal hide" data-easein="rotateInDownLeft" data-easeout="rotateOutDownLeft" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+        <div class="modal-header">
+          <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
+          <h3 id="myModalLabel">Modal header 1</h3>
+        </div>
+        <div class="modal-body">
+          <p>One fine body…</p>
+        </div>
+        <div class="modal-footer">
+          <button class="btn" data-dismiss="modal" aria-hidden="true">Close</button>
+          <button class="btn btn-primary">Save changes</button>
+        </div>
+      </div>
+
+      <a href="#myModal16" role="button" class="btn" data-toggle="modal">rotate InDownRight | OutDownRight</a>
+      <div id="myModal16" class="modal hide" data-easein="rotateInDownRight" data-easeout="rotateOutDownRight" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+        <div class="modal-header">
+          <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
+          <h3 id="myModalLabel">Modal header 2</h3>
+        </div>
+        <div class="modal-body">
+          <p>One fine body…</p>
+        </div>
+        <div class="modal-footer">
+          <button class="btn" data-dismiss="modal" aria-hidden="true">Close</button>
+          <button class="btn btn-primary">Save changes</button>
+        </div>
+      </div>
+
+      <a href="#myModal17" role="button" class="btn" data-toggle="modal">rotate InUpLeft | OutUpLeft</a>
+      <div id="myModal17" class="modal hide" data-easein="rotateInUpLeft" data-easeout="rotateOutUpLeft" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+        <div class="modal-header">
+          <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
+          <h3 id="myModalLabel">Modal header</h3>
+        </div>
+        <div class="modal-body">
+          <p>One fine body…</p>
+        </div>
+        <div class="modal-footer">
+          <button class="btn" data-dismiss="modal" aria-hidden="true">Close</button>
+        </div>
+      </div>
+
+      <a href="#myModal18" role="button" class="btn" data-toggle="modal">rotate InUpRight | OutUpRight</a>
+      <div id="myModal18" class="modal hide" data-easein="rotateInUpRight" data-easeout="rotateOutUpRight" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+        <div class="modal-header">
+          <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
+          <h3 id="myModalLabel">Modal header</h3>
+        </div>
+        <div class="modal-body">
+          <p>One fine body…</p>
+        </div>
+        <div class="modal-footer">
+          <button class="btn" data-dismiss="modal" aria-hidden="true">Close</button>
+        </div>
+      </div>
+
+      <a href="#myModal14" role="button" class="btn" data-toggle="modal">lightSpeed In | Out</a>
+      <div id="myModal14" class="modal hide" data-easein="lightSpeedIn" data-easeout="lightSpeedOut" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+        <div class="modal-header">
+          <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
+          <h3 id="myModalLabel">Modal header</h3>
+        </div>
+        <div class="modal-body">
+          <p>One fine body…</p>
+        </div>
+        <div class="modal-footer">
+          <button class="btn" data-dismiss="modal" aria-hidden="true">Close</button>
+        </div>
+      </div>
+
+      <a href="#myModal19" role="button" class="btn" data-toggle="modal">wobble</a>
+      <div id="myModal19" class="modal hide" data-easein="wobble" data-easeout="lightSpeedOut" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+        <div class="modal-header">
+          <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
+          <h3 id="myModalLabel">Modal header</h3>
+        </div>
+        <div class="modal-body">
+          <p>One fine body…</p>
+        </div>
+        <div class="modal-footer">
+          <button class="btn" data-dismiss="modal" aria-hidden="true">Close</button>
+        </div>
+      </div>
+
+      <a href="#myModal20" role="button" class="btn" data-toggle="modal">roll In | Out</a>
+      <div id="myModal20" class="modal hide" data-easein="rollIn" data-easeout="rollOut" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+        <div class="modal-header">
+          <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
+          <h3 id="myModalLabel">Modal header</h3>
+        </div>
+        <div class="modal-body">
+          <p>One fine body…</p>
+        </div>
+        <div class="modal-footer">
+          <button class="btn" data-dismiss="modal" aria-hidden="true">Close</button>
+        </div>
+      </div>
+
+      <a href="#myModal21" role="button" class="btn" data-toggle="modal">bounce</a>
+      <div id="myModal21" class="modal hide" data-easein="bounce" data-easeout="rollOut" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+        <div class="modal-header">
+          <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
+          <h3 id="myModalLabel">Modal header</h3>
+        </div>
+        <div class="modal-body">
+          <p>One fine body…</p>
+        </div>
+        <div class="modal-footer">
+          <button class="btn" data-dismiss="modal" aria-hidden="true">Close</button>
+        </div>
+      </div>
+
+
+      <a href="#myModal22" role="button" class="btn" data-toggle="modal">shake</a>
+      <div id="myModal22" class="modal hide" data-easein="shake" data-easeout="rollOut" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+        <div class="modal-header">
+          <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
+          <h3 id="myModalLabel">Modal header</h3>
+        </div>
+        <div class="modal-body">
+          <p>One fine body…</p>
+        </div>
+        <div class="modal-footer">
+          <button class="btn" data-dismiss="modal" aria-hidden="true">Close</button>
+        </div>
+      </div>
+
+      <a href="#myModal23" role="button" class="btn" data-toggle="modal">tada</a>
+      <div id="myModal23" class="modal hide" data-easein="tada" data-easeout="rollOut" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+        <div class="modal-header">
+          <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
+          <h3 id="myModalLabel">Modal header</h3>
+        </div>
+        <div class="modal-body">
+          <p>One fine body…</p>
+        </div>
+        <div class="modal-footer">
+          <button class="btn" data-dismiss="modal" aria-hidden="true">Close</button>
+        </div>
+      </div>
+
+      <a href="#myModal24" role="button" class="btn" data-toggle="modal">swing</a>
+      <div id="myModal24" class="modal hide" data-easein="swing" data-easeout="rollOut" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+        <div class="modal-header">
+          <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
+          <h3 id="myModalLabel">Modal header</h3>
+        </div>
+        <div class="modal-body">
+          <p>One fine body…</p>
+        </div>
+        <div class="modal-footer">
+          <button class="btn" data-dismiss="modal" aria-hidden="true">Close</button>
+        </div>
+      </div>
+
+      <a href="#myModal25" role="button" class="btn" data-toggle="modal">wiggle</a>
+      <div id="myModal25" class="modal hide" data-easein="wiggle" data-easeout="rollOut" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+        <div class="modal-header">
+          <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
+          <h3 id="myModalLabel">Modal header</h3>
+        </div>
+        <div class="modal-body">
+          <p>One fine body…</p>
+        </div>
+        <div class="modal-footer">
+          <button class="btn" data-dismiss="modal" aria-hidden="true">Close</button>
+        </div>
+      </div>
+
+      <a href="#myModal26" role="button" class="btn" data-toggle="modal">pulse</a>
+      <div id="myModal26" class="modal hide" data-easein="pulse" data-easeout="rollOut" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+        <div class="modal-header">
+          <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
+          <h3 id="myModalLabel">Modal header</h3>
+        </div>
+        <div class="modal-body">
+          <p>One fine body…</p>
+        </div>
+        <div class="modal-footer">
+          <button class="btn" data-dismiss="modal" aria-hidden="true">Close</button>
+        </div>
+      </div>
+
+      </div>  <!-- end of modExample -->
+
+      <br />
+      <br />
+
+
+      <!-- The popover examples -->
+      <h4>Popover with CSS3 animation</h4>
+      <div>
+          <ul class="popover-example">
+            <li>
+              <a data-original-title="Popover on top" data-animation="false" data-easein="fadeInUp" href="#" class="btn btn-primary" rel="popover" data-placement="top" data-content="Vivamus sagittis lacus vel augue laoreet rutrum faucibus.">fade In Up</a>
+            </li>
+            <li><a data-original-title="Popover on right" data-animation="false" data-easein="fadeInRight" href="#" class="btn btn-primary" rel="popover" data-placement="right" data-content="Vivamus sagittis lacus vel augue laoreet rutrum faucibus.">fade In Right</a></li>
+            <li><a data-original-title="Popover on bottom" data-animation="false" data-easein="fadeInDown" href="#" class="btn btn-primary" rel="popover" data-placement="bottom" data-content="Vivamus sagittis lacus vel augue laoreet rutrum faucibus.">fade In Down</a></li>
+            <li><a data-original-title="Popover on left" data-animation="false" href="#" data-easein="fadeInLeft" class="btn btn-primary" rel="popover" data-placement="left" data-content="Vivamus sagittis lacus vel augue laoreet rutrum faucibus.">fade In Left</a></li>
+            <br />
+            <li><a data-original-title="Popover on bottom" data-animation="false" data-easein="fadeInUpBig" href="#" class="btn" rel="popover" data-placement="bottom" data-content="Vivamus sagittis lacus vel augue laoreet rutrum faucibus.">fade In Up Big</a></li>
+            <li><a data-original-title="Popover on right" data-animation="false" data-easein="fadeInRightBig" href="#" class="btn" rel="popover" data-placement="right" data-content="Vivamus sagittis lacus vel augue laoreet rutrum faucibus.">fade In Right Big</a></li>
+            <li><a data-original-title="Popover on top" data-animation="false" data-easein="fadeInDownBig" href="#" class="btn" rel="popover" data-placement="top" data-content="Vivamus sagittis lacus vel augue laoreet rutrum faucibus.">fade In Down Big</a></li>
+            <li><a data-original-title="Popover on left" data-animation="false" href="#" data-easein="fadeInLeftBig" class="btn" rel="popover" data-placement="left" data-content="Vivamus sagittis lacus vel augue laoreet rutrum faucibus.">fade In Left Big</a></li>
+            <br />
+            <li>
+              <a data-original-title="Popover on top" data-animation="false" data-easein="bounceInDown" href="#" class="btn btn-inverse" rel="popover" data-placement="top" data-content="Vivamus sagittis lacus vel augue laoreet rutrum faucibus.">bounce In Down</a>
+            </li>
+            <li><a data-original-title="Popover on right" data-animation="false" data-easein="bounceInRight" href="#" class="btn btn-inverse" rel="popover" data-placement="right" data-content="Vivamus sagittis lacus vel augue laoreet rutrum faucibus.">bounce In Right</a></li>
+            <li><a data-original-title="Popover on bottom" data-animation="false" data-easein="bounceInUp" href="#" class="btn btn-inverse" rel="popover" data-placement="bottom" data-content="Vivamus sagittis lacus vel augue laoreet rutrum faucibus.">bounce In Up</a></li>
+            <li><a data-original-title="Popover on left" data-animation="false" href="#" data-easein="bounceInLeft" class="btn btn-inverse" rel="popover" data-placement="left" data-content="Vivamus sagittis lacus vel augue laoreet
+            rutrum faucibus.">bounce In Left</a></li>
+            <br />
+            <li><a data-original-title="Popover on bottom" data-animation="false" data-easein="rotateInDownLeft" href="#" class="btn" rel="popover" data-placement="bottom" data-content="Vivamus sagittis lacus vel augue laoreet rutrum faucibus.">rotate In Down Left</a></li>
+            <li><a data-original-title="Popover on right" data-animation="false" data-easein="rotateInDownRight" href="#" class="btn" rel="popover" data-placement="right" data-content="Vivamus sagittis lacus vel augue laoreet rutrum faucibus.">rotate In Down Right</a></li>
+            <li><a data-original-title="Popover on top" data-animation="false" data-easein="rotateInUpLeft" href="#" class="btn" rel="popover" data-placement="top" data-content="Vivamus sagittis lacus vel augue laoreet rutrum faucibus.">rotate In Up Left</a></li>
+            <li><a data-original-title="Popover on left" data-animation="false" href="#" data-easein="rotateInUpRight" class="btn" rel="popover" data-placement="left" data-content="Vivamus sagittis lacus vel augue laoreet
+            rutrum faucibus.">rotate In Up Right</a></li>
+            <br />
+            <li><a data-original-title="Popover on right" data-animation="false" data-easein="rotateIn" href="#" class="btn btn-info" rel="popover" data-placement="right" data-content="Vivamus sagittis lacus vel augue laoreet rutrum faucibus.">rotateIn</a></li>
+            <li><a data-original-title="Popover on left" data-animation="false" data-easein="bounce" href="#" class="btn btn-info" rel="popover" data-placement="left" data-content="Vivamus sagittis lacus vel augue laoreet rutrum faucibus.">bounce</a></li>
+            <li><a data-original-title="Popover on left" data-animation="false" data-easein="wobble" href="#" class="btn btn-info" rel="popover" data-placement="left" data-content="Vivamus sagittis lacus vel augue laoreet rutrum faucibus.">wobble</a></li>
+            <li><a data-original-title="Popover on top" data-animation="false" data-easein="shake" href="#" class="btn btn-info" rel="popover" data-placement="top" data-content="Vivamus sagittis lacus vel augue laoreet rutrum faucibus.">shake</a></li>
+            <li><a data-original-title="Popover on left" data-animation="false" data-easein="tada" href="#" class="btn btn-info" rel="popover" data-placement="left" data-content="Vivamus sagittis lacus vel augue laoreet rutrum faucibus.">tada</a></li>
+            <li><a data-original-title="Popover on top" data-animation="false" data-easein="swing" href="#" class="btn btn-info" rel="popover" data-placement="top" data-content="Vivamus sagittis lacus vel augue laoreet rutrum faucibus.">swing</a></li>
+            <li><a data-original-title="Popover on left" data-animation="false" data-easein="wiggle" href="#" class="btn btn-info" rel="popover" data-placement="left" data-content="Vivamus sagittis lacus vel augue laoreet rutrum faucibus.">wiggle</a></li>
+            <li><a data-original-title="Popover on left" data-animation="false" data-easein="pulse" href="#" class="btn btn-info" rel="popover" data-placement="left" data-content="Vivamus sagittis lacus vel augue laoreet rutrum faucibus.">pulse</a></li>
+            <li><a data-original-title="Popover on left" data-animation="false" data-easein="lightSpeedIn" href="#" class="btn btn-info" rel="popover" data-placement="left" data-content="Vivamus sagittis lacus vel augue laoreet rutrum faucibus.">lightSpeedIn</a></li>
+            <li><a data-original-title="Popover on left" data-animation="false" data-easein="rollIn" href="#" class="btn btn-info" rel="popover" data-placement="left" data-content="Vivamus sagittis lacus vel augue laoreet rutrum faucibus.">rollIn</a></li>
+            <br />
+            <li><a data-original-title="Popover on left" data-animation="false" data-easein="flipInX" href="#" class="btn btn-success" rel="popover" data-placement="left" data-content="Vivamus sagittis lacus vel augue laoreet rutrum faucibus.">flipInX</a></li>
+            <li><a data-original-title="Popover on left" data-animation="false" data-easein="flipInY" href="#" class="btn btn-success" rel="popover" data-placement="left" data-content="Vivamus sagittis lacus vel augue laoreet rutrum faucibus.">flipInY</a></li>
+          </ul>
+      </div>
+
+
+
+    <!-- The tab example  -->
+    <div class="tabbable">
+     <ul class="nav nav-tabs" id="myTab1">
+        <li class="active"><a href="#home">Home</a></li>
+        <li><a href="#profile" data-easein="fadeInRight">Profile</a></li>
+        <li><a href="#messages" data-easein="fadeInDown">Messages</a></li>
+        <li><a href="#settings" data-easein="fadeInUp">Settings</a></li>
+        <li><a href="#other">Other</a></li>
+    </ul>
+
+    <div class="tab-content" id="tab-content1">
+        <div class="tab-pane active" id="home">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptate officiis eos excepturi est pariatur repudiandae repellat atque hic molestiae ut aperiam quae quia iure fugiat alias placeat illo perferendis explicabo. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quibusdam tempora eos unde ea consectetur debitis repellendus perferendis tempore asperiores illum! Tempora vero fuga nostrum alias inventore voluptatem odio laboriosam suscipit.</div>
+        <div class="tab-pane" id="profile">Dicta illum voluptates cum consectetur expedita nostrum totam laborum ipsam quia reiciendis. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Corrupti sint quisquam nemo iusto explicabo fugiat minus a necessitatibus</div>
+        <div class="tab-pane" id="messages">The third tab here. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Corrupti sint quisquam nemo iusto explicabo fugiat minus a necessitatibus.</div>
+        <div class="tab-pane" id="settings">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Corrupti sint quisquam nemo iusto explicabo fugiat minus a necessitatibus</div>
+        <div class="tab-pane" id="other">The last tab here. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Corrupti sint quisquam nemo iusto explicabo fugiat minus a necessitatibus. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Impedit ab a fugiat cumque tempora illum perferendis velit reiciendis tempore natus excepturi molestiae! Nihil ab deleniti velit vero cum temporibus ea.</div>
+    </div>
+  </div>
+
+  </div><!-- end of container -->
+
+    <!-- Placed at the end of the document so the pages load faster -->
+    <script src="js/jquery-1.8.3.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <script src="js/script.js"></script>
+  </body>
+</html>
