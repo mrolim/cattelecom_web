@@ -88,7 +88,7 @@ p{font-size:12px; line-height:21px; margin-bottom:18px}
 .megamenu_fixed {
 	width:960px;
 	height:44px;
-	position:fixed;
+	position: relative;
 	top:0;
 	left:50%;
 	margin:0 auto 0 -480px;
