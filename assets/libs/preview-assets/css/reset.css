@@ -516,7 +516,7 @@ padding: 0 20px 20px;
 }
 .cc-icon {
   margin: 4px 0 0 0;
-  background: url('../../../templates/assets/preview-assets/css/sprite.png') 0 0;
+  background: url('../../../widgets/assets/preview-assets/css/sprite.png') 0 0;
   width: 38px;
   height: 38px;
   float: right;
@@ -648,7 +648,7 @@ margin-bottom: 4px;
   display: block;
 padding: 10px;
 padding-left: 62px;
-background: url('../../../templates/assets/img/wordpress-logo-32-blue.png') no-repeat 15px 15px #f7f7f7;
+background: url('../../../widgets/assets/img/wordpress-logo-32-blue.png') no-repeat 15px 15px #f7f7f7;
 }
 
 /**

@@ -64,7 +64,7 @@
 
 	position: absolute;	
 	cursor: pointer;	
-	background: url('../../../../templates/assets/royalslider/skins/universal/rs-universal.png');
+	background: url('../../../../widgets/assets/royalslider/skins/universal/rs-universal.png');
 	opacity: 0.5;
 	border-radius: 2px;
 }
@@ -228,7 +228,7 @@
 	margin-left: -8px;
 	position: absolute;	
 	cursor: pointer;	
-	background: url('../../../../templates/assets/royalslider/skins/universal/rs-universal.png') transparent;
+	background: url('../../../../widgets/assets/royalslider/skins/universal/rs-universal.png') transparent;
 }
 
 .rsUni.rsWithThumbsHor .rsThumbsArrowLeft .rsThumbsArrowIcn { background-position: -128px -32px; }
@@ -333,7 +333,7 @@
 	width: 32px;
 	height: 32px;
 
-	background: url('../../../../templates/assets/royalslider/skins/universal/rs-universal.png') 0 0 transparent;
+	background: url('../../../../widgets/assets/royalslider/skins/universal/rs-universal.png') 0 0 transparent;
 	opacity: 0.7;
 	border-radius: 2px;
 
@@ -374,7 +374,7 @@
 	-moz-transition: .3s;
 	transition: .3s;
 
-	background:url(../../../../templates/assets/royalslider/skins/universal/rs-universal.png) no-repeat 0 -32px;
+	background:url(../../../../widgets/assets/royalslider/skins/universal/rs-universal.png) no-repeat 0 -32px;
 	background-color: #383838;
 	background-color: rgba(0,0,0,0.75);
 	*background-color: #383838;
@@ -410,7 +410,7 @@
 	margin: 6px;
 	width: 32px;
 	height: 32px;
-	background: url('../../../../templates/assets/royalslider/skins/universal/rs-universal.png') -64px 0;
+	background: url('../../../../widgets/assets/royalslider/skins/universal/rs-universal.png') -64px 0;
 	background-color: #383838;
 	background-color: rgba(0,0,0,0.75);
 	*background-color: #383838;
@@ -430,7 +430,7 @@
 .rsUni .rsPreloader {
 	width:20px;
 	height:20px;
-	background-image:url(../../../../templates/assets/royalslider/skins/preloaders/preloader-white.gif);
+	background-image:url(../../../../widgets/assets/royalslider/skins/preloaders/preloader-white.gif);
 
 	left:50%;
 	top:50%;

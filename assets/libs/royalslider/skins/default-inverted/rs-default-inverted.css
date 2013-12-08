@@ -64,7 +64,7 @@
 
 	position: absolute;	
 	cursor: pointer;	
-	background: url('../../../../templates/assets/royalslider/skins/default-inverted/rs-default-inverted.png');
+	background: url('../../../../widgets/assets/royalslider/skins/default-inverted/rs-default-inverted.png');
 
 	background-color: #FFF;
 	background-color: rgba(255,255,255, .75);
@@ -222,7 +222,7 @@
 	margin-left: -8px;
 	position: absolute;	
 	cursor: pointer;	
-	background: url('../../../../templates/assets/royalslider/skins/default-inverted/rs-default-inverted.png');
+	background: url('../../../../widgets/assets/royalslider/skins/default-inverted/rs-default-inverted.png');
 }
 
 .rsDefaultInv.rsWithThumbsHor .rsThumbsArrowLeft .rsThumbsArrowIcn { background-position: -128px -32px; }
@@ -344,7 +344,7 @@
 	width: 32px;
 	height: 32px;
 
-	background: url('../../../../templates/assets/royalslider/skins/default-inverted/rs-default-inverted.png') 0 0;
+	background: url('../../../../widgets/assets/royalslider/skins/default-inverted/rs-default-inverted.png') 0 0;
 	background-color: #FFF;
 	background-color: rgba(255,255,255,0.75);
 	*background-color: #FFF;
@@ -387,7 +387,7 @@
 	-moz-transition: .3s;
 	transition: .3s;
 
-	background:url(../../../../templates/assets/royalslider/skins/default-inverted/rs-default-inverted.png) no-repeat 0 -32px;
+	background:url(../../../../widgets/assets/royalslider/skins/default-inverted/rs-default-inverted.png) no-repeat 0 -32px;
 	background-color: #FFF;
 	background-color: rgba(255,255,255,0.75);
 	*background-color: #FFF;
@@ -423,7 +423,7 @@
 	margin: 6px;
 	width: 32px;
 	height: 32px;
-	background: url('../../../../templates/assets/royalslider/skins/default-inverted/rs-default-inverted.png') -64px 0;
+	background: url('../../../../widgets/assets/royalslider/skins/default-inverted/rs-default-inverted.png') -64px 0;
 	background-color: #FFF;
 	background-color: rgba(255,255,255,0.75);
 	*background-color: #FFF;
@@ -443,7 +443,7 @@
 .rsDefaultInv .rsPreloader {
 	width:20px;
 	height:20px;
-	background-image:url(../../../../templates/assets/royalslider/skins/preloaders/preloader.gif);
+	background-image:url(../../../../widgets/assets/royalslider/skins/preloaders/preloader.gif);
 
 	left:50%;
 	top:50%;
