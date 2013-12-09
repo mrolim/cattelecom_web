@@ -352,6 +352,7 @@ h6.project_title {
 /*-----------------------------------------------------------------------------------*/
 /*	04: SLIDER REVOLUTION
 /*-----------------------------------------------------------------------------------*/	
+/*
 #revolution_slider { padding:85px 0 0; }
 .fullwidthbanner-container {
 	width: 100%!important;
@@ -411,7 +412,7 @@ h6.project_title {
     background:url(../../img/timer.png);
     position:absolute;
     z-index:200;
-}
+}*/
 .tp-loader 	{
 	width:64px!important;
 	height:64px!important;

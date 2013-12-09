@@ -11,6 +11,7 @@
 
 <!--  'Include CSS' -->
 
+
 <!-- import 'inc_css_font.kit' --> 
 
 <link href="../assets/css/bootstrap.min.css" rel="stylesheet">
@@ -36,6 +37,7 @@
 <!--[if lt IE 9]>
 	<link rel="stylesheet" href="../assets/libs/tab_css3/pcss3t-ie8.css">
 <![endif]-->
+ 
 
 	<!-- THE SHOWBIZ STLYES -->
 	<link rel="stylesheet" type="text/css" href="../assets/libs/showbizpro/showbizpro/css/settings.css" media="screen" />
@@ -49,6 +51,15 @@
 <!--[if lt IE 8]>
 <link rel="stylesheet" type="text/css" href="css/megamenu_ie.css" />
 <![endif]-->
+    <!-- CSS STYLE-->
+    <link rel="stylesheet" type="text/css" href="../assets/libs/slide_revolution/css/style.css" media="screen" />
+
+
+	<!-- SLIDER REVOLUTION 4.x CSS SETTINGS -->
+	<link rel="stylesheet" type="text/css" href="../assets/libs/slide_revolution/rs-plugin/css/settings.css" media="screen" />
+<link href="../assets/libs/modern_accordion/css/modern_accordion.css" rel="stylesheet" type="text/css" />
+
+
 <link class="rs-file" href="../assets/libs/royalslider/skins/minimal-white/rs-minimal-white.css" rel="stylesheet">
 
 
@@ -3897,6 +3908,12 @@
 <script src="../assets/libs/elevate_zoom/jquery.elevateZoom-3.0.8.min.js" type="text/javascript"></script>
 
 
+    <!-- SLIDER REVOLUTION 4.x SCRIPTS  -->
+    <script type="text/javascript" src="../assets/libs/slide_revolution/rs-plugin/js/jquery.themepunch.plugins.min.js"></script>
+    <script type="text/javascript" src="../assets/libs/slide_revolution/rs-plugin/js/jquery.themepunch.revolution.min.js"></script>
+	    <script type="text/javascript" src="../assets/libs/modern_accordion/js/modern_accordion.js"></script>
+
+
 <script src="../assets/js/parallax.js" type="text/javascript"></script>
 <script src="../assets/js/count.js" type="text/javascript"></script>
 <!--PRELOADER - add your images and text to preload here -->
@@ -3909,8 +3926,16 @@
 <script src="../assets/libs/bt_enhance/script.js" type="text/javascript"></script>
 
 
+<!--modern_accordion-->
+ <script type="text/javascript">
+            $(document).ready(function(){
+                var acc1 = new ModernAccordion('accordion1');
+                acc1.showItem(2);
+            });
+</script>
+  
 
-
+<!--royalslider-->
 
     <script id="addJS">jQuery(document).ready(function($) {
   // Please note that autoHeight option has some conflicts with options like imageScaleMode, imageAlignCenter and autoScaleSlider
@@ -4225,7 +4250,7 @@ jQuery(document).ready(function($) {
   });
 });
 </script>
-
+<!--showbiz-->
 <script type="text/javascript">
 
 				jQuery(document).ready(function() {
@@ -4543,6 +4568,28 @@ jQuery(document).ready(function($) {
 				});
 
 			</script>
+<!--slide revolution-->
+	<script type="text/javascript">
+
+		var revapi;
+
+		jQuery(document).ready(function() {
+
+			   revapi = jQuery('.tp-banner').revolution(
+				{
+					delay:9000,
+					startwidth:1170,
+					startheight:500,
+					hideThumbs:10,
+					lazyLoad:"on"
+
+				});
+
+		});	//ready
+
+	</script>
+
+
 <!--megamenu-->
 <script>
 $(document).ready(function($){

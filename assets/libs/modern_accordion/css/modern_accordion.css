@@ -11,7 +11,7 @@
 .modern_accordion .content {
     display : none;
     color : #fff;
-    background: #318DF2;
+    background: rgba(0, 0, 0, 0.42);
     font-family: Helvetica Neue, Helvetica, Arial, Lucida;
     font-size: 10pt;
     padding: 5px;

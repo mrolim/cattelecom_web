@@ -1,0 +1,137 @@
+
+			<script type="text/javascript">
+
+				var revapi;
+
+				jQuery(document).ready(function() {
+
+					   revapi = jQuery('.tp-banner').revolution(
+						{
+							delay:9000,
+							startwidth:1170,
+							startheight:500,
+							hideThumbs:10
+
+						});
+
+
+						//########################################
+					//	-	API HANDLING	-
+					//########################################
+
+					// listen for slide change event
+					revapi.bind("revolution.slide.onchange",function (e,data) {
+						jQuery('#callbackinfo').html('Last Event: Slide Changed to '+data.slideIndex).addClass("changecolor");
+						setTimeout(function() {
+							jQuery('#callbackinfo').removeClass("changecolor");
+						},200)
+					});
+
+					revapi.bind("revolution.slide.onpause",function (e,data) {
+						jQuery('#callbackinfo').html('Last Event: Timer Pause ').addClass("changecolor");
+						setTimeout(function() {
+							jQuery('#callbackinfo').removeClass("changecolor");
+						},200)
+;
+					});
+
+					revapi.bind("revolution.slide.onresume",function (e,data) {
+						jQuery('#callbackinfo').html('Last Event: Timer Resume ').addClass("changecolor");
+						setTimeout(function() {
+							jQuery('#callbackinfo').removeClass("changecolor");
+						},200)
+;
+					});
+
+					revapi.bind("revolution.slide.onvideoplay",function (e,data) {
+						jQuery('#videoinfo').html('YouTube / Vimeo Video Playing ').addClass("changecolor");
+						setTimeout(function() {
+							jQuery('#videoinfo').removeClass("changecolor");
+						},200);
+					});
+
+					revapi.bind("revolution.slide.onvideostop",function (e,data) {
+						jQuery('#videoinfo').html('YouTube / Vimeo Video Stopped').addClass("changecolor");
+						setTimeout(function() {
+							jQuery('#videoinfo').removeClass("changecolor");
+						},200);
+					});
+
+					revapi.bind("revolution.slide.onstop",function (e,data) {
+						jQuery('#stopinfo').html('Slider Stopped ').addClass("changecolor");
+						setTimeout(function() {
+							jQuery('#stopinfo').removeClass("changecolor");
+						},200);
+					});
+
+					revapi.bind("revolution.slide.onbeforeswap",function (e) {
+						jQuery('#otherevents').html('Slider going to swap').addClass("changecolor");
+						setTimeout(function() {
+							jQuery('#otherevents').removeClass("changecolor");
+						},200);
+					});
+
+					revapi.bind("revolution.slide.onafterswap",function (e) {
+						jQuery('#otherevents').html('Slider is ready with swap').addClass("changecolor");
+						setTimeout(function() {
+							jQuery('#otherevents').removeClass("changecolor");
+						},200);
+					});
+
+					revapi.bind("revolution.slide.onloaded",function (e) {
+						jQuery('#loadevent').html('Slider is Loaded').addClass("changecolor");
+						setTimeout(function() {
+							jQuery('#loadevent').removeClass("changecolor");
+						},200);
+					});
+
+					// bind to button click
+					jQuery("input").click(apiHandler)
+
+					function apiHandler(e) {
+						switch (e.currentTarget.id) {
+							case "pause":
+								revapi.revpause();
+							break;
+							case "resume":
+								revapi.revresume()
+							break;
+							case "prev":
+								revapi.revprev()
+							break;
+							case "next":
+								revapi.revnext()
+							break;
+							case "show":
+								revapi.revshowslide(3);
+							break;
+							case "length":
+								alert(revapi.revmaxslide());
+							break;
+							case "current":
+								alert(revapi.revcurrentslide());
+							break;
+							case "lastslide":
+								alert(revapi.revlastslide());
+							break;
+							case "redraw":
+								revapi.revredraw();
+							break;
+
+						}
+						return false;
+					}
+
+				});	//ready
+
+			</script>
+
+			<!-- END REVOLUTION SLIDER -->
+
+
+
+
+
+
+
+
