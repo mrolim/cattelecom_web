@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset='utf-8'/>
+	<title>jQuery elevateZoom Demo</title>
+	<script src='jquery-1.8.3.min.js'></script>
+	<script src='jquery.elevatezoom.js'></script>
+	
+
+</head>
+<body>
+<h1>Basic Zoom Example</h1>
+<img id="zoom_01" src="" data-zoom-image=""/>
+
+<div id="gal1">
+ 	  <a href="#" data-image="images/small/image1.png" data-zoom-image="images/large/image1.jpg">
+	    <img id="img_01" src="images/thumb/image1.jpg" />
+	  </a>
+	
+	  <a  href="#" data-image="images/small/image2.png" data-zoom-image="images/large/image2.jpg">
+	    <img id="img_01" src="images/thumb/image2.jpg" />
+	  </a>
+	
+	  <a  href="#" data-image="images/small/image3.png" data-zoom-image="images/large/image3.jpg">
+	    <img id="img_01" src="images/thumb/image3.jpg" />
+	  </a>
+	
+	  <a  href="#" data-image="images/small/image4.png" data-zoom-image="images/large/image4.jpg">
+	    <img id="img_01" src="images/thumb/image4.jpg" />
+	  </a>
+</div>
+
+<script>
+   $( document ).ready(function() {
+   
+   $("#zoom_01").attr("src",$("#gal1 a:first-child").attr("data-image"));
+    $("#zoom_01").attr("data-zoom-image",$("#gal1 a:first-child").attr("data-zoom-image"));
+   
+		   //initiate the plugin and pass the id of the div containing gallery images
+		   $("#zoom_01").elevateZoom({gallery:'gal1', cursor: 'pointer', galleryActiveClass: 'active', imageCrossfade: true, loadingIcon: 'http://www.elevateweb.co.uk/spinner.gif'}); 
+		   
+		   //pass the images to Fancybox
+		   $("#zoom_01").bind("click", function(e) {  
+		     var ez =   $('#zoom_01').data('elevateZoom');	
+		   	$.fancybox(ez.getGalleryList());
+		     return false;
+		   });
+		   
+
+   });
+   
+</script>
+</body>
+</html>

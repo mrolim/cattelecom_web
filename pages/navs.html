@@ -696,6 +696,7 @@
 <link rel="stylesheet" type="text/css" href="htc/ie6.css" />
 <![endif]-->
 
+
 <!--Include Early Stage javascript Libs-->
 <!--[if lt IE 9]>
 <script src="http://html5shim.googlecode.com/svn/trunk/html5.js" type="text/javascript"></script>
@@ -713,7 +714,7 @@
 	<section id="Section-a">
 			<div class="container">
 
-<div class="megamenu_wrapper megamenu_container"><!-- Begin Mega Menu Container -->
+			<div class="megamenu_wrapper megamenu_container"><!-- Begin Mega Menu Container -->
 
 
     
@@ -1451,8 +1452,22 @@
 
 
 
-</div>
-<div id="footer"><!-- BEGIN FOOTER CONTAINER -->
+</div>			
+			<div class="elevate_zoom elevate_zoom_inner">
+<img class='zoom_01' src='../assets/libs/elevate_zoom/images/small/image1.png' data-zoom-image='../assets/libs/elevate_zoom/images/large/image1.jpg'  />
+
+<img class='zoom_01' src='../assets/libs/elevate_zoom/images/small/image1.png' data-zoom-image='../assets/libs/elevate_zoom/images/large/image1.jpg'  />
+</div>			 			 
+			 
+			<div class="pad90"></div><div class="pad90"></div><div class="pad90"></div><div class="pad90"></div><div class="pad90"></div>			</div>
+	</section>
+	<!---END SECTION->
+		
+				
+	<!--SECTION-8-->	
+	<section id="Section-8" class="ss-style-invertedrounded">
+			<div class="container">
+						<div id="footer"><!-- BEGIN FOOTER CONTAINER -->
 
 
     <ul id="footer_menu"><!-- Begin Footer Menu -->
@@ -1534,13 +1549,13 @@
                 
                 <div class="col_3">
                 	<!-- Examples of paragraphs with side images -->
-                    <p><img src="img/01.jpg" width="40" height="40" class="img_left imgshadow" alt="" />
+                    <p><img src="../assets/libs/sticky_footer/img/01.jpg" width="40" height="40" class="img_left imgshadow" alt="" />
                     Maecenas eget eros lorem, nec pellentesque lacus. Aenean dui orci, rhoncus sit amet tristique eu, tristique.<a href="#">Read more...</a></p>
-                    <p><img src="img/02.jpg" width="40" height="40" class="img_left imgshadow" alt="" />
+                    <p><img src="../assets/libs/sticky_footer/img/02.jpg" width="40" height="40" class="img_left imgshadow" alt="" />
                     Aliquam elementum felis quis felis consequat scelerisque. Fusce sed lectus at arcu mollis accumsan.<a href="#">Read more...</a></p>
-                    <p><img src="img/03.jpg" width="40" height="40" class="img_right imgshadow" alt="" />
+                    <p><img src="../assets/libs/sticky_footer/img/03.jpg" width="40" height="40" class="img_right imgshadow" alt="" />
                     Aliquam elementum felis quis felis consequat scelerisque. Fusce sed lectus at arcu mollis accumsan.<a href="#">Read more...</a></p>
-                    <p><img src="img/04.jpg" width="40" height="40" class="img_right imgshadow" alt="" />
+                    <p><img src="../assets/libs/sticky_footer/img/04.jpg" width="40" height="40" class="img_right imgshadow" alt="" />
                     Aliquam elementum felis quis felis consequat scelerisque. Fusce sed lectus at arcu mollis accumsan.<a href="#">Read more...</a></p>
                 </div>
                 
@@ -1644,7 +1659,7 @@
     <p><a href="#">StickyFooter</a> &copy; 2010 All Rights Reserved.</p>
 
 
-
+ 
     <ul id="social"><!-- Social Icons -->
     
     	<!-- The span is the text appearing on hover, use the tooltip class in the link -->
@@ -1657,18 +1672,7 @@
 
 
 
-</div>
-			 
-				<div class="pad90"></div><div class="pad90"></div><div class="pad90"></div><div class="pad90"></div><div class="pad90"></div>			</div>
-	</section>
-	<!---END SECTION->
-	
-	
-				
-	<!--SECTION-8-->	
-	<section id="Section-8" class="ss-style-invertedrounded">
-			<div class="container">
-			</div> 
+</div>			</div> 
 	</section>
 					
 <!--  'Include JS' -->
@@ -1756,6 +1760,9 @@
 
 <script src="../assets/libs/mega_menu/js/megamenu_plugins.js"></script><!-- Mega Menu Plugins (scroller, form, hoverIntent) -->
 <script src="../assets/libs/mega_menu/js/megamenu.js"></script><!-- Mega Menu Script -->
+<script src="../assets/libs/elevate_zoom/jquery.elevateZoom-3.0.8.min.js" type="text/javascript"></script>
+
+
 <script src="../assets/js/parallax.js" type="text/javascript"></script>
 <script src="../assets/js/count.js" type="text/javascript"></script>
 <!--PRELOADER - add your images and text to preload here -->
@@ -1766,6 +1773,8 @@
 <script src="../assets/js/scripts-ck.js" type="text/javascript"></script>
 <script src="../assets/libs/dialog_master/bootstrap-dialog.js"></script> <!--BootstrapDialog.show/.alert-->
 <script src="../assets/libs/bt_enhance/script.js" type="text/javascript"></script>
+
+
 
 
 
@@ -2420,6 +2429,19 @@ $(document).ready(function($){
 	$('#megamenu_form').ajaxForm({target:'#alert'}); 
 });
 </script>
+<script>
+$( document ).ready(function() {
+ 
+		   //initiate the plugin and pass the id of the div containing gallery images
+		   $(".elevate_zoom_inner .zoom_01").elevateZoom({
+		   zoomWindowWidth: 600,zoomWindowHeight: 350,
+		   zoomWindowFadeIn: 500,zoomWindowFadeOut: 500,
+			lensFadeIn: 500,lensFadeOut: 500,
+			easing:true,  zoomType : "inner",
+			cursor: 'crosshair', imageCrossfade: true, loadingIcon: 'http://www.elevateweb.co.uk/spinner.gif'}); 
+		});
+   
+</script>   
 <script type="text/javascript">
 //<![CDATA[
             var images = {

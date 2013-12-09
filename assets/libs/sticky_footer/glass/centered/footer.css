@@ -35,6 +35,7 @@ body {
    This value must be 50% of your width + 10px (because of the padding) */
    
 #footer {
+	z-index: 900;
 	position: fixed;
 	bottom: 0px;
 	margin:0 auto;

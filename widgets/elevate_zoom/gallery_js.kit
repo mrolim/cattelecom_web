@@ -1,0 +1,22 @@
+<script>
+$( document ).ready(function() {
+   
+    $("#zoom_01").attr("src",$("#gal1 a:first-child").attr("data-image"));
+    $("#zoom_01").attr("data-zoom-image",$("#gal1 a:first-child").attr("data-zoom-image"));
+   
+		   //initiate the plugin and pass the id of the div containing gallery images
+		   $("#zoom_01").elevateZoom({
+		   zoomWindowWidth: 600,zoomWindowHeight: 350,
+		   zoomWindowFadeIn: 500,zoomWindowFadeOut: 500,
+			lensFadeIn: 500,lensFadeOut: 500,
+		   easing:true,gallery:'gal1', cursor: 'pointer', galleryActiveClass: 'active', imageCrossfade: true, loadingIcon: 'http://www.elevateweb.co.uk/spinner.gif'}); 
+		   
+		   //pass the images to Fancybox
+		   $("#zoom_01").bind("click", function(e) {  
+		     var ez =   $('#zoom_01').data('elevateZoom');	
+		   	$.fancybox(ez.getGalleryList());
+		     return false;
+	});
+});
+   
+</script>   

@@ -33,6 +33,7 @@ body {
 /* The #footer must stick to the bottom of the page, the fixed positionning is here necessary. */
 
 #footer {
+	z-index: 900;
 	position: fixed;
 	bottom: 0px;
 	margin:0;
