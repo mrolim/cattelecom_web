@@ -699,6 +699,13 @@
     <style>
       #page-navigation { display: none; }
     </style>
+<!--form_elements-->
+<link rel="stylesheet" href="../assets/libs/form_elements/Dark/form.css" title="Form Dark theme" type="text/css" media="screen" charset="utf-8">
+
+    <!--[if lt IE 9]>
+    <link rel="stylesheet" href="../assets/libs/form_elements/Dark/ie/form_ie.css">
+    <script src="http://ie7-js.googlecode.com/svn/version/2.1(beta4)/IE9.js"></script>
+    <![endif]-->
 	<!--sticky_footer-->
 <link rel="stylesheet" href="../assets/libs/sticky_footer/glass/full_width/footer.css" type="text/css" media="screen" /><!-- Footer Stylings -->
 
@@ -1466,6 +1473,8 @@
 <script src="../assets/libs/bt_enhance/script.js" type="text/javascript"></script>
 
 
+
+
 <!--modern_accordion-->
  <script type="text/javascript">
             $(document).ready(function(){
@@ -2132,7 +2141,7 @@ jQuery(document).ready(function($) {
 
 <!--megamenu-->
 <script>
-$(document).ready(function($){
+$(document).ready(function($){ 
 	$('.megamenu').megaMenuReloaded({
 		menu_speed_show : 300, // Time (in milliseconds) to show a drop down
 		menu_speed_hide : 200, // Time (in milliseconds) to hide a drop down
@@ -2150,17 +2159,27 @@ $(document).ready(function($){
 	$('#megamenu_form').ajaxForm({target:'#alert'}); 
 });
 </script>
+<!--elevate_zoom-->
 <script>
 $( document ).ready(function() {
- 
+   
+    $("#zoom_01").attr("src",$("#gal1 a:first-child").attr("data-image"));
+    $("#zoom_01").attr("data-zoom-image",$("#gal1 a:first-child").attr("data-zoom-image"));
+   
 		   //initiate the plugin and pass the id of the div containing gallery images
-		   $(".elevate_zoom_inner .zoom_01").elevateZoom({
+		   $("#zoom_01").elevateZoom({
 		   zoomWindowWidth: 600,zoomWindowHeight: 350,
 		   zoomWindowFadeIn: 500,zoomWindowFadeOut: 500,
 			lensFadeIn: 500,lensFadeOut: 500,
-			easing:true,  zoomType : "inner",
-			cursor: 'crosshair', imageCrossfade: true, loadingIcon: 'http://www.elevateweb.co.uk/spinner.gif'}); 
-		});
+		   easing:true,gallery:'gal1', cursor: 'pointer', galleryActiveClass: 'active', imageCrossfade: true, loadingIcon: 'http://www.elevateweb.co.uk/spinner.gif'}); 
+		   
+		   //pass the images to Fancybox
+		   $("#zoom_01").bind("click", function(e) {  
+		     var ez =   $('#zoom_01').data('elevateZoom');	
+		   	$.fancybox(ez.getGalleryList());
+		     return false;
+	});
+});
    
 </script>   
 <script type="text/javascript">

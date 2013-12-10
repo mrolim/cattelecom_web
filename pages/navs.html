@@ -699,6 +699,13 @@
     <style>
       #page-navigation { display: none; }
     </style>
+<!--form_elements-->
+<link rel="stylesheet" href="../assets/libs/form_elements/Dark/form.css" title="Form Dark theme" type="text/css" media="screen" charset="utf-8">
+
+    <!--[if lt IE 9]>
+    <link rel="stylesheet" href="../assets/libs/form_elements/Dark/ie/form_ie.css">
+    <script src="http://ie7-js.googlecode.com/svn/version/2.1(beta4)/IE9.js"></script>
+    <![endif]-->
 	<!--sticky_footer-->
 <link rel="stylesheet" href="../assets/libs/sticky_footer/glass/full_width/footer.css" type="text/css" media="screen" /><!-- Footer Stylings -->
 
@@ -718,56 +725,109 @@
   <body data-spy="scroll" data-target=".navbar" class="royal_loader page_home">
 
 	<!--SECTION a showcase-->
-	
-	
 	<section id="Section-a"> 
 			<div class="container" style="width:100%">
 
-<!-- tabs -->
 			<div class="pcss3t pcss3t-height-auto">
 				<input type="radio" name="pcss3t" checked  id="tab1"class="tab-content-first">
-				<label for="tab1"><i class="icon-bolt"></i>Tesla</label>
-				
-				<input type="radio" name="pcss3t" id="tab2" class="tab-content-2">
-				<label for="tab2"><i class="icon-picture"></i>da Vinci</label>
+				<label for="tab1"><i class="icon-home"></i>Overview</label>
 				
 				<input type="radio" name="pcss3t" id="tab3" class="tab-content-3">
-				<label for="tab3"><i class="icon-cogs"></i>Einstein</label>
+				<label for="tab3"><i class="icon-tasks"></i>Offsets</label>
 				
 				<input type="radio" name="pcss3t" id="tab5" class="tab-content-last">
-				<label for="tab5"><i class="icon-globe"></i>Newton</label>
+				<label for="tab5"><i class="icon-print"></i>Blog post</label>
 				
-				<ul>
+				<ul>					
 					<li class="tab-content tab-content-first typography">
-						<h1>Nikola Tesla</h1>
-						<p>Serbian-American inventor, electrical engineer, mechanical engineer, physicist, and futurist best known for his contributions to the design of the modern alternating current (AC) electrical supply system.</p>
-						<p>Tesla started working in the telephony and electrical fields before emigrating to the United States in 1884 to work for Thomas Edison. He soon struck out on his own with financial backers, setting up laboratories/companies to develop a range of electrical devices. His patented AC induction motor and transformer were licensed by George Westinghouse, who also hired Tesla as a consultant to help develop an alternating current system. Tesla is also known for his high-voltage, high-frequency power experiments in New York and Colorado Springs which included patented devices and theoretical work used in the invention of radio communication, for his X-ray experiments, and for his ill-fated attempt at intercontinental wireless transmission in his unfinished Wardenclyffe Tower project.</p>
-						<p class="text-right"><em>Find out more about Nikola Tesla from <a href="http://en.wikipedia.org/wiki/Nikola_Tesla" target="_blank">Wikipedia</a>.</em></p>
+						<div class="typography"><p>Grid system is fully responsive and utilizes 6 fluid columns. It means that it looks perfectly on any device. Try to resize your browser window to see it in action.</p></div>
+						
+						<div class="grid-row">
+							<div class="grid-col grid-col-1"><div class="inner">1/6</div></div>
+							<div class="grid-col grid-col-1"><div class="inner">1/6</div></div>
+							<div class="grid-col grid-col-1"><div class="inner">1/6</div></div>
+							<div class="grid-col grid-col-1"><div class="inner">1/6</div></div>
+							<div class="grid-col grid-col-1"><div class="inner">1/6</div></div>
+							<div class="grid-col grid-col-1"><div class="inner">1/6</div></div>
+						</div>
+						<div class="grid-row">
+							<div class="grid-col grid-col-2"><div class="inner">2/6</div></div>
+							<div class="grid-col grid-col-2"><div class="inner">2/6</div></div>
+							<div class="grid-col grid-col-2"><div class="inner">2/6</div></div>
+						</div>
+						<div class="grid-row">
+							<div class="grid-col grid-col-3"><div class="inner">3/6</div></div>
+							<div class="grid-col grid-col-3"><div class="inner">3/6</div></div>
+						</div>
+						<div class="grid-row">
+							<div class="grid-col grid-col-4"><div class="inner">4/6</div></div>
+							<div class="grid-col grid-col-2"><div class="inner">2/6</div></div>
+						</div>
+						<div class="grid-row">
+							<div class="grid-col grid-col-5"><div class="inner">5/6</div></div>
+							<div class="grid-col grid-col-1"><div class="inner">1/6</div></div>
+						</div>
 					</li>
 					
-					<li class="tab-content tab-content-2 typography">
-						<h1>Leonardo da Vinci</h1>
-						<p>Italian Renaissance polymath: painter, sculptor, architect, musician, mathematician, engineer, inventor, anatomist, geologist, cartographer, botanist, and writer. His genius, perhaps more than that of any other figure, epitomized the Renaissance humanist ideal. Leonardo has often been described as the archetype of the Renaissance Man, a man of "unquenchable curiosity" and "feverishly inventive imagination". He is widely considered to be one of the greatest painters of all time and perhaps the most diversely talented person ever to have lived. According to art historian Helen Gardner, the scope and depth of his interests were without precedent and "his mind and personality seem to us superhuman, the man himself mysterious and remote". Marco Rosci states that while there is much speculation about Leonardo, his vision of the world is essentially logical rather than mysterious, and that the empirical methods he employed were unusual for his time.</p>
-						<p class="text-right"><em>Find out more about Leonardo da Vinci from <a href="http://en.wikipedia.org/wiki/Leonardo_da_Vinci" target="_blank">Wikipedia</a>.</em></p>
+					<li class="tab-content tab-content-3">
+						<div class="grid-row">
+							<div class="grid-col grid-col-1"><div class="inner">1/6</div></div>
+							<div class="grid-col grid-col-1 grid-col-offset-1"><div class="inner">1/6, offset 1</div></div>
+							<div class="grid-col grid-col-1 grid-col-offset-2"><div class="inner">1/6, offset 2</div></div>
+						</div>
+						<div class="grid-row">
+							<div class="grid-col grid-col-2 grid-col-offset-3"><div class="inner">2/6, offset 3</div></div>
+						</div>
+						<div class="grid-row">
+							<div class="grid-col grid-col-3 grid-col-offset-1"><div class="inner">3/6, offset 1</div></div>
+						</div>
+						<div class="grid-row">
+							<div class="grid-col grid-col-1 grid-col-offset-4"><div class="inner">1/6, offset 4</div></div>
+						</div>
+						<div class="grid-row">
+							<div class="grid-col grid-col-1 grid-col-offset-5"><div class="inner">1/6, offset 5</div></div>
+						</div>
 					</li>
 					
-					<li class="tab-content tab-content-3 typography">
-						<h1>Albert Einstein</h1>
-						<p>German-born theoretical physicist who developed the general theory of relativity, one of the two pillars of modern physics (alongside quantum mechanics). While best known for his mass–energy equivalence formula E = mc2 (which has been dubbed "the world's most famous equation"), he received the 1921 Nobel Prize in Physics "for his services to theoretical physics, and especially for his discovery of the law of the photoelectric effect". The latter was pivotal in establishing quantum theory.</p>
-						<p class="text-right"><em>Find out more about Albert Einstein from <a href="http://en.wikipedia.org/wiki/Albert_Einstein" target="_blank">Wikipedia</a>.</em></p>				
-					</li>
-					
-					<li class="tab-content tab-content-last typography">
+					<li class="tab-content tab-content-last">
 						<div class="typography">
-							<h1>Isaac Newton</h1>
-							<p>English physicist and mathematician who is widely regarded as one of the most influential scientists of all time and as a key figure in the scientific revolution. His book Philosophiæ Naturalis Principia Mathematica ("Mathematical Principles of Natural Philosophy"), first published in 1687, laid the foundations for most of classical mechanics. Newton also made seminal contributions to optics and shares credit with Gottfried Leibniz for the invention of the infinitesimal calculus.</p>
-							<p>Newton's Principia formulated the laws of motion and universal gravitation that dominated scientists' view of the physical universe for the next three centuries. It also demonstrated that the motion of objects on the Earth and that of celestial bodies could be described by the same principles. By deriving Kepler's laws of planetary motion from his mathematical description of gravity, Newton removed the last doubts about the validity of the heliocentric model of the cosmos.</p>
-						<p class="text-right"><em>Find out more about Isaac Newton from <a href="http://en.wikipedia.org/wiki/Isaac_Newton" target="_blank">Wikipedia</a>.</em></p>		
+							<div>
+								<h1>Nikola Tesla</h1>
+								<p>Nikola Tesla was a Serbian-American inventor, electrical engineer, mechanical engineer, physicist, and futurist best known for his contributions to the design of the modern alternating current (AC) electrical supply system.</p>
+								<p>Tesla started working in the telephony and electrical fields before emigrating to the United States in 1884 to work for Thomas Edison. He soon struck out on his own with financial backers, setting up laboratories/companies to develop a range of electrical devices. His patented AC induction motor and transformer were licensed by George Westinghouse, who also hired Tesla as a consultant to help develop an alternating current system. Tesla is also known for his high-voltage, high-frequency power experiments in New York and Colorado Springs which included patented devices and theoretical work used in the invention of radio communication, for his X-ray experiments, and for his ill-fated attempt at intercontinental wireless transmission in his unfinished Wardenclyffe Tower project.</p>
+							</div>	
+									
+							<div class="grid-row">
+								<div class="grid-col grid-col-2">
+									<h3>Early years</h3>
+									<p>Nikola Tesla was born on 10 July (O.S. 28 June) 1856 to Serb parents in the village of Smiljan, Austrian Empire (modern-day Croatia). His father, Milutin Tesla, was a priest of the Serbian Orthodox Church.</p>
+								</div>
+								<div class="grid-col grid-col-2">
+									<h3>Middle years</h3>
+									<p>In 1886, Tesla formed his own company, Tesla Electric Light & Manufacturing. The company installed electrical arc light based illumination systems designed by Tesla and also had designs for dynamo electric machine commutators, the first patents issued to Tesla in the US.</p>
+								</div>
+								<div class="grid-col grid-col-2">
+									<h3>Later years</h3>
+									<p>In 1928, Tesla received his last patent, U.S. Patent 1,655,114, for a biplane capable of taking off vertically (VTOL aircraft) and then be "gradually tilted through manipulation of the elevator devices" in flight until it was flying like a conventional plane.</p>
+								</div>
+							</div>
+							
 						</div>
 					</li>
 				</ul>
+			</div> 
+			<div id="big_button" class="well notice parallax-section">
+			<div class="container">
+				<div class="row">
+					<div class="col-lg-2"></div>	
+						<div class="col-12 col-lg-8">
+							<p class="lead pull-left"><a class="btn btn-md btn-warning pull-right cta" href="#">A BIG BUTTON</a>
+							Here's an attention grabbing advertising section with a big call-to-action button.</p>
+						</div>
+					<div class="col-lg-2"></div>	
+				</div>
 			</div>
-<!--/ tabs -->
+		</div>
 			<div class="megamenu_wrapper megamenu_container"><!-- Begin Mega Menu Container -->
 
 
@@ -1506,7 +1566,28 @@
 
 
 
-</div>				<div class="tp-banner-container">
+</div>			
+			<div class="elevate_zoom elevate_zoom_gallery">
+	<img id='zoom_01' src='' data-zoom-image=''  />
+	<div id='gal1'>
+	 	  <a href='#' data-image='../assets/libs/elevate_zoom/images/small/image1.png' data-zoom-image='../assets/libs/elevate_zoom/images/large/image1.jpg' >
+		    <img class='img_01' src='../assets/libs/elevate_zoom/images/thumb/image1.jpg' />
+		  </a>
+		 
+		  <a  href='#' data-image='../assets/libs/elevate_zoom/images/small/image2.png' data-zoom-image='../assets/libs/elevate_zoom/images/large/image2.jpg'>
+		    <img class='img_01' src='../assets/libs/elevate_zoom/images/thumb/image2.jpg' />
+		  </a>
+		
+		  <a  href='#' data-image='../assets/libs/elevate_zoom/images/small/image3.png' data-zoom-image='../assets/libs/elevate_zoom/images/large/image3.jpg'>
+		    <img class='img_01' src='../assets/libs/elevate_zoom/images/thumb/image3.jpg' />
+		  </a>
+		
+		  <a  href='#' data-image='../assets/libs/elevate_zoom/images/small/image4.png' data-zoom-image='../assets/libs/elevate_zoom/images/large/image4.jpg'>
+		    <img class='img_01' src='../assets/libs/elevate_zoom/images/thumb/image4.jpg' />
+		  </a>
+	</div>
+</div>
+				<div class="tp-banner-container">
 		<div class="tp-banner" >
 			<ul>	<!-- SLIDE  -->
 				<li data-transition="fade" data-slotamount="7" data-masterspeed="1500" >
@@ -2595,7 +2676,20 @@
 		</div>
 	</div>
 
+			
 			<div class="pad90"></div><div class="pad90"></div><div class="pad90"></div><div class="pad90"></div><div class="pad90"></div>			</div>
+	</section>
+	<!---END SECTION->
+	
+	<!--SECTION b showcase -->
+	<section id="Section-b">
+		<div class="container">
+			<ul class="row">
+				<li class="col-4">1</li>
+				<li class="col-4">2</li>
+				<li class="col-4">3</li>
+			</ul>
+		</div>
 	</section>
 	<!---END SECTION->
 		
@@ -2810,7 +2904,6 @@
 
 </div>			</div> 
 	</section>
-					
 <!--  'Include JS' -->
 
 <script src="../assets/js/jquery.js" type="text/javascript"></script>
@@ -2915,6 +3008,8 @@
 <script src="../assets/js/scripts-ck.js" type="text/javascript"></script>
 <script src="../assets/libs/dialog_master/bootstrap-dialog.js"></script> <!--BootstrapDialog.show/.alert-->
 <script src="../assets/libs/bt_enhance/script.js" type="text/javascript"></script>
+
+
 
 
 <!--modern_accordion-->
@@ -3583,7 +3678,7 @@ jQuery(document).ready(function($) {
 
 <!--megamenu-->
 <script>
-$(document).ready(function($){
+$(document).ready(function($){ 
 	$('.megamenu').megaMenuReloaded({
 		menu_speed_show : 300, // Time (in milliseconds) to show a drop down
 		menu_speed_hide : 200, // Time (in milliseconds) to hide a drop down
@@ -3601,17 +3696,27 @@ $(document).ready(function($){
 	$('#megamenu_form').ajaxForm({target:'#alert'}); 
 });
 </script>
+<!--elevate_zoom-->
 <script>
 $( document ).ready(function() {
- 
+   
+    $("#zoom_01").attr("src",$("#gal1 a:first-child").attr("data-image"));
+    $("#zoom_01").attr("data-zoom-image",$("#gal1 a:first-child").attr("data-zoom-image"));
+   
 		   //initiate the plugin and pass the id of the div containing gallery images
-		   $(".elevate_zoom_inner .zoom_01").elevateZoom({
+		   $("#zoom_01").elevateZoom({
 		   zoomWindowWidth: 600,zoomWindowHeight: 350,
 		   zoomWindowFadeIn: 500,zoomWindowFadeOut: 500,
 			lensFadeIn: 500,lensFadeOut: 500,
-			easing:true,  zoomType : "inner",
-			cursor: 'crosshair', imageCrossfade: true, loadingIcon: 'http://www.elevateweb.co.uk/spinner.gif'}); 
-		});
+		   easing:true,gallery:'gal1', cursor: 'pointer', galleryActiveClass: 'active', imageCrossfade: true, loadingIcon: 'http://www.elevateweb.co.uk/spinner.gif'}); 
+		   
+		   //pass the images to Fancybox
+		   $("#zoom_01").bind("click", function(e) {  
+		     var ez =   $('#zoom_01').data('elevateZoom');	
+		   	$.fancybox(ez.getGalleryList());
+		     return false;
+	});
+});
    
 </script>   
 <script type="text/javascript">
