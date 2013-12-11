@@ -112,7 +112,7 @@ blockquote { border-left:4px solid #8e939a!important; color:#8e939a!important; p
 .vendor iframe { position:absolute; top:0; left:0; width:100%; height:100%; } 
 
 /**** PADDING ****/
-.pad90 { padding-top:90px; }
+.pad90 { padding-top:90px; /* float: left; */}
 .pad60 { padding-top:60px; }
 .pad45 { padding-top:45px; }
 .pad30 { padding-top:30px; }

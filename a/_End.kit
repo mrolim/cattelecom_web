@@ -1,0 +1,45 @@
+
+<script type="text/javascript">
+//<![CDATA[
+            var images = {
+               parallax1: '<!--$assets_path-->/img/parallax-1-1.jpg',
+			   parallax2: '<!--$assets_path-->/img/parallax-2-1.jpg',
+			   parallax3: '<!--$assets_path-->/img/parallax-3-1.jpg'
+            };
+
+            Royal_Preloader.config({
+                mode:           'logo', // 'number', "text, logo"
+                text:           '<!--$site_name--> ',
+                images:         images,
+                timeout:        10,
+                showInfo:       false,
+                showPercentage: true,
+                opacity:        1,
+                background:     ['#fff'], 
+               logo:           'assets/img/logo.png'
+            });
+		//]]>
+</script>
+
+<!--TICKER - add your text here -->
+ <script type="text/javascript">
+//<![CDATA[
+$(".ticker").airport([ "creating web sites","to stand out from the crowd","drinking cups of tea"  ]);
+ //<![CDATA[
+</script>
+
+
+<script>
+$('#openBtn').click(function(){
+	$('#myModal,#fullScreenModal').modal({show:true})
+});
+
+$('#customDialog').click(function(){
+	 BootstrapDialog.show({
+            title: 'Say-hello dialog',
+            message: 'Hi Apple!'
+        });
+        
+})
+</script>
+</body></html>
