@@ -1,0 +1,71 @@
+<?xml version="1.0"?>
+<gallery>
+	<image>
+		<title>Dynamic Grid XML Gallery</title>
+		<src>images/gallery/img-00.jpg</src>
+		<description>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt</description>
+		<link>http://www.nikolaydyankovdesign.com/</link>
+	</image>
+	<image>
+		<title>Dynamic Grid XML Gallery</title>
+		<src>images/gallery/img-01.jpg</src>
+		<link>http://www.nikolaydyankovdesign.com/</link>
+	</image>
+	<image>
+		<title>Dynamic Grid XML Gallery</title>
+		<src>images/gallery/img-02.jpg</src>
+		<description>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt</description>
+		<link>http://www.nikolaydyankovdesign.com/</link>
+	</image>
+	<image>
+		<title>Click to Launch Lightbox!</title>
+		<src>images/gallery/img-03.jpg</src>
+		<description>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt</description>
+		<link>http://www.nikolaydyankovdesign.com/</link>
+	</image>
+	<image>
+		<title>Lorem ipsum dolor sit amet.</title>
+		<src>images/gallery/img-04.jpg</src>
+	</image>
+	<image>
+		<title>Lorem ipsum dolor sit amet.</title>
+		<src>images/gallery/img-05.jpg</src>
+		<description>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt</description>
+	</image>
+	<image>
+		<title>Click to Launch Lightbox!</title>
+		<src>images/gallery/img-06.jpg</src>
+		<link>http://www.nikolaydyankovdesign.com/</link>
+	</image>
+	<image>
+		<title>Click to Launch Lightbox!</title>
+		<src>images/gallery/img-07.jpg</src>
+		<description>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt</description>
+		<link>http://www.nikolaydyankovdesign.com/</link>
+	</image>
+	<image>
+		<title>Click to Launch Lightbox!</title>
+		<src>images/gallery/img-08.jpg</src>
+		<description>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt</description>
+		<link>http://www.nikolaydyankovdesign.com/</link>
+	</image>
+	<image>
+		<title>Lorem ipsum dolor sit amet.</title>
+		<src>images/gallery/img-09.jpg</src>
+		<description>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt</description>
+	</image>
+	<image>
+		<title>Check out the other examples!</title>
+		<src>images/gallery/img-10.jpg</src>
+	</image>
+	<image>
+		<title>Check out the other examples!</title>
+		<src>images/gallery/img-11.jpg</src>
+		<link>http://www.nikolaydyankovdesign.com/</link>
+	</image>
+	<image>
+		<title>Check out the other examples!</title>
+		<src>images/gallery/img-12.jpg</src>
+		<link>http://www.nikolaydyankovdesign.com/</link>
+	</image>
+</gallery>

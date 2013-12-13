@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+    <head>
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+        <meta name="description" content="Real Parallax effect jQuery plugin" />
+        <title>Parallax</title>
+        
+        <style type="text/css">
+        #parallaxID {
+            position: relative;
+            overflow:hidden;
+            padding: 0px;   
+            margin: 0px;
+            border:1px solid #ccc;          
+        }
+        </style>
+        
+        <!-- Including styles -->
+		<link type="text/css" href="css/style.css" rel="stylesheet" />	
+
+		<!-- Including jQuery -->
+		<script type="text/javascript" src="js/jquery-1.7.1.min.js"></script>
+		
+		<!-- Including parallax plugin -->
+		<script type="text/javascript" src="js/jquery.real-parallax.js"></script>
+	
+	
+        <script type="text/javascript">
+            $(document).ready(function() 
+                { 
+                    $("#parallaxID").parallax({width: 640,  height: 280});
+                } 
+            );
+        </script>   
+        
+    </head>
+    
+    <body>    
+	<div>Start building your parallax from this template (see html code)</div>
+		 <!-- PARALLAX WITH LAYERS -->
+        <div id="parallaxID">        
+           <div style="left:300px;top:30%;">Layer 1 (z:auto)</div>
+			<div style="left:300px;top:40%;" data-z="20">Layer 2 (z:20)</div>
+			<div style="left:300px;top:50%;" data-z="30">Layer 3 (z:30)</div>
+			<div style="left:300px;top:60%;" data-lock="yes">Layer 4 (locked)</div>
+			<div style="left:300px;top:70%;" data-z="-150">Layer 5 (z=-150)</div>
+		</div>
+		
+    </body>
+</html>

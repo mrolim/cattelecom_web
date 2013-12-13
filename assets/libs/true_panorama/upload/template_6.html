@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+	<meta name="description" content="Panorama effect jQuery plugin" />
+	<title>Template 6</title>
+
+	<link rel="stylesheet" href="css/buttons.css" />
+	
+	<!-- EDIT the styles to fit your design-->	
+	<style type="text/css">	
+		
+		
+		#mypanorama{
+			width: 500px;			
+			border:1px solid #333;		 		
+		}	
+		
+		.panorama_titel{
+			padding:10px;			
+		}
+	
+	</style>
+	
+	<!-- Including jQuery and panorama plugin -->
+	<script type="text/javascript" src="js/jquery-1.7.1.min.js"></script>
+	<script type="text/javascript" src="js/jquery.panorama.min.js"></script>
+	
+	<script type="text/javascript">
+	   
+		$(document).ready(function(){
+		
+			//START panorama			
+			$('#mypanorama').panorama({				
+				speed        : 0,        //target speed px/sec (if negative - move to opposite direction on start, if zero - not moving at start)
+				move         : 0,        //max speed px/sec on mouse move (if negative - inverted sensitivity, if zero - not sensitive)
+				wheel        : 0,        //sensitivity on mouse wheel (if negative - inverted sensitivity, if zero - not sensitive)                    
+				drag         : 0,        //sensitivity on drag (if negative - inverted sensitivity, if zero - not sensitive)            
+				attenuation  : 3         //attenuation koefficient (not negative number)
+			}); 
+			
+		});
+		
+	</script>	
+	
+</head>
+
+	<body>
+		
+			<div>Template: External control (See the source of this file)</div>
+		
+		
+			<!-- begin panorama-->
+			<div id="mypanorama">
+				<div class="panorama_img"><img data-src="img/panorama.jpg"></div>	
+				<div class="panorama_titel"><img src="img/logo.png"></div>
+				<div class="panorama_preloader" style="margin: 0 auto; width:32px; top:50%; margin-top: -16px;"><img src="img/loading.gif"></div>    
+			</div>		
+			<!-- end panorama-->	
+			
+			<div class="playbacks">				
+				<ul>				
+					<li><a id="backfast" class="button" href="#" onmousedown="$('#mypanorama').panorama('play',1000);" onClick="return false"></a></li>
+					<li><a id="back" class="button" href="#" onmousedown="$('#mypanorama').panorama('play',400);" onClick="return false"></a></li>
+					<li><a id="stop" class="button" href="#" onmousedown="$('#mypanorama').panorama('pause');" onClick="return false"></a></li>					
+					<li><a id="play" class="button" href="#" onmousedown="$('#mypanorama').panorama('play',-400);" onClick="return false"></a></li>
+					<li><a id="playfast" class="button" href="#" onmousedown="$('#mypanorama').panorama('play',-1000);" onClick="return false"></a></li>
+				</ul>
+			 </div>
+			
+		
+			<br>
+			<p>
+			<a href="http://www.publicdomainpictures.net/view-image.php?image=23250&picture=sonnenaufgang-panorama-6-23-12-ein">Sonnenaufgang Panorama 6-23-12 ein</a> von Ronald Carlson
+			</p>
+			
+		
+	</body>
+</html>

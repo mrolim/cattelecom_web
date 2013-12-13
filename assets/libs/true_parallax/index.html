@@ -1,0 +1,472 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+	<meta name="description" content="Real Parallax effect jQuery plugin" />
+	<title>Parallax</title>
+
+	  
+	<!-- Including styles -->
+	<link type="text/css" href="css/style.css" rel="stylesheet" />	
+	
+	
+	<!-- Including jQuery -->
+	<script type="text/javascript" src="js/jquery-1.7.1.min.js"></script>
+	<script type="text/javascript" src="js/jquery-ui-1.8.18.custom.min.js"></script>
+
+	<!-- Including parallax plugin -->
+	<script type="text/javascript" src="js/jquery.real-parallax.js"></script>
+	
+		
+		
+	<script type="text/javascript">
+	   
+		$(function(){
+	
+			//START PARALLAX			
+			$('#mylogoparallax').parallax({width: 840,  height: 280,focusZ:40, sensitivityY:0.4, sensitivityX:0.2}); 
+			
+			
+			/* all available PARALLAX settings with default values:
+				
+				width				: putDesiredParallaxWidth, 	//if not provided parallax DIV width will be used
+				height				: putDesiredParallaxHeight, //if not provided parallax DIV height will be used
+							
+				enableMouse			: true,
+				activateOnClick		: false,	//if true - effect will appear only on click
+				sensitivityX		: 0.5,		//if sensitivity=0 no parallax effect will be applied
+				sensitivityY		: 0.4,		//negative values invert mouse
+				easingCoefficient	: 7,		//bigger value - slower/smoother movement
+				
+				autoZCoordinate		: true,		//if true - Z-coordinates will be assigned automatically (between +100 and -100)
+				useCustomZ			: true,		//if false - provided Z-coordinates will be rewritten to auto values (between +100 and -100)
+				focusZ				: 0 		//objects with z>focusZ move in opposite direction						
+			*/
+			
+		});
+
+		function toggle(showHideDiv) {
+			var ele = document.getElementById(showHideDiv);			
+			if(ele.style.display == "block") {
+				ele.style.display = "none";				
+			}
+			else {
+				ele.style.display = "block";				
+			}
+		} 
+		
+	</script>	
+
+	
+</head>
+
+
+	<body>
+				
+		<div class="row">
+        		
+			
+			<!-- begin of logoparallax	-->
+			<div id="mylogoparallax" class="column">        
+				<div style="left:79%;top:52%;"><img src="img/parallaximg/x.png" width="61px" height="78px"/></div>
+				<div style="left:18%;top:48%;"><img src="img/parallaximg/a1.png" width="64px" height="83px" /></div>
+				<div style="left:53%;top:38%;"><img src="img/parallaximg/l1.png" width="50px" height="86px"/></div>
+				<div style="left:69%;top:23%;"><img src="img/parallaximg/a3.png" width="63px" height="86px" /></div>
+				<div style="left:30%;top:38%;"><img src="img/parallaximg/r.png" width="55px" height="84px" /></div>
+				<div style="left:61%;top:52%;"><img src="img/parallaximg/l2.png" width="46px" height="94px" /></div>
+				<div style="left:40%;top:21%;"><img src="img/parallaximg/a2.png" width="63px" height="92px" /></div>
+				<div style="left:16%;top:23%;"><img src="img/parallaximg/p.png" width="51px" height="91px" /></div>
+			</div>
+			<!-- end of logoparallax -->
+			
+			
+			<div class="right">	from the creators of <a href="http://activeden.net/item/parallax-creator/135469" target="_blank">flash parallax</a></div>
+		</div>
+		
+		<hr/><div class="clearfix"></div>		
+				
+		
+		
+		<div class="row">
+			
+			<div class="thumb_img border-box">
+			<h4>Contents</h4>
+			
+			<ul>
+			<li><a href="#Introduction">Introduction</a></li>
+			<li><a href="#Start">Getting started</a></li>
+			<li><a href="#Examples">Examples</a></li>
+			<li><a href="#Configuration">Configuration</a></li>
+			<li><a href="#Methods">Methods</a></li>			
+			<li><a href="#Compatibility">Browser Compatibility</a></li>			
+			<li><a href="#Support">Support</a></li>			
+			</ul>
+			</div>
+					
+			<a name="Introduction"></a>
+			<h2>Introduction</h2>			
+			<p>Parallax is a small (5 kb minified & gzipped) jQuery Plugin that helps you to apply parallax effect to any of your content. It has many useful features including:
+			</p>
+			<ul>
+			<li>parallax depth (focus) adjustments</li>
+			<li>flexible easing option</li>
+			<li>various mouse interaction options</li>
+			<li>external control support</li>
+			<li>Chaining and playback</li>
+			</ul>
+			<p>If you like parallax - rate it  :) </br><img src="img/stars.jpg"/></p>					
+		</div>
+		
+		
+		
+		<hr/><div class="clearfix"></div>
+		
+		
+		<div class="row">				
+			<a name="Start"></a>
+			<h2>Getting started</h2>			
+			<p>To use the parallax plugin, include the jQuery library and the parallax plugin inside the &lt;head&gt; tag of your HTML document:</p>
+			
+			<!-- CODE -->
+			<div class="container_code">
+<pre class="dr_hl_lang_html"><span class="html_tagop">&lt;</span><span class="html_tag">script</span><span class="html_def"> </span><span class="html_attr">type</span><span class="html_attrop">=</span><span class="html_attrvalue">"text/javascript"</span><span class="html_def"> </span><span class="html_attr">src</span><span class="html_attrop">=</span><span class="html_attrvalue">"/path/to/jquery-latest.js"</span><span class="html_tagop">&gt;&lt;/</span><span class="html_tag">script</span><span class="html_tagop">&gt;</span><span class="html_def"> 
+</span><span class="html_tagop">&lt;</span><span class="html_tag">script</span><span class="html_def"> </span><span class="html_attr">type</span><span class="html_attrop">=</span><span class="html_attrvalue">"text/javascript"</span><span class="html_def"> </span><span class="html_attr">src</span><span class="html_attrop">=</span><span class="html_attrvalue">"/path/to/jquery.real-parallax.js"</span><span class="html_tagop">&gt;&lt;/</span><span class="html_tag">script</span><span class="html_tagop">&gt;</span></pre>
+                </div>
+			<!-- END OF CODE -->
+			
+			</br>
+			<p>Use the following format inside the &lt;body&gt; tag of your HTML document:</p>
+			<!-- CODE -->
+			<div class="container_code">
+<pre class="dr_hl_lang_html"><span class="html_tagop">&lt;</span><span class="html_tag">div</span><span class="html_def"> </span><span class="html_attr">id</span><span class="html_attrop">=</span><span class="html_attrvalue">"parallaxID"</span><span class="html_tagop">&gt;</span><span class="html_def">        
+    </span><span class="html_tagop">&lt;</span><span class="html_tag">div</span><span class="html_def"> </span><span class="html_attr">style</span><span class="html_attrop">=</span><span class="html_attrvalue">"left:10%;top:50%;"</span><span class="html_tagop">&gt;</span><span class="html_def">Layer 1</span><span class="html_tagop">&lt;/</span><span class="html_tag">div</span><span class="html_tagop">&gt;</span><span class="html_def">
+    </span><span class="html_tagop">&lt;</span><span class="html_tag">div</span><span class="html_def"> </span><span class="html_attr">style</span><span class="html_attrop">=</span><span class="html_attrvalue">"left:30%;top:20%;"</span><span class="html_tagop">&gt;</span><span class="html_def">Layer 2</span><span class="html_tagop">&lt;/</span><span class="html_tag">div</span><span class="html_tagop">&gt;</span><span class="html_def">
+    </span><span class="html_tagop">&lt;</span><span class="html_tag">div</span><span class="html_def"> </span><span class="html_attr">style</span><span class="html_attrop">=</span><span class="html_attrvalue">"left:50%;top:30%;"</span><span class="html_tagop">&gt;</span><span class="html_def">Layer 3</span><span class="html_tagop">&lt;/</span><span class="html_tag">div</span><span class="html_tagop">&gt;</span><span class="html_def">
+    </span><span class="html_tagop">&lt;</span><span class="html_tag">div</span><span class="html_def"> </span><span class="html_attr">style</span><span class="html_attrop">=</span><span class="html_attrvalue">"left:70%;top:70%;"</span><span class="html_tagop">&gt;</span><span class="html_def">Layer 4</span><span class="html_tagop">&lt;/</span><span class="html_tag">div</span><span class="html_tagop">&gt;</span><span class="html_def">
+</span><span class="html_tagop">&lt;/</span><span class="html_tag">div</span><span class="html_tagop">&gt;</span></pre>
+                </div>
+			<!-- END OF CODE -->
+				
+			<p>Note: you can provide top and left position not only in % but also in px</p>
+			
+			</br>
+			<p>Start parallax when the document is loaded:</p>
+			<!-- CODE -->
+			<div class="container_code">
+<pre class="dr_hl_lang_jscript"><span class="jscript_def">$</span><span class="jscript_op">(</span><span class="jscript_prop">document</span><span class="jscript_op">).</span><span class="jscript_def">ready</span><span class="jscript_op">(</span><span class="jscript_keyword">function</span><span class="jscript_op">()</span><span class="jscript_def"> 
+    </span><span class="jscript_op">{</span><span class="jscript_def"> 
+        $</span><span class="jscript_op">(</span><span class="jscript_string">"#parallaxID"</span><span class="jscript_op">).</span><span class="jscript_def">parallax</span><span class="jscript_op">({</span><span class="jscript_def">width</span><span class="jscript_op">:</span><span class="jscript_def"> </span><span class="jscript_number">840</span><span class="jscript_op">,</span><span class="jscript_def">  height</span><span class="jscript_op">:</span><span class="jscript_def"> </span><span class="jscript_number">280</span><span class="jscript_op">});</span><span class="jscript_def">
+    </span><span class="jscript_op">}</span><span class="jscript_def"> 
+</span><span class="jscript_op">);</span></pre>
+                </div>
+			<!-- END OF CODE -->
+			
+			</br>
+			
+			<p>All together: simplest html file (<a href="javascript:toggle('e1');">show / hide</a>)</p>
+			<div id="e1" style="display: none">
+			<p>dont forget to chage the path to .js files</p>
+			<!-- CODE -->
+			<div class="container_code">
+<pre class="dr_hl_lang_html"><span class="html_tagop">&lt;</span><span class="html_doctype">!DOCTYPE</span><span class="html_def"> </span><span class="html_doctype">html</span><span class="html_tagop">&gt;</span><span class="html_def">
+</span><span class="html_tagop">&lt;</span><span class="html_tag">html</span><span class="html_def"> </span><span class="html_attr">xmlns</span><span class="html_attrop">=</span><span class="html_attrvalue">"http://www.w3.org/1999/xhtml"</span><span class="html_tagop">&gt;</span><span class="html_def">
+    </span><span class="html_tagop">&lt;</span><span class="html_tag">head</span><span class="html_tagop">&gt;</span><span class="html_def">
+        </span><span class="html_tagop">&lt;</span><span class="html_tag">meta</span><span class="html_def"> </span><span class="html_attr">http-equiv</span><span class="html_attrop">=</span><span class="html_attrvalue">"Content-Type"</span><span class="html_def"> </span><span class="html_attr">content</span><span class="html_attrop">=</span><span class="html_attrvalue">"text/html; charset=UTF-8"</span><span class="html_def"> </span><span class="html_tagop">/&gt;</span><span class="html_def">
+        </span><span class="html_tagop">&lt;</span><span class="html_tag">meta</span><span class="html_def"> </span><span class="html_attr">name</span><span class="html_attrop">=</span><span class="html_attrvalue">"description"</span><span class="html_def"> </span><span class="html_attr">content</span><span class="html_attrop">=</span><span class="html_attrvalue">"Real Parallax effect jQuery plugin"</span><span class="html_def"> </span><span class="html_tagop">/&gt;</span><span class="html_def">
+        </span><span class="html_tagop">&lt;</span><span class="html_tag">title</span><span class="html_tagop">&gt;</span><span class="html_def">Parallax</span><span class="html_tagop">&lt;/</span><span class="html_tag">title</span><span class="html_tagop">&gt;</span><span class="html_def">
+        
+        </span><span class="html_tagop">&lt;</span><span class="html_tag">script</span><span class="html_def"> </span><span class="html_attr">type</span><span class="html_attrop">=</span><span class="html_attrvalue">"text/javascript"</span><span class="html_def"> </span><span class="html_attr">src</span><span class="html_attrop">=</span><span class="html_attrvalue">"/path/to/jquery-latest.js"</span><span class="html_tagop">&gt;&lt;/</span><span class="html_tag">script</span><span class="html_tagop">&gt;</span><span class="html_def"> 
+        </span><span class="html_tagop">&lt;</span><span class="html_tag">script</span><span class="html_def"> </span><span class="html_attr">type</span><span class="html_attrop">=</span><span class="html_attrvalue">"text/javascript"</span><span class="html_def"> </span><span class="html_attr">src</span><span class="html_attrop">=</span><span class="html_attrvalue">"/path/to/jquery.real-parallax.js"</span><span class="html_tagop">&gt;&lt;/</span><span class="html_tag">script</span><span class="html_tagop">&gt;</span><span class="html_def"> 
+        
+        </span><span class="html_tagop">&lt;</span><span class="html_tag">script</span><span class="html_def"> </span><span class="html_attr">type</span><span class="html_attrop">=</span><span class="html_attrvalue">"text/javascript"</span><span class="html_tagop">&gt;</span><span class="jscript_def">
+            $</span><span class="jscript_op">(</span><span class="jscript_prop">document</span><span class="jscript_op">).</span><span class="jscript_def">ready</span><span class="jscript_op">(</span><span class="jscript_keyword">function</span><span class="jscript_op">()</span><span class="jscript_def"> 
+                </span><span class="jscript_op">{</span><span class="jscript_def"> 
+                    $</span><span class="jscript_op">(</span><span class="jscript_string">"#parallaxID"</span><span class="jscript_op">).</span><span class="jscript_def">parallax</span><span class="jscript_op">({</span><span class="jscript_def">width</span><span class="jscript_op">:</span><span class="jscript_def"> </span><span class="jscript_number">840</span><span class="jscript_op">,</span><span class="jscript_def">  height</span><span class="jscript_op">:</span><span class="jscript_def"> </span><span class="jscript_number">280</span><span class="jscript_op">});</span><span class="jscript_def">
+                </span><span class="jscript_op">}</span><span class="jscript_def"> 
+            </span><span class="jscript_op">);</span><span class="jscript_def">
+        </span><span class="html_tagop">&lt;/</span><span class="html_tag">script</span><span class="html_tagop">&gt;</span><span class="html_def">   
+        
+    </span><span class="html_tagop">&lt;/</span><span class="html_tag">head</span><span class="html_tagop">&gt;</span><span class="html_def">
+
+    </span><span class="html_tagop">&lt;</span><span class="html_tag">body</span><span class="html_tagop">&gt;</span><span class="html_def">
+    
+        </span><span class="html_tagop">&lt;</span><span class="html_tag">div</span><span class="html_def"> </span><span class="html_attr">id</span><span class="html_attrop">=</span><span class="html_attrvalue">"parallaxID"</span><span class="html_tagop">&gt;</span><span class="html_def">        
+            </span><span class="html_tagop">&lt;</span><span class="html_tag">div</span><span class="html_def"> </span><span class="html_attr">style</span><span class="html_attrop">=</span><span class="html_attrvalue">"left:10%;top:50%;"</span><span class="html_tagop">&gt;</span><span class="html_def">Layer 1</span><span class="html_tagop">&lt;/</span><span class="html_tag">div</span><span class="html_tagop">&gt;</span><span class="html_def">
+            </span><span class="html_tagop">&lt;</span><span class="html_tag">div</span><span class="html_def"> </span><span class="html_attr">style</span><span class="html_attrop">=</span><span class="html_attrvalue">"left:30%;top:20%;"</span><span class="html_tagop">&gt;</span><span class="html_def">Layer 2</span><span class="html_tagop">&lt;/</span><span class="html_tag">div</span><span class="html_tagop">&gt;</span><span class="html_def">
+            </span><span class="html_tagop">&lt;</span><span class="html_tag">div</span><span class="html_def"> </span><span class="html_attr">style</span><span class="html_attrop">=</span><span class="html_attrvalue">"left:50%;top:30%;"</span><span class="html_tagop">&gt;</span><span class="html_def">Layer 3</span><span class="html_tagop">&lt;/</span><span class="html_tag">div</span><span class="html_tagop">&gt;</span><span class="html_def">
+            </span><span class="html_tagop">&lt;</span><span class="html_tag">div</span><span class="html_def"> </span><span class="html_attr">style</span><span class="html_attrop">=</span><span class="html_attrvalue">"left:70%;top:70%;"</span><span class="html_tagop">&gt;</span><span class="html_def">Layer 4</span><span class="html_tagop">&lt;/</span><span class="html_tag">div</span><span class="html_tagop">&gt;</span><span class="html_def">
+        </span><span class="html_tagop">&lt;/</span><span class="html_tag">div</span><span class="html_tagop">&gt;</span><span class="html_def">
+        
+    </span><span class="html_tagop">&lt;/</span><span class="html_tag">body</span><span class="html_tagop">&gt;</span><span class="html_def">
+</span><span class="html_tagop">&lt;/</span><span class="html_tag">html</span><span class="html_tagop">&gt;</span></pre>
+                </div>           
+			<!-- END OF CODE -->
+			</div>
+			
+		</div>
+		
+		<hr/><div class="clearfix"></div>
+		
+		
+		<div class="row">	
+			<a name="Examples"></a>
+			<h2>Examples</h2>
+			<p>The fastest and easy way to start using parallax are examples.</p>
+			</br>
+			<h4>Basic</h4>
+			<ul>
+			<li><a href="example1.htm">Constructing simple parallax</a></li>
+			<li><a href="example2.htm">Content of the layers</a></li>
+			<li><a href="example3.htm">Changing the properties</a></li>
+			</ul>
+			</br>
+			<h4>Advanced</h4>
+			<ul>
+			<li><a href="example4.htm">Cross-linking</a></li>
+			<li><a href="example5.htm">Chains and playback</a></li>			
+			</ul>
+		
+		</div>
+		
+		<hr/><div class="clearfix"></div>
+		
+		
+		<div class="row">	
+			<a name="Configuration"></a>
+			<h2>Configuration</h2>
+			<p>Parallax has many options you can pass in at initialization to achieve different effects:</p>
+			
+			<!-- CODE -->
+			<div class="container_code">
+<pre class="dr_hl_lang_html"><span class="html_tagop">&lt;</span><span class="html_tag">script</span><span class="html_def"> </span><span class="html_attr">type</span><span class="html_attrop">=</span><span class="html_attrvalue">"text/javascript"</span><span class="html_tagop">&gt;</span><span class="jscript_def">
+    $</span><span class="jscript_op">(</span><span class="jscript_prop">document</span><span class="jscript_op">).</span><span class="jscript_def">ready</span><span class="jscript_op">(</span><span class="jscript_keyword">function</span><span class="jscript_op">()</span><span class="jscript_def"> 
+        </span><span class="jscript_op">{</span><span class="jscript_def"> 
+            $</span><span class="jscript_op">(</span><span class="jscript_string">"#parallaxID"</span><span class="jscript_op">).</span><span class="jscript_def">parallax</span><span class="jscript_op">({</span><span class="jscript_def">
+                width               </span><span class="jscript_op">:</span><span class="jscript_def"> </span><span class="jscript_number">840</span><span class="jscript_op">,</span><span class="jscript_def">
+                height              </span><span class="jscript_op">:</span><span class="jscript_def"> </span><span class="jscript_number">280</span><span class="jscript_op">,</span><span class="jscript_def">
+                enableMouse         </span><span class="jscript_op">:</span><span class="jscript_def"> </span><span class="jscript_keyword">true</span><span class="jscript_op">,</span><span class="jscript_def">
+                activateOnClick     </span><span class="jscript_op">:</span><span class="jscript_def"> </span><span class="jscript_keyword">false</span><span class="jscript_op">,</span><span class="jscript_def">
+                sensitivityX        </span><span class="jscript_op">:</span><span class="jscript_def"> </span><span class="jscript_number">0.5</span><span class="jscript_op">,</span><span class="jscript_def">  
+                sensitivityY        </span><span class="jscript_op">:</span><span class="jscript_def"> </span><span class="jscript_number">0.4</span><span class="jscript_op">,</span><span class="jscript_def">
+                easingCoefficient   </span><span class="jscript_op">:</span><span class="jscript_def"> </span><span class="jscript_number">7</span><span class="jscript_op">,</span><span class="jscript_def">
+                autoZCoordinate     </span><span class="jscript_op">:</span><span class="jscript_def"> </span><span class="jscript_keyword">true</span><span class="jscript_op">,</span><span class="jscript_def"> 
+                useCustomZ          </span><span class="jscript_op">:</span><span class="jscript_def"> </span><span class="jscript_keyword">true</span><span class="jscript_op">,</span><span class="jscript_def">
+                focusZ              </span><span class="jscript_op">:</span><span class="jscript_def"> </span><span class="jscript_number">0</span><span class="jscript_def">
+            </span><span class="jscript_op">});</span><span class="jscript_def">
+        </span><span class="jscript_op">}</span><span class="jscript_def"> 
+    </span><span class="jscript_op">);</span><span class="jscript_def">
+</span><span class="html_tagop">&lt;/</span><span class="html_tag">script</span><span class="html_tagop">&gt;</span><span class="html_def">   </span></pre>
+                </div>
+			<!-- END OF CODE -->
+			
+			
+			</br>
+			<p>Table of properties with description:</p>
+			
+			<table border="1" bordercolor="#cccccc" style="background-color:" cellpadding="6" cellspacing="0">
+				<tr>
+					<th>Property</th>
+					<th>Description</th>					
+				</tr>
+				<tr>
+					<td>width</td>
+					<td>Parallax width (in pixels), in general, defines the DIV size and mouse-sensitive area. If not provided, width of the parallax DIV will be used. </td>					
+				</tr>
+				<tr>
+					<td>height</td>
+					<td>Parallax height (in pixels), in general, defines the DIV size mouse-sensitive area. If not provided, height of the parallax DIV will be used.</td>					
+				</tr>
+				
+				<tr>
+					<td>enableMouse</td>
+					<td>Default value: true. To disable any mouse interactions set it to false:
+					<!-- CODE -->
+					<div class="container_code">
+<pre class="dr_hl_lang_jscript"><span class="jscript_def">$</span><span class="jscript_op">(</span><span class="jscript_string">"#parallaxID"</span><span class="jscript_op">).</span><span class="jscript_def">parallax</span><span class="jscript_op">({</span><span class="jscript_def">width</span><span class="jscript_op">:</span><span class="jscript_def"> </span><span class="jscript_number">840</span><span class="jscript_op">,</span><span class="jscript_def">  height</span><span class="jscript_op">:</span><span class="jscript_def"> </span><span class="jscript_number">280</span><span class="jscript_op">,</span><span class="jscript_def"> enableMouse</span><span class="jscript_op">:</span><span class="jscript_def"> </span><span class="jscript_keyword">false</span><span class="jscript_op">});</span></pre>
+                </div>
+					<!-- END OF CODE -->
+					</td>					
+				</tr>
+				
+				<tr>
+					<td>activateOnClick</td>
+					<td>Default value: false. In use only if enableMouse=true. Indicates whether activate parallax effect on mouse move (false) or click (true):
+					<!-- CODE -->
+					<div class="container_code">
+<pre class="dr_hl_lang_jscript"><span class="jscript_def">$</span><span class="jscript_op">(</span><span class="jscript_string">"#parallaxID"</span><span class="jscript_op">).</span><span class="jscript_def">parallax</span><span class="jscript_op">({</span><span class="jscript_def">width</span><span class="jscript_op">:</span><span class="jscript_def"> </span><span class="jscript_number">840</span><span class="jscript_op">,</span><span class="jscript_def">  height</span><span class="jscript_op">:</span><span class="jscript_def"> </span><span class="jscript_number">280</span><span class="jscript_op">,</span><span class="jscript_def"> activateOnClick</span><span class="jscript_op">:</span><span class="jscript_def"> </span><span class="jscript_keyword">true</span><span class="jscript_op">});</span></pre>
+                </div>
+					<!-- END OF CODE -->
+					</td>					
+				</tr>
+				
+				<tr>
+					<td>sensitivityX</td>
+					<td>Default value: 0.5. Sensitivity in horizontal direction. Can be positive, negative (to invert mouse in this direction) or euqal to 0 (zero). In case its set to zero - parallax will not react on mouse movement in horizontal direction:
+					<!-- CODE -->
+					 <div class="container_code">
+<pre class="dr_hl_lang_jscript"><span class="jscript_def">$</span><span class="jscript_op">(</span><span class="jscript_string">"#parallaxID"</span><span class="jscript_op">).</span><span class="jscript_def">parallax</span><span class="jscript_op">({</span><span class="jscript_def">width</span><span class="jscript_op">:</span><span class="jscript_def"> </span><span class="jscript_number">840</span><span class="jscript_op">,</span><span class="jscript_def">  height</span><span class="jscript_op">:</span><span class="jscript_def"> </span><span class="jscript_number">280</span><span class="jscript_op">,</span><span class="jscript_def"> sensitivityX</span><span class="jscript_op">:</span><span class="jscript_def"> </span><span class="jscript_number">0</span><span class="jscript_op">});</span></pre>
+                </div>
+					<!-- END OF CODE -->
+					</td>					
+				</tr>
+				
+				<tr>
+					<td>sensitivityY</td>
+					<td>Default value: 0.4. Sensitivity in vertical direction. Can be positive, negative (to invert mouse in this direction) or euqal to 0 (zero). In case its set to zero - parallax will not react on mouse movement in vertical direction:
+					<!-- CODE -->
+					 <div class="container_code">
+<pre class="dr_hl_lang_jscript"><span class="jscript_def">$</span><span class="jscript_op">(</span><span class="jscript_string">"#parallaxID"</span><span class="jscript_op">).</span><span class="jscript_def">parallax</span><span class="jscript_op">({</span><span class="jscript_def">width</span><span class="jscript_op">:</span><span class="jscript_def"> </span><span class="jscript_number">840</span><span class="jscript_op">,</span><span class="jscript_def">  height</span><span class="jscript_op">:</span><span class="jscript_def"> </span><span class="jscript_number">280</span><span class="jscript_op">,</span><span class="jscript_def"> sensitivityY</span><span class="jscript_op">:</span><span class="jscript_def"> </span><span class="jscript_number">0</span><span class="jscript_op">});</span></pre>
+                </div>
+					<!-- END OF CODE -->
+					</td>					
+				</tr>
+				
+				<tr>
+					<td>easingCoefficient</td>
+					<td>Default value: 7. Can be positive or euqal to 0 (no easing effect). Bigger values make easing effect more prominent:
+					<!-- CODE -->
+					<div class="container_code">
+<pre class="dr_hl_lang_jscript"><span class="jscript_def">$</span><span class="jscript_op">(</span><span class="jscript_string">"#parallaxID"</span><span class="jscript_op">).</span><span class="jscript_def">parallax</span><span class="jscript_op">({</span><span class="jscript_def">width</span><span class="jscript_op">:</span><span class="jscript_def"> </span><span class="jscript_number">840</span><span class="jscript_op">,</span><span class="jscript_def">  height</span><span class="jscript_op">:</span><span class="jscript_def"> </span><span class="jscript_number">280</span><span class="jscript_op">,</span><span class="jscript_def"> easingCoefficient</span><span class="jscript_op">:</span><span class="jscript_def"> </span><span class="jscript_number">15</span><span class="jscript_op">});</span></pre>
+                </div>
+					<!-- END OF CODE -->
+					</td>					
+				</tr>
+				
+				<tr>
+					<td>useCustomZ</td>
+					<td>Default value: true. By default parallax plugin automatically assign Z coordinate (between -100 and 100) for each layer . Howether, Z-coordinate of each layer can be defined manually using "data-z" (see example). Also layer can be locked (no parallax effect will be applied to this layer) with the help of "data-lock" attribute. Example:
+					<!-- CODE -->
+					<div class="container_code">
+<pre class="dr_hl_lang_html"><span class="html_tagop">&lt;</span><span class="html_tag">div</span><span class="html_def"> </span><span class="html_attr">id</span><span class="html_attrop">=</span><span class="html_attrvalue">"parallaxID"</span><span class="html_tagop">&gt;</span><span class="html_def">        
+    </span><span class="html_tagop">&lt;</span><span class="html_tag">div</span><span class="html_def"> </span><span class="html_attr">style</span><span class="html_attrop">=</span><span class="html_attrvalue">"left:10%;top:50%;"</span><span class="html_def"> </span><span class="html_attr_unknown">data-z</span><span class="html_attrop">=</span><span class="html_attrvalue_unknown">"70"</span><span class="html_tagop">&gt;</span><span class="html_def">Layer 1</span><span class="html_tagop">&lt;/</span><span class="html_tag">div</span><span class="html_tagop">&gt;</span><span class="html_def">
+    </span><span class="html_tagop">&lt;</span><span class="html_tag">div</span><span class="html_def"> </span><span class="html_attr">style</span><span class="html_attrop">=</span><span class="html_attrvalue">"left:30%;top:20%;"</span><span class="html_tagop">&gt;</span><span class="html_def">Layer 2</span><span class="html_tagop">&lt;/</span><span class="html_tag">div</span><span class="html_tagop">&gt;</span><span class="html_def">
+    </span><span class="html_tagop">&lt;</span><span class="html_tag">div</span><span class="html_def"> </span><span class="html_attr">style</span><span class="html_attrop">=</span><span class="html_attrvalue">"left:50%;top:30%;"</span><span class="html_def"> </span><span class="html_attr_unknown">data-z</span><span class="html_attrop">=</span><span class="html_attrvalue_unknown">"50"</span><span class="html_tagop">&gt;</span><span class="html_def">Layer 3</span><span class="html_tagop">&lt;/</span><span class="html_tag">div</span><span class="html_tagop">&gt;</span><span class="html_def">
+    </span><span class="html_tagop">&lt;</span><span class="html_tag">div</span><span class="html_def"> </span><span class="html_attr">style</span><span class="html_attrop">=</span><span class="html_attrvalue">"left:70%;top:70%;"</span><span class="html_def"> </span><span class="html_attr_unknown">data-lock</span><span class="html_attrop">=</span><span class="html_attrvalue_unknown">"yes"</span><span class="html_tagop">&gt;</span><span class="html_def">Layer 4</span><span class="html_tagop">&lt;/</span><span class="html_tag">div</span><span class="html_tagop">&gt;</span><span class="html_def">
+</span><span class="html_tagop">&lt;/</span><span class="html_tag">div</span><span class="html_tagop">&gt;</span></pre>
+                </div>
+					<!-- END OF CODE -->
+					If useCustomZ=false then manually provided z-coordinates (see example above) will be ignored. For layers there z-coordinate is no set manually - z-coordinate will be automatically assigned by plugin.
+					</td>					
+				</tr>
+				
+				<tr>
+					<td>autoZCoordinate</td>
+					<td>Default value: true. By default parallax plugin automatically assigns Z coordinate (between -100 and 100) for each layer. If you want to prevent it, set autoZCoordinate=false (not recommended, use manually provided z-coordinates instead).
+					
+					</td>					
+				</tr>
+				
+				
+				<tr>
+					<td>focusZ</td>
+					<td>Default value: 0. Determines the Z-coordinate at which no movement accurs. Layers with z&lt;focusZ and z&gt;focusZ move in opposite directions. Layers with z=focusZ doesnt move. To change focusZ:
+					<!-- CODE -->
+					<div class="container_code">
+<pre class="dr_hl_lang_jscript"><span class="jscript_def">$</span><span class="jscript_op">(</span><span class="jscript_string">"#parallaxID"</span><span class="jscript_op">).</span><span class="jscript_def">parallax</span><span class="jscript_op">({</span><span class="jscript_def">width</span><span class="jscript_op">:</span><span class="jscript_def"> </span><span class="jscript_number">840</span><span class="jscript_op">,</span><span class="jscript_def">  height</span><span class="jscript_op">:</span><span class="jscript_def"> </span><span class="jscript_number">280</span><span class="jscript_op">,</span><span class="jscript_def"> focusZ</span><span class="jscript_op">:</span><span class="jscript_def"> </span><span class="jscript_number">60</span><span class="jscript_op">});</span></pre>
+                </div>
+					<!-- END OF CODE -->
+					</td>					
+				</tr>
+				
+			</table>
+			
+			</br>
+			
+		
+		</div>
+		
+		<hr/><div class="clearfix"></div>
+		
+		
+		<div class="row">	
+			<a name="Methods"></a>
+			<h2>Methods</h2>
+			<p>Parallax plugin has a number of methods, especially useful then you want to change parameters or affect paralax at any time directly from your HTML page. Here are all the methods available with examples on how to execute them from your HTML page:</p>
+			<!-- CODE -->
+			<div class="container_code">
+<pre class="dr_hl_lang_jscript"><span class="jscript_com">// to change properties of parallax
+</span><span class="jscript_def">$</span><span class="jscript_op">(</span><span class="jscript_string">'#parallaxID'</span><span class="jscript_op">).</span><span class="jscript_def">parallax</span><span class="jscript_op">(</span><span class="jscript_string">'option'</span><span class="jscript_op">,</span><span class="jscript_def"> </span><span class="jscript_string">'enableMouse'</span><span class="jscript_op">,</span><span class="jscript_def"> </span><span class="jscript_keyword">true</span><span class="jscript_op">);</span><span class="jscript_def">           </span><span class="jscript_com">//enable mouse
+</span><span class="jscript_def">$</span><span class="jscript_op">(</span><span class="jscript_string">'#parallaxID'</span><span class="jscript_op">).</span><span class="jscript_def">parallax</span><span class="jscript_op">(</span><span class="jscript_string">'option'</span><span class="jscript_op">,</span><span class="jscript_def"> </span><span class="jscript_string">'activateOnClick'</span><span class="jscript_op">,</span><span class="jscript_def"> </span><span class="jscript_keyword">true</span><span class="jscript_op">);</span><span class="jscript_def">       </span><span class="jscript_com">//activate parallax effect on mouse click
+</span><span class="jscript_def">$</span><span class="jscript_op">(</span><span class="jscript_string">'#parallaxID'</span><span class="jscript_op">).</span><span class="jscript_def">parallax</span><span class="jscript_op">(</span><span class="jscript_string">'option'</span><span class="jscript_op">,</span><span class="jscript_def"> </span><span class="jscript_string">'sensitivityX'</span><span class="jscript_op">,</span><span class="jscript_def"> </span><span class="jscript_number">0.5</span><span class="jscript_op">);</span><span class="jscript_def">           </span><span class="jscript_com">//sensitivity of the mouse in horizontal direction
+</span><span class="jscript_def">$</span><span class="jscript_op">(</span><span class="jscript_string">'#parallaxID'</span><span class="jscript_op">).</span><span class="jscript_def">parallax</span><span class="jscript_op">(</span><span class="jscript_string">'option'</span><span class="jscript_op">,</span><span class="jscript_def"> </span><span class="jscript_string">'sensitivityY'</span><span class="jscript_op">,</span><span class="jscript_def"> </span><span class="jscript_op">-</span><span class="jscript_number">0.4</span><span class="jscript_op">);</span><span class="jscript_def">          </span><span class="jscript_com">//negative values invert mouse
+</span><span class="jscript_def">$</span><span class="jscript_op">(</span><span class="jscript_string">'#parallaxID'</span><span class="jscript_op">).</span><span class="jscript_def">parallax</span><span class="jscript_op">(</span><span class="jscript_string">'option'</span><span class="jscript_op">,</span><span class="jscript_def"> </span><span class="jscript_string">'easingCoefficient'</span><span class="jscript_op">,</span><span class="jscript_def"> </span><span class="jscript_number">15</span><span class="jscript_op">);</span><span class="jscript_def">       </span><span class="jscript_com">//bigger value - slower/smoother movement
+</span><span class="jscript_def">$</span><span class="jscript_op">(</span><span class="jscript_string">'#parallaxID'</span><span class="jscript_op">).</span><span class="jscript_def">parallax</span><span class="jscript_op">(</span><span class="jscript_string">'option'</span><span class="jscript_op">,</span><span class="jscript_def"> </span><span class="jscript_string">'autoZCoordinate'</span><span class="jscript_op">,</span><span class="jscript_def"> </span><span class="jscript_keyword">true</span><span class="jscript_op">);</span><span class="jscript_def">       </span><span class="jscript_com">//if true - Z-coordinates will be assigned automatically (between +100 and -100)
+</span><span class="jscript_def">$</span><span class="jscript_op">(</span><span class="jscript_string">'#parallaxID'</span><span class="jscript_op">).</span><span class="jscript_def">parallax</span><span class="jscript_op">(</span><span class="jscript_string">'option'</span><span class="jscript_op">,</span><span class="jscript_def"> </span><span class="jscript_string">'useCustomZ'</span><span class="jscript_op">,</span><span class="jscript_def"> </span><span class="jscript_keyword">true</span><span class="jscript_op">);</span><span class="jscript_def">            </span><span class="jscript_com">//if false - Z-coordinates will be assigned automatically (between +100 and -100)
+</span><span class="jscript_def">$</span><span class="jscript_op">(</span><span class="jscript_string">'#parallaxID'</span><span class="jscript_op">).</span><span class="jscript_def">parallax</span><span class="jscript_op">(</span><span class="jscript_string">'option'</span><span class="jscript_op">,</span><span class="jscript_def"> </span><span class="jscript_string">'focusZ'</span><span class="jscript_op">,</span><span class="jscript_def"> </span><span class="jscript_number">50</span><span class="jscript_op">);</span><span class="jscript_def">                  </span><span class="jscript_com">//change the focus of the parallax
+</span><span class="jscript_def">
+
+</span><span class="jscript_com">// to emulate mouse movements ant to interact with parallax
+</span><span class="jscript_def">$</span><span class="jscript_op">(</span><span class="jscript_string">'#parallaxID'</span><span class="jscript_op">).</span><span class="jscript_def">parallax</span><span class="jscript_op">(</span><span class="jscript_string">'mouseTo'</span><span class="jscript_op">,</span><span class="jscript_def"> </span><span class="jscript_op">{</span><span class="jscript_def">x</span><span class="jscript_op">:</span><span class="jscript_number">0</span><span class="jscript_op">,</span><span class="jscript_def"> y</span><span class="jscript_op">:</span><span class="jscript_number">0</span><span class="jscript_op">});</span><span class="jscript_def">                                   </span><span class="jscript_com">//emulate mouse movement to x, y in px
+</span><span class="jscript_def">$</span><span class="jscript_op">(</span><span class="jscript_string">'#parallaxID'</span><span class="jscript_op">).</span><span class="jscript_def">parallax</span><span class="jscript_op">(</span><span class="jscript_string">'mouseToRatio'</span><span class="jscript_op">,</span><span class="jscript_def"> </span><span class="jscript_op">{</span><span class="jscript_def">x</span><span class="jscript_op">:</span><span class="jscript_number">0.7</span><span class="jscript_op">,</span><span class="jscript_def"> y</span><span class="jscript_op">:</span><span class="jscript_number">0.9</span><span class="jscript_op">});</span><span class="jscript_def">                          </span><span class="jscript_com">//emulate mouse movement to x, y in provided as ratio of width, height 
+</span><span class="jscript_def">$</span><span class="jscript_op">(</span><span class="jscript_string">'#parallaxID'</span><span class="jscript_op">).</span><span class="jscript_def">parallax</span><span class="jscript_op">(</span><span class="jscript_string">'mouseToRandom'</span><span class="jscript_op">);</span><span class="jscript_def">                                         </span><span class="jscript_com">//emulate mouse movement random position
+</span><span class="jscript_def">$</span><span class="jscript_op">(</span><span class="jscript_string">'#parallaxID'</span><span class="jscript_op">).</span><span class="jscript_def">parallax</span><span class="jscript_op">(</span><span class="jscript_string">'reset'</span><span class="jscript_op">);</span><span class="jscript_def">                                                 </span><span class="jscript_com">//emulate mouse movement to the center
+</span><span class="jscript_def">$</span><span class="jscript_op">(</span><span class="jscript_string">'#parallaxID'</span><span class="jscript_op">).</span><span class="jscript_def">parallax</span><span class="jscript_op">(</span><span class="jscript_string">'pause'</span><span class="jscript_op">,</span><span class="jscript_def"> </span><span class="jscript_number">3000</span><span class="jscript_op">);</span><span class="jscript_def">                                           </span><span class="jscript_com">//pause parallax effect for 3 seconds
+</span><span class="jscript_def">$</span><span class="jscript_op">(</span><span class="jscript_string">'#parallaxID'</span><span class="jscript_op">).</span><span class="jscript_def">parallax</span><span class="jscript_op">(</span><span class="jscript_string">'unpause'</span><span class="jscript_op">);</span><span class="jscript_def">                                               </span><span class="jscript_com">//unpause parallax effect
+</span><span class="jscript_def">$</span><span class="jscript_op">(</span><span class="jscript_string">'#parallaxID'</span><span class="jscript_op">).</span><span class="jscript_def">parallax</span><span class="jscript_op">(</span><span class="jscript_string">'triggerPause'</span><span class="jscript_op">);</span><span class="jscript_def">                                          </span><span class="jscript_com">//pause/unpause parallax effect
+</span><span class="jscript_def">$</span><span class="jscript_op">(</span><span class="jscript_string">'#parallaxID'</span><span class="jscript_op">).</span><span class="jscript_def">parallax</span><span class="jscript_op">(</span><span class="jscript_string">'centerTo'</span><span class="jscript_op">,</span><span class="jscript_def"> </span><span class="jscript_op">{</span><span class="jscript_def">id</span><span class="jscript_op">:</span><span class="jscript_string">'layerID'</span><span class="jscript_op">,</span><span class="jscript_def"> align</span><span class="jscript_op">:</span><span class="jscript_string">'tl'</span><span class="jscript_op">,</span><span class="jscript_def"> offx</span><span class="jscript_op">:</span><span class="jscript_number">0</span><span class="jscript_op">,</span><span class="jscript_def"> offy</span><span class="jscript_op">:</span><span class="jscript_number">0</span><span class="jscript_op">});</span><span class="jscript_def">  </span><span class="jscript_com">//apply parallax effect to make layers top-left ('tl') corner appear in center with given offsets. Use letters t(top), b(bottom), l(left) and r(right) to align.
+</span><span class="jscript_def">$</span><span class="jscript_op">(</span><span class="jscript_string">'#parallaxID'</span><span class="jscript_op">).</span><span class="jscript_def">parallax</span><span class="jscript_op">(</span><span class="jscript_string">'layer'</span><span class="jscript_op">,</span><span class="jscript_def"> </span><span class="jscript_string">'layerID'</span><span class="jscript_op">,</span><span class="jscript_def"> </span><span class="jscript_op">{</span><span class="jscript_def">x</span><span class="jscript_op">:</span><span class="jscript_number">200</span><span class="jscript_op">,</span><span class="jscript_def"> y</span><span class="jscript_op">:</span><span class="jscript_number">100</span><span class="jscript_op">});</span><span class="jscript_def">                      </span><span class="jscript_com">//move layer layerID to position x, y in px
+</span><span class="jscript_def">
+
+
+</span><span class="jscript_com">//CHAINS AND PLAYBACK
+</span><span class="jscript_def">
+</span><span class="jscript_com">//add all above actions to chain to execute them later
+</span><span class="jscript_def">$</span><span class="jscript_op">(</span><span class="jscript_string">'#parallaxID'</span><span class="jscript_op">).</span><span class="jscript_def">parallax</span><span class="jscript_op">(</span><span class="jscript_string">'addToChain'</span><span class="jscript_op">,</span><span class="jscript_string">'mouseTo'</span><span class="jscript_op">,</span><span class="jscript_def"> </span><span class="jscript_op">{</span><span class="jscript_def">x</span><span class="jscript_op">:</span><span class="jscript_number">0</span><span class="jscript_op">,</span><span class="jscript_def"> y</span><span class="jscript_op">:</span><span class="jscript_number">0</span><span class="jscript_op">});</span><span class="jscript_def">
+$</span><span class="jscript_op">(</span><span class="jscript_string">'#parallaxID'</span><span class="jscript_op">).</span><span class="jscript_def">parallax</span><span class="jscript_op">(</span><span class="jscript_string">'addToChain'</span><span class="jscript_op">,</span><span class="jscript_string">'mouseToRatio'</span><span class="jscript_op">,</span><span class="jscript_def"> </span><span class="jscript_op">{</span><span class="jscript_def">x</span><span class="jscript_op">:</span><span class="jscript_number">0.7</span><span class="jscript_op">,</span><span class="jscript_def"> y</span><span class="jscript_op">:</span><span class="jscript_number">0.9</span><span class="jscript_op">});</span><span class="jscript_def">
+$</span><span class="jscript_op">(</span><span class="jscript_string">'#parallaxID'</span><span class="jscript_op">).</span><span class="jscript_def">parallax</span><span class="jscript_op">(</span><span class="jscript_string">'addToChain'</span><span class="jscript_op">,</span><span class="jscript_string">'mouseToRandom'</span><span class="jscript_op">);</span><span class="jscript_def">
+$</span><span class="jscript_op">(</span><span class="jscript_string">'#parallaxID'</span><span class="jscript_op">).</span><span class="jscript_def">parallax</span><span class="jscript_op">(</span><span class="jscript_string">'addToChain'</span><span class="jscript_op">,</span><span class="jscript_string">'reset'</span><span class="jscript_op">);</span><span class="jscript_def">
+$</span><span class="jscript_op">(</span><span class="jscript_string">'#parallaxID'</span><span class="jscript_op">).</span><span class="jscript_def">parallax</span><span class="jscript_op">(</span><span class="jscript_string">'addToChain'</span><span class="jscript_op">,</span><span class="jscript_string">'centerTo'</span><span class="jscript_op">,</span><span class="jscript_def"> </span><span class="jscript_op">{</span><span class="jscript_def">id</span><span class="jscript_op">:</span><span class="jscript_string">'layerID'</span><span class="jscript_op">,</span><span class="jscript_def"> align</span><span class="jscript_op">:</span><span class="jscript_string">'tl'</span><span class="jscript_op">,</span><span class="jscript_def"> offx</span><span class="jscript_op">:</span><span class="jscript_number">0</span><span class="jscript_op">,</span><span class="jscript_def"> offy</span><span class="jscript_op">:</span><span class="jscript_number">0</span><span class="jscript_op">});</span><span class="jscript_def">
+$</span><span class="jscript_op">(</span><span class="jscript_string">'#parallaxID'</span><span class="jscript_op">).</span><span class="jscript_def">parallax</span><span class="jscript_op">(</span><span class="jscript_string">'addToChain'</span><span class="jscript_op">,</span><span class="jscript_string">'pause'</span><span class="jscript_op">,</span><span class="jscript_def"> </span><span class="jscript_number">3000</span><span class="jscript_op">);</span><span class="jscript_def">
+$</span><span class="jscript_op">(</span><span class="jscript_string">'#parallaxID'</span><span class="jscript_op">).</span><span class="jscript_def">parallax</span><span class="jscript_op">(</span><span class="jscript_string">'addToChain'</span><span class="jscript_op">,</span><span class="jscript_string">'triggerPause'</span><span class="jscript_op">);</span><span class="jscript_def">
+$</span><span class="jscript_op">(</span><span class="jscript_string">'#parallaxID'</span><span class="jscript_op">).</span><span class="jscript_def">parallax</span><span class="jscript_op">(</span><span class="jscript_string">'addToChain'</span><span class="jscript_op">,</span><span class="jscript_string">'unpause'</span><span class="jscript_op">);</span><span class="jscript_def">  
+
+
+</span><span class="jscript_com">//playback, use also pause (see above) to pause the chain
+</span><span class="jscript_def">$</span><span class="jscript_op">(</span><span class="jscript_string">'#parallaxID'</span><span class="jscript_op">).</span><span class="jscript_def">parallax</span><span class="jscript_op">(</span><span class="jscript_string">'startChain'</span><span class="jscript_op">,</span><span class="jscript_def"> </span><span class="jscript_keyword">true</span><span class="jscript_op">);</span><span class="jscript_def">                  </span><span class="jscript_com">//play in loop, change parameter to false to play the chain only once
+</span><span class="jscript_def">$</span><span class="jscript_op">(</span><span class="jscript_string">'#parallaxID'</span><span class="jscript_op">).</span><span class="jscript_def">parallax</span><span class="jscript_op">(</span><span class="jscript_string">'stopChain'</span><span class="jscript_op">);</span><span class="jscript_def">                         </span><span class="jscript_com">//stops chain playback
+</span><span class="jscript_def">$</span><span class="jscript_op">(</span><span class="jscript_string">'#parallaxID'</span><span class="jscript_op">).</span><span class="jscript_def">parallax</span><span class="jscript_op">(</span><span class="jscript_string">'clearChain'</span><span class="jscript_op">);</span><span class="jscript_def">                        </span><span class="jscript_com">//clear chain of actions
+</span><span class="jscript_def">
+
+</span><span class="jscript_com">//CROSS-LINKING TWO PARALLAXES
+</span><span class="jscript_def">$</span><span class="jscript_op">(</span><span class="jscript_string">'#parallaxID'</span><span class="jscript_op">).</span><span class="jscript_def">parallax</span><span class="jscript_op">(</span><span class="jscript_string">'linkWith'</span><span class="jscript_op">,</span><span class="jscript_string">'parallaxToControlID'</span><span class="jscript_op">);</span><span class="jscript_def">    </span><span class="jscript_com">//all mouse movements from parallaxID will be translated to parallaxToControlID
+</span><span class="jscript_def">$</span><span class="jscript_op">(</span><span class="jscript_string">'#parallaxID'</span><span class="jscript_op">).</span><span class="jscript_def">parallax</span><span class="jscript_op">(</span><span class="jscript_string">'resetLinks'</span><span class="jscript_op">);</span><span class="jscript_def">                        </span><span class="jscript_com">//remove all links for parallaxID</span></pre>
+                </div>
+
+			<!-- END OF CODE -->
+		</br>
+		<p>See also <a class="external" href="#Examples">Examples</a></p>
+		
+		</div>
+		
+		<hr/><div class="clearfix"></div>
+		
+		
+		<div class="row">	
+			<a name="Compatibility"></a>
+			<h2>Browser Compatibility</h2>
+			<p>Parallax plugin has been tested successfully in the following browsers with Javascript enabled:</p>
+			<ul>
+				<li>Firefox</li>				
+				<li>Safari</li>
+				<li>Opera</li>
+				<li>Chrome</li>
+				<li>Internet Explorer 8+</li>
+			</ul>
+    
+    <p><a class="external" href="http://docs.jquery.com/Browser_Compatibility">jQuery Browser Compatibility</a></p>
+		
+		</div>
+		
+		<hr/><div class="clearfix"></div>
+		
+		
+		<div class="row">	
+			<a name="Support"></a>
+			<h2>Support</h2>
+			<p>Support is available through the <a href="http://codecanyon.net/user/Sandi" target="_blank">Codecanyon</a></p>
+		
+		</div>
+		
+	
+	</body>
+</html>

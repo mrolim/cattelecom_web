@@ -1,0 +1,580 @@
+<!DOCTYPE html>
+<html>
+
+    <head>
+    
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+        <title>Documentation - Page Scrolling</title>
+        <link rel="stylesheet" href="style.css" type="text/css" />
+        <!--[if IE 7]><link href="ie7only.css" rel="stylesheet" type="text/css" /><![endif]-->
+    
+    </head>
+
+    <body class="doku">
+    
+        <div class="container">
+        
+        	<div class="logo">
+        		<img src="icons/creative-dive.png">
+    		</div>
+    
+            <h1><span class="color blue">Documentation</span> - Page Scrolling</h1>
+            
+            <div class="description">
+                This documentation will help you in the processing to include Page Scrolling
+            </div>
+        
+            <div class="content">
+            	<div class="content-in">
+                	<h3>1. Installation</h3>
+                    
+                    1.1. Insert the <code>style.css</code> and <code>jquery.min.js</code> file in the <code>head</code>-tag of your html file.
+                    
+<pre>
+    <code>
+        &lt;!DOCTYPE html&gt;
+        &lt;html&gt;
+            &lt;head&gt;
+            	<span class="color green">
+                &lt;link rel="stylesheet" href="style.css" type="text/css" &gt;
+                &lt;script src="jquery.min.js"&gt;&lt;/script&gt;
+                </span>
+            &lt;/head&gt;
+            &lt;body&gt;
+            &lt;/body&gt;
+        &lt;/html&gt;
+    </code>
+</pre>
+                    
+                    1.2. Insert the html code for pricing table into the <code>body</code>-tag of your html file.
+                    
+<pre>
+    <code>
+        &lt;body&gt;
+        	<span class="color green">
+            &lt;div class="scrollmenu style1 black"&gt;
+                &lt;div class="scrollmenu-inner"&gt;
+                    &lt;div class="scrollmenu-inner-top"&gt;
+                        &lt;div class="scroll-button stop-1 scroll-top slide-top"&gt;&nbsp;&lt;/div&gt;
+                    &lt;/div&gt;
+                    &lt;div class="scrollmenu-inner-bottom"&gt;
+                        &lt;div class="scroll-button sbottom-1 scroll-bottom slide-bottom"&gt;&nbsp;&lt;/div&gt;
+                    &lt;/div&gt;
+                &lt;/div&gt;
+            &lt;/div&gt;
+            </span>
+        &lt;/body&gt;
+    </code>
+</pre>
+                    
+                    1.3. So you can see the Page Scrolling Menu on the live page.
+                    
+            	</div>
+            </div>
+                    
+            <div class="content">
+            	<div class="content-in">
+                	<h3>2. Change the style</h3> 
+                          
+                    2.1. You can edit the style with the <code>class</code>-attribute. Add the class <code>style1</code>, <code>style2</code>, <code>style3</code>, <code>style4</code>, <code>style5</code>, <code>style6</code>, <code>style7</code>, <code>style8</code> or <code>style9</code>.
+                    
+<pre>
+    <code>
+    	&lt;div class="scrollmenu <span class="color green">style1</span> black"&gt;
+            &lt;div class="scrollmenu-inner"&gt;
+                &lt;div class="scrollmenu-inner-top"&gt;
+                    &lt;div class="scroll-button stop-1 scroll-top slide-top"&gt;&nbsp;&lt;/div&gt;
+                &lt;/div&gt;
+                &lt;div class="scrollmenu-inner-bottom"&gt;
+                    &lt;div class="scroll-button sbottom-1 scroll-bottom slide-bottom"&gt;&nbsp;&lt;/div&gt;
+                &lt;/div&gt;
+            &lt;/div&gt;
+        &lt;/div&gt;
+    </code>
+</pre>
+                    
+                    <table>
+                    
+                    	<tr>
+                        	<td width="30%">style1</td>
+                            <td width="40%" class="light">
+            
+                                <div class="scrollmenu style1 black">
+                                    <div class="scrollmenu-inner">
+                                        <div class="scrollmenu-inner-top">
+                                            <div class="scroll-button stop-1 scroll-top slide-top">&nbsp;</div>
+                                        </div>
+                                        <div class="scrollmenu-inner-bottom">
+                                            <div class="scroll-button sbottom-1 scroll-bottom slide-bottom">&nbsp;</div>
+                                        </div>
+                                    </div>
+                                </div>
+                                    
+                            </td>
+                            <td width="30%"><code>class="scrollmenu <span class="color blue">style1</span> black"</code></td>
+                        </tr>
+                        
+                        <tr>
+                        	<td>style2</td>
+                            <td class="light">
+            
+                                <div class="scrollmenu style2 black">
+                                    <div class="scrollmenu-inner">
+                                        <div class="scrollmenu-inner-top">
+                                            <div class="scroll-button stop-1 scroll-top slide-top">&nbsp;</div>
+                                        </div>
+                                        <div class="scrollmenu-inner-bottom">
+                                            <div class="scroll-button sbottom-1 scroll-bottom slide-bottom">&nbsp;</div>
+                                        </div>
+                                    </div>
+                                </div>
+                                    
+                            </td>
+                            <td><code>class="scrollmenu <span class="color blue">style2</span> black"</code></td>
+                        </tr>
+                        
+                        <tr>
+                        	<td>style3</td>
+                            <td class="light">
+            
+                                <div class="scrollmenu style3 black">
+                                    <div class="scrollmenu-inner">
+                                        <div class="scrollmenu-inner-top">
+                                            <div class="scroll-button stop-1 scroll-top slide-top">&nbsp;</div>
+                                        </div>
+                                        <div class="scrollmenu-inner-bottom">
+                                            <div class="scroll-button sbottom-1 scroll-bottom slide-bottom">&nbsp;</div>
+                                        </div>
+                                    </div>
+                                </div>
+                                    
+                            </td>
+                            <td><code>class="scrollmenu <span class="color blue">style3</span> black"</code></td>
+                        </tr>
+                        
+                        <tr>
+                        	<td>style4</td>
+                            <td class="light">
+            
+                                <div class="scrollmenu style4 black">
+                                    <div class="scrollmenu-inner">
+                                        <div class="scrollmenu-inner-top">
+                                            <div class="scroll-button stop-1 scroll-top slide-top">&nbsp;</div>
+                                        </div>
+                                        <div class="scrollmenu-inner-bottom">
+                                            <div class="scroll-button sbottom-1 scroll-bottom slide-bottom">&nbsp;</div>
+                                        </div>
+                                    </div>
+                                </div>
+                                    
+                            </td>
+                            <td><code>class="scrollmenu <span class="color blue">style4</span> black"</code></td>
+                        </tr>
+                        
+                        <tr>
+                        	<td>style5</td>
+                            <td class="light">
+            
+                                <div class="scrollmenu style5 black">
+                                    <div class="scrollmenu-inner">
+                                        <div class="scrollmenu-inner-top">
+                                            <div class="scroll-button stop-1 scroll-top slide-top">&nbsp;</div>
+                                        </div>
+                                        <div class="scrollmenu-inner-bottom">
+                                            <div class="scroll-button sbottom-1 scroll-bottom slide-bottom">&nbsp;</div>
+                                        </div>
+                                    </div>
+                                </div>
+                                    
+                            </td>
+                            <td><code>class="scrollmenu <span class="color blue">style5</span> black"</code></td>
+                        </tr>
+                        
+                        <tr>
+                        	<td>style6</td>
+                            <td class="light">
+            
+                                <div class="scrollmenu style6 black">
+                                    <div class="scrollmenu-inner">
+                                        <div class="scrollmenu-inner-top">
+                                            <div class="scroll-button stop-1 scroll-top slide-top">&nbsp;</div>
+                                        </div>
+                                        <div class="scrollmenu-inner-bottom">
+                                            <div class="scroll-button sbottom-1 scroll-bottom slide-bottom">&nbsp;</div>
+                                        </div>
+                                    </div>
+                                </div>
+                                    
+                            </td>
+                            <td><code>class="scrollmenu <span class="color blue">style6</span> black"</code></td>
+                        </tr>
+                        
+                        <tr>
+                        	<td>style7</td>
+                            <td class="light">
+            
+                                <div class="scrollmenu style7 black">
+                                    <div class="scrollmenu-inner">
+                                        <div class="scrollmenu-inner-top">
+                                            <div class="scroll-button stop-1 scroll-top slide-top">&nbsp;</div>
+                                        </div>
+                                        <div class="scrollmenu-inner-bottom">
+                                            <div class="scroll-button sbottom-1 scroll-bottom slide-bottom">&nbsp;</div>
+                                        </div>
+                                    </div>
+                                </div>
+                                    
+                            </td>
+                            <td><code>class="scrollmenu <span class="color blue">style7</span> black"</code></td>
+                        </tr>
+                        
+                        <tr>
+                        	<td>style8</td>
+                            <td class="light">
+            
+                                <div class="scrollmenu style8 black">
+                                    <div class="scrollmenu-inner">
+                                        <div class="scrollmenu-inner-top">
+                                            <div class="scroll-button stop-1 scroll-top slide-top">&nbsp;</div>
+                                        </div>
+                                        <div class="scrollmenu-inner-bottom">
+                                            <div class="scroll-button sbottom-1 scroll-bottom slide-bottom">&nbsp;</div>
+                                        </div>
+                                    </div>
+                                </div>
+                                    
+                            </td>
+                            <td><code>class="scrollmenu <span class="color blue">style8</span> black"</code></td>
+                        </tr>
+                        
+                        <tr>
+                        	<td>style9</td>
+                            <td class="light">
+            
+                                <div class="scrollmenu style9 black">
+                                    <div class="scrollmenu-inner">
+                                        <div class="scrollmenu-inner-top">
+                                            <div class="scroll-button stop-1 scroll-top slide-top">&nbsp;</div>
+                                        </div>
+                                        <div class="scrollmenu-inner-bottom">
+                                            <div class="scroll-button sbottom-1 scroll-bottom slide-bottom">&nbsp;</div>
+                                        </div>
+                                    </div>
+                                </div>
+                                    
+                            </td>
+                            <td><code>class="scrollmenu <span class="color blue">style9</span> black"</code></td>
+                        </tr>
+                        
+                   	</table>
+                    
+            	</div>
+            </div>
+            
+            <div class="content">
+            	<div class="content-in">
+                	<h3>3. Available colors and versions</h3> 
+                          
+                    3.1. Here you can see all available colors of Page Scrolling Menu.
+                    
+<pre>
+    <code>
+        &lt;div class="scrollmenu style1 <span class="color green">black</span>"&gt;
+            &lt;div class="scrollmenu-inner"&gt;
+                &lt;div class="scrollmenu-inner-top"&gt;
+                    &lt;div class="scroll-button stop-1 scroll-top slide-top"&gt;&nbsp;&lt;/div&gt;
+                &lt;/div&gt;
+                &lt;div class="scrollmenu-inner-bottom"&gt;
+                    &lt;div class="scroll-button sbottom-1 scroll-bottom slide-bottom"&gt;&nbsp;&lt;/div&gt;
+                &lt;/div&gt;
+            &lt;/div&gt;
+        &lt;/div&gt;
+    </code>
+</pre>
+                    
+                    <table>
+                    
+                    	<tr>
+                        	<td width="30%">black</td>
+                            <td width="40%" class="light">
+            
+                                <div class="scrollmenu style1 black">
+                                    <div class="scrollmenu-inner">
+                                        <div class="scrollmenu-inner-top">
+                                            <div class="scroll-button stop-1 scroll-top slide-top">&nbsp;</div>
+                                        </div>
+                                        <div class="scrollmenu-inner-bottom">
+                                            <div class="scroll-button sbottom-1 scroll-bottom slide-bottom">&nbsp;</div>
+                                        </div>
+                                    </div>
+                                </div>
+                                    
+                            </td>
+                            <td width="30%"><code>class="scrollmenu style1 <span class="color blue">black</span>"</code></td>
+                        </tr>
+                        
+                        <tr>
+                        	<td width="30%">white</td>
+                            <td width="40%" class="light">
+            
+                                <div class="scrollmenu style1 white">
+                                    <div class="scrollmenu-inner">
+                                        <div class="scrollmenu-inner-top">
+                                            <div class="scroll-button stop-1 scroll-top slide-top">&nbsp;</div>
+                                        </div>
+                                        <div class="scrollmenu-inner-bottom">
+                                            <div class="scroll-button sbottom-1 scroll-bottom slide-bottom">&nbsp;</div>
+                                        </div>
+                                    </div>
+                                </div>
+                                    
+                            </td>
+                            <td width="30%"><code>class="scrollmenu style1 <span class="color blue">white</span>"</code></td>
+                        </tr>
+                        
+                   	</table>
+                    
+            	</div>
+            </div>
+            
+            <div class="content">
+            	<div class="content-in">
+                	<h3>4. Set the position</h3> 
+                          
+                    4.1. Here you can change the position of Page Scrolling Menu.
+                    
+<pre>
+    <code>
+        &lt;div class="scrollmenu style1 black <span class="color green">topleft</span>"&gt;
+            &lt;div class="scrollmenu-inner"&gt;
+                &lt;div class="scrollmenu-inner-top"&gt;
+                    &lt;div class="scroll-button stop-1 scroll-top slide-top"&gt;&nbsp;&lt;/div&gt;
+                &lt;/div&gt;
+                &lt;div class="scrollmenu-inner-bottom"&gt;
+                    &lt;div class="scroll-button sbottom-1 scroll-bottom slide-bottom"&gt;&nbsp;&lt;/div&gt;
+                &lt;/div&gt;
+            &lt;/div&gt;
+        &lt;/div&gt;
+    </code>
+</pre>
+                    
+                    Using the classnames <code>topleft</code>, <code>topright</code>, <code>bottomleft</code> or <code>bottomright</code>.
+                    
+            	</div>
+            </div>
+            
+            <div class="content">
+            	<div class="content-in">
+                	<h3>5. Scrollmenu - Buttons is show all the time</h3> 
+                          
+                    5.1. You can show the Page Scrolling Menu all the time.
+                    
+<pre>
+    <code>
+		<span class="color green">
+        &lt;script type="text/javascript"&gt;
+            // Scroll to Top
+            $(function () {$(window).scroll(function () {});
+            $('<span class="color blue">.slide-top</span>').click(function () { $('body,html').animate({ scrollTop: 0 }, 500); return false;});
+            });
+            // Scroll to Bottom
+            $(function () {$(window).scroll(function () {});
+            $('<span class="color blue">.slide-bottom</span>').click(function () { $('body,html').animate({ scrollTop: $(document).height() - $(window).height() }, 500); return false;});
+            });
+        &lt;/script&gt;
+    	</span>
+        &lt;div class="scrollmenu style1 black <span class="color green">topleft</span>"&gt;
+            &lt;div class="scrollmenu-inner"&gt;
+                &lt;div class="scrollmenu-inner-top"&gt;
+                    &lt;div class="scroll-button stop-1 scroll-top <span class="color blue">slide-top</span>"&gt;&nbsp;&lt;/div&gt;
+                &lt;/div&gt;
+                &lt;div class="scrollmenu-inner-bottom"&gt;
+                    &lt;div class="scroll-button sbottom-1 scroll-bottom <span class="color blue">slide-bottom</span>"&gt;&nbsp;&lt;/div&gt;
+                &lt;/div&gt;
+            &lt;/div&gt;
+        &lt;/div&gt;
+    </code>
+</pre>
+                    
+            	</div>
+            </div>
+            
+            <div class="content">
+            	<div class="content-in">
+                	<h3>6. Scrollmenu - Buttons fade in and out</h3> 
+                          
+                    6.1. You can fade in and out the Page Scrolling Menu.
+                    
+<pre>
+    <code>
+		<span class="color green">
+        &lt;script type="text/javascript"&gt;
+            // Scroll to Top
+            $(function () {$(window).scroll(function () {if ($(this).scrollTop() > 100) $('<span class="color blue">.slide-top-fade</span>').fadeIn();else $('<span class="color blue">.slide-top-fade</span>').fadeOut();});
+            $('<span class="color blue">.slide-top-fade</span>').click(function () { $('body,html').animate({ scrollTop: 0 }, 500); return false;});
+            });
+            // Scroll to Bottom
+            $(function () {$(window).scroll(function () {if ($(document).height() - $(window).height() == $(this).scrollTop()) $('<span class="color blue">.slide-bottom-fade</span>').fadeOut();else $('<span class="color blue">.slide-bottom-fade</span>').fadeIn();});
+            $('<span class="color blue">.slide-bottom-fade</span>').click(function () { $('body,html').animate({ scrollTop: $(document).height() - $(window).height() }, 500); return false;});
+            });
+        &lt;/script&gt;
+    	</span>
+        &lt;div class="scrollmenu style1 black <span class="color green">topleft</span>"&gt;
+            &lt;div class="scrollmenu-inner"&gt;
+                &lt;div class="scrollmenu-inner-top"&gt;
+                    &lt;div class="scroll-button stop-1 scroll-top <span class="color blue">slide-top-fade</span>"&gt;&nbsp;&lt;/div&gt;
+                &lt;/div&gt;
+                &lt;div class="scrollmenu-inner-bottom"&gt;
+                    &lt;div class="scroll-button sbottom-1 scroll-bottom <span class="color blue">slide-bottom-fade</span>"&gt;&nbsp;&lt;/div&gt;
+                &lt;/div&gt;
+            &lt;/div&gt;
+        &lt;/div&gt;
+    </code>
+</pre>
+                    
+            	</div>
+            </div>
+            
+            <div class="content">
+            	<div class="content-in">
+                	<h3>7. Scrollmenu - Buttons is show all the time (Position Top &amp; Bottom)</h3> 
+                          
+                    7.1. You can show the Page Scrolling Menu all the time on top and bottom position.
+                    
+<pre>
+    <code>
+		<span class="color green">
+        &lt;script type="text/javascript"&gt;
+            // Scroll to Top
+            $(function () {$(window).scroll(function () {});
+            $('<span class="color blue">.slide-top</span>').click(function () { $('body,html').animate({ scrollTop: 0 }, 500); return false;});
+            });
+            // Scroll to Bottom
+            $(function () {$(window).scroll(function () {});
+            $('<span class="color blue">.slide-bottom</span>').click(function () { $('body,html').animate({ scrollTop: $(document).height() - $(window).height() }, 500); return false;});
+            });
+        &lt;/script&gt;
+    	</span>
+        &lt;div class="scrollmenu style2 white <span class="color green">topleft</span>"&gt;
+            &lt;div class="scrollmenu-inner"&gt;
+                &lt;div class="scrollmenu-inner-bottom"&gt;
+                    &lt;div class="scroll-button sbottom-1 scroll-bottom <span class="color blue">slide-bottom</span>"&gt;&nbsp;&lt;/div&gt;
+                &lt;/div&gt;
+            &lt;/div&gt;
+        &lt;/div&gt;
+        
+        &lt;div class="scrollmenu style2 white <span class="color green">bottomleft</span>"&gt;
+            &lt;div class="scrollmenu-inner"&gt;
+                &lt;div class="scrollmenu-inner-top"&gt;
+                    &lt;div class="scroll-button stop-1 scroll-top <span class="color blue">slide-top</span>"&gt;&nbsp;&lt;/div&gt;
+                &lt;/div&gt;
+            &lt;/div&gt;
+        &lt;/div&gt;
+    </code>
+</pre>
+                    
+            	</div>
+            </div>
+            
+            <div class="content">
+            	<div class="content-in">
+                	<h3>8. Scrollmenu - Buttons fade in and out (Position Top &amp; Bottom)</h3> 
+                          
+                    8.1. You can fade in and out the Page Scrolling Menu show it on top or bottom position.
+                    
+<pre>
+    <code>
+		<span class="color green">
+        &lt;script type="text/javascript"&gt;
+            // Scroll to Top
+            $(function () {$(window).scroll(function () {if ($(this).scrollTop() > 100) $('<span class="color blue">.slide-top-fade</span>').fadeIn();else $('<span class="color blue">.slide-top-fade</span>').fadeOut();});
+            $('<span class="color blue">.slide-top-fade</span>').click(function () { $('body,html').animate({ scrollTop: 0 }, 500); return false;});
+            });
+            // Scroll to Bottom
+            $(function () {$(window).scroll(function () {if ($(document).height() - $(window).height() == $(this).scrollTop()) $('<span class="color blue">.slide-bottom-fade</span>').fadeOut();else $('<span class="color blue">.slide-bottom-fade</span>').fadeIn();});
+            $('<span class="color blue">.slide-bottom-fade</span>').click(function () { $('body,html').animate({ scrollTop: $(document).height() - $(window).height() }, 500); return false;});
+            });
+        &lt;/script&gt;
+    	</span>
+        &lt;div class="scrollmenu style2 white <span class="color green">topleft</span> <span class="color blue">slide-bottom-fade</span>"&gt;
+            &lt;div class="scrollmenu-inner"&gt;
+                &lt;div class="scrollmenu-inner-bottom"&gt;
+                    &lt;div class="scroll-button sbottom-1 scroll-bottom <span class="color blue">slide-bottom-fade</span>"&gt;&nbsp;&lt;/div&gt;
+                &lt;/div&gt;
+            &lt;/div&gt;
+        &lt;/div&gt;
+        
+        &lt;div class="scrollmenu style2 white <span class="color green">bottomleft</span> <span class="color blue">slide-top-fade</span>"&gt;
+            &lt;div class="scrollmenu-inner"&gt;
+                &lt;div class="scrollmenu-inner-top"&gt;
+                    &lt;div class="scroll-button stop-1 scroll-top <span class="color blue">slide-top-fade</span>"&gt;&nbsp;&lt;/div&gt;
+                &lt;/div&gt;
+            &lt;/div&gt;
+        &lt;/div&gt;
+    </code>
+</pre>
+                    
+            	</div>
+            </div>
+            
+            <div class="content">
+            	<div class="content-in">
+                	<h3>9. Show on of both only</h3> 
+                          
+                    9.1. Here you can show on of both Page Scrolling Menu (Up or Down).
+                    
+<pre>
+    <code>
+        <span class="color green">
+        &lt;script type="text/javascript"&gt;
+            // Scroll to Bottom
+            $(function () {$(window).scroll(function () {});
+            $('<span class="color blue">.slide-bottom</span>').click(function () { $('body,html').animate({ scrollTop: $(document).height() - $(window).height() }, 500); return false;});
+            });
+        &lt;/script&gt;
+    	</span>
+        &lt;div class="scrollmenu style1 black <span class="color green">topleft</span>"&gt;
+            &lt;div class="scrollmenu-inner"&gt;
+                &lt;div class="scrollmenu-inner-bottom"&gt;
+                    &lt;div class="scroll-button sbottom-1 scroll-bottom <span class="color blue">slide-bottom</span>"&gt;&nbsp;&lt;/div&gt;
+                &lt;/div&gt;
+            &lt;/div&gt;
+        &lt;/div&gt;
+    </code>
+</pre>
+                    
+                    Using scroll down Menu.
+
+<pre>
+    <code>
+		<span class="color green">
+        &lt;script type="text/javascript"&gt;
+            // Scroll to Top
+            $(function () {$(window).scroll(function () {});
+            $('<span class="color blue">.slide-top</span>').click(function () { $('body,html').animate({ scrollTop: 0 }, 500); return false;});
+            });
+        &lt;/script&gt;
+    	</span>
+        &lt;div class="scrollmenu style1 black <span class="color green">topleft</span>"&gt;
+            &lt;div class="scrollmenu-inner"&gt;
+                &lt;div class="scrollmenu-inner-top"&gt;
+                    &lt;div class="scroll-button stop-1 scroll-top <span class="color blue">slide-top</span>"&gt;&nbsp;&lt;/div&gt;
+                &lt;/div&gt;
+            &lt;/div&gt;
+        &lt;/div&gt;
+    </code>
+</pre>
+
+					Using scroll up Menu.
+                    
+            	</div>
+            </div>
+            
+            
+            
+            
+        </div>
+        
+    </body>
+
+</html>

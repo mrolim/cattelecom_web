@@ -1,0 +1,238 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+	<meta name="description" content="Real Parallax effect jQuery plugin" />
+	<title>Parallax: positioning</title>
+
+	  
+	<!-- Including styles -->
+	<link type="text/css" href="css/ui-lightness/jquery-ui-1.8.18.custom.css" rel="stylesheet" />	
+	<link type="text/css" href="css/style.css" rel="stylesheet" />	
+	
+	
+	<!-- Including jQuery -->
+	<script type="text/javascript" src="js/jquery-1.7.1.min.js"></script>
+	<script type="text/javascript" src="js/jquery-ui-1.8.18.custom.min.js"></script>
+
+	<!-- Including parallax plugin -->
+	<script type="text/javascript" src="js/jquery.real-parallax.js"></script>
+	
+		
+		
+	<script type="text/javascript">
+	   
+		$(document).ready(function() 
+			{ 
+				$("#parallax1").parallax({width: 640,  height: 280});
+				$("#parallax2").parallax({width: 640,  height: 280});
+				
+			} 
+		);
+		
+		function toggle(showHideDiv) {
+			var ele = document.getElementById(showHideDiv);			
+			if(ele.style.display == "block") {
+				ele.style.display = "none";				
+			}
+			else {
+				ele.style.display = "block";				
+			}
+		} 
+
+	</script>	
+
+	
+</head>
+
+
+	<body>
+		
+		
+		<div class="row">
+			
+			<div class="thumb_img border-box">
+			<p><a href="index.html">&lt;&lt; back to main page</a></p></br>
+			<h4>Contents</h4>
+			
+			<ul>			
+			<li><a href="#positioning">Layers positioning</a></li>
+			<li><a href="#zcoordinate">Z-coordinates</a></li>				
+			</ul>
+			
+			</div>
+					
+			
+			<h2>Constructing simple parallax</h2>			
+			<p>
+			Below you will find working example(s) and complete, ready to use HTML code for each example.
+			</p>
+			<p>Remember: always include the correct path to jQuery library and the parallax plugin:</p>
+			
+			<!-- CODE -->
+			<div class="container_code">
+<pre class="dr_hl_lang_html"><span class="html_def"> </span><span class="html_com">&lt;!-- PROVIDE THE CORRECT PATH TO .js FILES --&gt;</span><span class="html_def">
+</span><span class="html_tagop">&lt;</span><span class="html_tag">script</span><span class="html_def"> </span><span class="html_attr">type</span><span class="html_attrop">=</span><span class="html_attrvalue">"text/javascript"</span><span class="html_def"> </span><span class="html_attr">src</span><span class="html_attrop">=</span><span class="html_attrvalue">"/path/to/jquery-latest.js"</span><span class="html_tagop">&gt;&lt;/</span><span class="html_tag">script</span><span class="html_tagop">&gt;</span><span class="html_def"> 
+</span><span class="html_tagop">&lt;</span><span class="html_tag">script</span><span class="html_def"> </span><span class="html_attr">type</span><span class="html_attrop">=</span><span class="html_attrvalue">"text/javascript"</span><span class="html_def"> </span><span class="html_attr">src</span><span class="html_attrop">=</span><span class="html_attrvalue">"/path/to/jquery.real-parallax.js"</span><span class="html_tagop">&gt;&lt;/</span><span class="html_tag">script</span><span class="html_tagop">&gt;</span></pre>
+                </div>
+			<!-- END OF CODE -->
+			
+		</div>
+		
+		
+		
+		<hr/><div class="clearfix"></div>
+		
+		
+		<div class="row">				
+			<a name="positioning"></a>
+			<h2>Layers positioning</h2>			
+		
+			<div id="parallax1" class="box">        
+				<div style="left:300px;top:30%;">Layer 1 (left:300px;top:30%;)</div>
+				<div style="left:300px;top:40%;">Layer 2 (left:300px;top:40%;)</div>
+				<div style="left:300px;top:50%;">Layer 3 (left:300px;top:50%;)</div>
+				<div style="left:300px;top:60%;">Layer 4 (left:300px;top:60%;)</div>
+				<div style="left:300px;top:70%;">Layer 5 (left:300px;top:70%;)</div>
+			</div>
+			
+			
+			</br>
+			<h4>HTML code</h4>
+			<p>Complete html code of example above (<a href="javascript:toggle('e1');">show / hide</a>)</p>
+			
+			
+			
+			<div id="e1" style="display: none">
+			</br><p>Note: you can provide top and left position not only in % but also in px</p>
+			<!-- CODE -->
+			<div class="container_code">
+<pre class="dr_hl_lang_html"><span class="html_tagop">&lt;</span><span class="html_doctype">!DOCTYPE</span><span class="html_def"> </span><span class="html_doctype">html</span><span class="html_tagop">&gt;</span><span class="html_def">
+</span><span class="html_tagop">&lt;</span><span class="html_tag">html</span><span class="html_def"> </span><span class="html_attr">xmlns</span><span class="html_attrop">=</span><span class="html_attrvalue">"http://www.w3.org/1999/xhtml"</span><span class="html_tagop">&gt;</span><span class="html_def">
+    </span><span class="html_tagop">&lt;</span><span class="html_tag">head</span><span class="html_tagop">&gt;</span><span class="html_def">
+        </span><span class="html_tagop">&lt;</span><span class="html_tag">meta</span><span class="html_def"> </span><span class="html_attr">http-equiv</span><span class="html_attrop">=</span><span class="html_attrvalue">"Content-Type"</span><span class="html_def"> </span><span class="html_attr">content</span><span class="html_attrop">=</span><span class="html_attrvalue">"text/html; charset=UTF-8"</span><span class="html_def"> </span><span class="html_tagop">/&gt;</span><span class="html_def">
+        </span><span class="html_tagop">&lt;</span><span class="html_tag">meta</span><span class="html_def"> </span><span class="html_attr">name</span><span class="html_attrop">=</span><span class="html_attrvalue">"description"</span><span class="html_def"> </span><span class="html_attr">content</span><span class="html_attrop">=</span><span class="html_attrvalue">"Real Parallax effect jQuery plugin"</span><span class="html_def"> </span><span class="html_tagop">/&gt;</span><span class="html_def">
+        </span><span class="html_tagop">&lt;</span><span class="html_tag">title</span><span class="html_tagop">&gt;</span><span class="html_def">Parallax</span><span class="html_tagop">&lt;/</span><span class="html_tag">title</span><span class="html_tagop">&gt;</span><span class="html_def">
+        
+    </span><span class="html_tagop">&lt;</span><span class="html_tag">style</span><span class="html_def"> </span><span class="html_attr">type</span><span class="html_attrop">=</span><span class="html_attrvalue">"text/css"</span><span class="html_tagop">&gt;</span><span class="css_def">
+    </span><span class="css_id">#parallaxID</span><span class="css_def"> {
+        </span><span class="css_prop">position</span><span class="css_def">:</span><span class="css_propvalue"> relative</span><span class="css_def">;
+        </span><span class="css_prop">overflow</span><span class="css_def">:</span><span class="css_propvalue">hidden</span><span class="css_def">;
+        </span><span class="css_prop">padding</span><span class="css_def">:</span><span class="css_propvalue"> 0px</span><span class="css_def">;   
+        </span><span class="css_prop">margin</span><span class="css_def">:</span><span class="css_propvalue"> 0px</span><span class="css_def">;
+        </span><span class="css_prop">border</span><span class="css_def">:</span><span class="css_propvalue">1px solid #ccc</span><span class="css_def">;          
+    }
+    </span><span class="html_tagop">&lt;/</span><span class="html_tag">style</span><span class="html_tagop">&gt;</span><span class="html_def">
+        
+    </span><span class="html_com">&lt;!-- PROVIDE THE CORRECT PATH TO .js FILES --&gt;</span><span class="html_def">
+        </span><span class="html_tagop">&lt;</span><span class="html_tag">script</span><span class="html_def"> </span><span class="html_attr">type</span><span class="html_attrop">=</span><span class="html_attrvalue">"text/javascript"</span><span class="html_def"> </span><span class="html_attr">src</span><span class="html_attrop">=</span><span class="html_attrvalue">"/path/to/jquery-latest.js"</span><span class="html_tagop">&gt;&lt;/</span><span class="html_tag">script</span><span class="html_tagop">&gt;</span><span class="html_def"> 
+        </span><span class="html_tagop">&lt;</span><span class="html_tag">script</span><span class="html_def"> </span><span class="html_attr">type</span><span class="html_attrop">=</span><span class="html_attrvalue">"text/javascript"</span><span class="html_def"> </span><span class="html_attr">src</span><span class="html_attrop">=</span><span class="html_attrvalue">"/path/to/jquery.real-parallax.js"</span><span class="html_tagop">&gt;&lt;/</span><span class="html_tag">script</span><span class="html_tagop">&gt;</span><span class="html_def"> 
+        
+        </span><span class="html_tagop">&lt;</span><span class="html_tag">script</span><span class="html_def"> </span><span class="html_attr">type</span><span class="html_attrop">=</span><span class="html_attrvalue">"text/javascript"</span><span class="html_tagop">&gt;</span><span class="jscript_def">
+            $</span><span class="jscript_op">(</span><span class="jscript_prop">document</span><span class="jscript_op">).</span><span class="jscript_def">ready</span><span class="jscript_op">(</span><span class="jscript_keyword">function</span><span class="jscript_op">()</span><span class="jscript_def"> 
+                </span><span class="jscript_op">{</span><span class="jscript_def"> 
+                    $</span><span class="jscript_op">(</span><span class="jscript_string">"#parallaxID"</span><span class="jscript_op">).</span><span class="jscript_def">parallax</span><span class="jscript_op">({</span><span class="jscript_def">width</span><span class="jscript_op">:</span><span class="jscript_def"> </span><span class="jscript_number">640</span><span class="jscript_op">,</span><span class="jscript_def">  height</span><span class="jscript_op">:</span><span class="jscript_def"> </span><span class="jscript_number">280</span><span class="jscript_op">});</span><span class="jscript_def">
+                </span><span class="jscript_op">}</span><span class="jscript_def"> 
+            </span><span class="jscript_op">);</span><span class="jscript_def">
+        </span><span class="html_tagop">&lt;/</span><span class="html_tag">script</span><span class="html_tagop">&gt;</span><span class="html_def">   
+        
+    </span><span class="html_tagop">&lt;/</span><span class="html_tag">head</span><span class="html_tagop">&gt;</span><span class="html_def">
+
+    </span><span class="html_tagop">&lt;</span><span class="html_tag">body</span><span class="html_tagop">&gt;</span><span class="html_def">    
+        </span><span class="html_tagop">&lt;</span><span class="html_tag">div</span><span class="html_def"> </span><span class="html_attr">id</span><span class="html_attrop">=</span><span class="html_attrvalue">"parallaxID"</span><span class="html_tagop">&gt;</span><span class="html_def">        
+            </span><span class="html_tagop">&lt;</span><span class="html_tag">div</span><span class="html_def"> </span><span class="html_attr">style</span><span class="html_attrop">=</span><span class="html_attrvalue">"left:300px;top:30%;"</span><span class="html_tagop">&gt;</span><span class="html_def">Layer 1</span><span class="html_tagop">&lt;/</span><span class="html_tag">div</span><span class="html_tagop">&gt;</span><span class="html_def">
+            </span><span class="html_tagop">&lt;</span><span class="html_tag">div</span><span class="html_def"> </span><span class="html_attr">style</span><span class="html_attrop">=</span><span class="html_attrvalue">"left:300px;top:40%;"</span><span class="html_tagop">&gt;</span><span class="html_def">Layer 2</span><span class="html_tagop">&lt;/</span><span class="html_tag">div</span><span class="html_tagop">&gt;</span><span class="html_def">
+            </span><span class="html_tagop">&lt;</span><span class="html_tag">div</span><span class="html_def"> </span><span class="html_attr">style</span><span class="html_attrop">=</span><span class="html_attrvalue">"left:300px;top:50%;"</span><span class="html_tagop">&gt;</span><span class="html_def">Layer 3</span><span class="html_tagop">&lt;/</span><span class="html_tag">div</span><span class="html_tagop">&gt;</span><span class="html_def">
+            </span><span class="html_tagop">&lt;</span><span class="html_tag">div</span><span class="html_def"> </span><span class="html_attr">style</span><span class="html_attrop">=</span><span class="html_attrvalue">"left:300px;top:60%;"</span><span class="html_tagop">&gt;</span><span class="html_def">Layer 4</span><span class="html_tagop">&lt;/</span><span class="html_tag">div</span><span class="html_tagop">&gt;</span><span class="html_def">
+            </span><span class="html_tagop">&lt;</span><span class="html_tag">div</span><span class="html_def"> </span><span class="html_attr">style</span><span class="html_attrop">=</span><span class="html_attrvalue">"left:300px;top:70%;"</span><span class="html_tagop">&gt;</span><span class="html_def">Layer 5</span><span class="html_tagop">&lt;/</span><span class="html_tag">div</span><span class="html_tagop">&gt;</span><span class="html_def">
+        </span><span class="html_tagop">&lt;/</span><span class="html_tag">div</span><span class="html_tagop">&gt;</span><span class="html_def">
+    </span><span class="html_tagop">&lt;/</span><span class="html_tag">body</span><span class="html_tagop">&gt;</span><span class="html_def">
+</span><span class="html_tagop">&lt;/</span><span class="html_tag">html</span><span class="html_tagop">&gt;</span></pre>
+                </div>
+
+			<!-- END OF CODE -->
+			
+			</div>
+			
+			
+			
+		</div>
+		
+		<hr/><div class="clearfix"></div>
+		
+		
+		<div class="row">	
+			<a name="zcoordinate"></a>
+			<h2>Z-coordinates</h2>	
+			<p>By default parallax plugin can assign Z-coordinates automatically (between z=-100 and z=+100) like in example above. Howether, for fine tuning z-coordinates can be adjusted manually. Layers can also be locked at place.</p>
+			<div id="parallax2" class="box">        
+				<div style="left:300px;top:30%;">Layer 1 (z:auto)</div>
+				<div style="left:300px;top:40%;" data-z="20">Layer 2 (z:20)</div>
+				<div style="left:300px;top:50%;" data-z="30">Layer 3 (z:30)</div>
+				<div style="left:300px;top:60%;" data-lock="yes">Layer 4 (locked)</div>
+				<div style="left:300px;top:70%;" data-z="-150">Layer 5 (z=-150)</div>
+			</div>
+			
+			</br>
+			<h4>HTML code</h4>
+			<p>Complete html code of example above (<a href="javascript:toggle('e2');">show / hide</a>)</p>
+			
+			<div id="e2" style="display: none">
+				</br>
+				<!-- CODE -->
+				<div class="container_code">
+<pre class="dr_hl_lang_html"><span class="html_tagop">&lt;</span><span class="html_doctype">!DOCTYPE</span><span class="html_def"> </span><span class="html_doctype">html</span><span class="html_tagop">&gt;</span><span class="html_def">
+</span><span class="html_tagop">&lt;</span><span class="html_tag">html</span><span class="html_def"> </span><span class="html_attr">xmlns</span><span class="html_attrop">=</span><span class="html_attrvalue">"http://www.w3.org/1999/xhtml"</span><span class="html_tagop">&gt;</span><span class="html_def">
+    </span><span class="html_tagop">&lt;</span><span class="html_tag">head</span><span class="html_tagop">&gt;</span><span class="html_def">
+        </span><span class="html_tagop">&lt;</span><span class="html_tag">meta</span><span class="html_def"> </span><span class="html_attr">http-equiv</span><span class="html_attrop">=</span><span class="html_attrvalue">"Content-Type"</span><span class="html_def"> </span><span class="html_attr">content</span><span class="html_attrop">=</span><span class="html_attrvalue">"text/html; charset=UTF-8"</span><span class="html_def"> </span><span class="html_tagop">/&gt;</span><span class="html_def">
+        </span><span class="html_tagop">&lt;</span><span class="html_tag">meta</span><span class="html_def"> </span><span class="html_attr">name</span><span class="html_attrop">=</span><span class="html_attrvalue">"description"</span><span class="html_def"> </span><span class="html_attr">content</span><span class="html_attrop">=</span><span class="html_attrvalue">"Real Parallax effect jQuery plugin"</span><span class="html_def"> </span><span class="html_tagop">/&gt;</span><span class="html_def">
+        </span><span class="html_tagop">&lt;</span><span class="html_tag">title</span><span class="html_tagop">&gt;</span><span class="html_def">Parallax</span><span class="html_tagop">&lt;/</span><span class="html_tag">title</span><span class="html_tagop">&gt;</span><span class="html_def">
+        
+        </span><span class="html_tagop">&lt;</span><span class="html_tag">style</span><span class="html_def"> </span><span class="html_attr">type</span><span class="html_attrop">=</span><span class="html_attrvalue">"text/css"</span><span class="html_tagop">&gt;</span><span class="css_def">
+        </span><span class="css_id">#parallaxID</span><span class="css_def"> {
+            </span><span class="css_prop">position</span><span class="css_def">:</span><span class="css_propvalue"> relative</span><span class="css_def">;
+            </span><span class="css_prop">overflow</span><span class="css_def">:</span><span class="css_propvalue">hidden</span><span class="css_def">;
+            </span><span class="css_prop">padding</span><span class="css_def">:</span><span class="css_propvalue"> 0px</span><span class="css_def">;   
+            </span><span class="css_prop">margin</span><span class="css_def">:</span><span class="css_propvalue"> 0px</span><span class="css_def">;
+            </span><span class="css_prop">border</span><span class="css_def">:</span><span class="css_propvalue">1px solid #ccc</span><span class="css_def">;          
+        }
+        </span><span class="html_tagop">&lt;/</span><span class="html_tag">style</span><span class="html_tagop">&gt;</span><span class="html_def">
+        
+        </span><span class="html_com">&lt;!-- PROVIDE THE CORRECT PATH TO .js FILES --&gt;</span><span class="html_def">
+        </span><span class="html_tagop">&lt;</span><span class="html_tag">script</span><span class="html_def"> </span><span class="html_attr">type</span><span class="html_attrop">=</span><span class="html_attrvalue">"text/javascript"</span><span class="html_def"> </span><span class="html_attr">src</span><span class="html_attrop">=</span><span class="html_attrvalue">"/path/to/jquery-latest.js"</span><span class="html_tagop">&gt;&lt;/</span><span class="html_tag">script</span><span class="html_tagop">&gt;</span><span class="html_def"> 
+        </span><span class="html_tagop">&lt;</span><span class="html_tag">script</span><span class="html_def"> </span><span class="html_attr">type</span><span class="html_attrop">=</span><span class="html_attrvalue">"text/javascript"</span><span class="html_def"> </span><span class="html_attr">src</span><span class="html_attrop">=</span><span class="html_attrvalue">"/path/to/jquery.real-parallax.js"</span><span class="html_tagop">&gt;&lt;/</span><span class="html_tag">script</span><span class="html_tagop">&gt;</span><span class="html_def"> 
+        
+        </span><span class="html_tagop">&lt;</span><span class="html_tag">script</span><span class="html_def"> </span><span class="html_attr">type</span><span class="html_attrop">=</span><span class="html_attrvalue">"text/javascript"</span><span class="html_tagop">&gt;</span><span class="jscript_def">
+            $</span><span class="jscript_op">(</span><span class="jscript_prop">document</span><span class="jscript_op">).</span><span class="jscript_def">ready</span><span class="jscript_op">(</span><span class="jscript_keyword">function</span><span class="jscript_op">()</span><span class="jscript_def"> 
+                </span><span class="jscript_op">{</span><span class="jscript_def"> 
+                    $</span><span class="jscript_op">(</span><span class="jscript_string">"#parallaxID"</span><span class="jscript_op">).</span><span class="jscript_def">parallax</span><span class="jscript_op">({</span><span class="jscript_def">width</span><span class="jscript_op">:</span><span class="jscript_def"> </span><span class="jscript_number">640</span><span class="jscript_op">,</span><span class="jscript_def">  height</span><span class="jscript_op">:</span><span class="jscript_def"> </span><span class="jscript_number">280</span><span class="jscript_op">});</span><span class="jscript_def">
+                </span><span class="jscript_op">}</span><span class="jscript_def"> 
+            </span><span class="jscript_op">);</span><span class="jscript_def">
+        </span><span class="html_tagop">&lt;/</span><span class="html_tag">script</span><span class="html_tagop">&gt;</span><span class="html_def">   
+        
+    </span><span class="html_tagop">&lt;/</span><span class="html_tag">head</span><span class="html_tagop">&gt;</span><span class="html_def">
+    
+    </span><span class="html_tagop">&lt;</span><span class="html_tag">body</span><span class="html_tagop">&gt;</span><span class="html_def">    
+        </span><span class="html_tagop">&lt;</span><span class="html_tag">div</span><span class="html_def"> </span><span class="html_attr">id</span><span class="html_attrop">=</span><span class="html_attrvalue">"parallaxID"</span><span class="html_tagop">&gt;</span><span class="html_def">        
+           </span><span class="html_tagop">&lt;</span><span class="html_tag">div</span><span class="html_def"> </span><span class="html_attr">style</span><span class="html_attrop">=</span><span class="html_attrvalue">"left:300px;top:30%;"</span><span class="html_tagop">&gt;</span><span class="html_def">Layer 1 (z:auto)</span><span class="html_tagop">&lt;/</span><span class="html_tag">div</span><span class="html_tagop">&gt;</span><span class="html_def">
+                </span><span class="html_tagop">&lt;</span><span class="html_tag">div</span><span class="html_def"> </span><span class="html_attr">style</span><span class="html_attrop">=</span><span class="html_attrvalue">"left:300px;top:40%;"</span><span class="html_def"> </span><span class="html_attr">data-z</span><span class="html_attrop">=</span><span class="html_attrvalue">"20"</span><span class="html_tagop">&gt;</span><span class="html_def">Layer 2 (z:20)</span><span class="html_tagop">&lt;/</span><span class="html_tag">div</span><span class="html_tagop">&gt;</span><span class="html_def">
+                </span><span class="html_tagop">&lt;</span><span class="html_tag">div</span><span class="html_def"> </span><span class="html_attr">style</span><span class="html_attrop">=</span><span class="html_attrvalue">"left:300px;top:50%;"</span><span class="html_def"> </span><span class="html_attr">data-z</span><span class="html_attrop">=</span><span class="html_attrvalue">"30"</span><span class="html_tagop">&gt;</span><span class="html_def">Layer 3 (z:30)</span><span class="html_tagop">&lt;/</span><span class="html_tag">div</span><span class="html_tagop">&gt;</span><span class="html_def">
+                </span><span class="html_tagop">&lt;</span><span class="html_tag">div</span><span class="html_def"> </span><span class="html_attr">style</span><span class="html_attrop">=</span><span class="html_attrvalue">"left:300px;top:60%;"</span><span class="html_def"> </span><span class="html_attr">data-lock</span><span class="html_attrop">=</span><span class="html_attrvalue">"yes"</span><span class="html_tagop">&gt;</span><span class="html_def">Layer 4 (locked)</span><span class="html_tagop">&lt;/</span><span class="html_tag">div</span><span class="html_tagop">&gt;</span><span class="html_def">
+                </span><span class="html_tagop">&lt;</span><span class="html_tag">div</span><span class="html_def"> </span><span class="html_attr">style</span><span class="html_attrop">=</span><span class="html_attrvalue">"left:300px;top:70%;"</span><span class="html_def"> </span><span class="html_attr">data-z</span><span class="html_attrop">=</span><span class="html_attrvalue">"-150"</span><span class="html_tagop">&gt;</span><span class="html_def">Layer 5 (z=-150)</span><span class="html_tagop">&lt;/</span><span class="html_tag">div</span><span class="html_tagop">&gt;</span><span class="html_def">
+            </span><span class="html_tagop">&lt;/</span><span class="html_tag">div</span><span class="html_tagop">&gt;</span><span class="html_def">
+    </span><span class="html_tagop">&lt;/</span><span class="html_tag">body</span><span class="html_tagop">&gt;</span><span class="html_def">
+</span><span class="html_tagop">&lt;/</span><span class="html_tag">html</span><span class="html_tagop">&gt;</span></pre>
+                </div>
+				<!-- END OF CODE -->			
+			</div>
+			
+			
+		</div>
+		<hr/><div class="clearfix"></div>
+		
+	
+		
+		
+	
+	</body>
+</html>

@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html>
+
+    <head>
+    
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+        <title>Page Scrolling</title>
+        <link rel="stylesheet" href="style.css" type="text/css" />
+        <script src="jquery.min.js"></script>
+    
+    </head>
+
+    <body class="light">
+    
+        <div class="container">
+        
+        	<div class="logo">
+        		<img src="icons/creative-dive.png">
+    		</div>
+    
+            <h1>Page <span class="color blue">Scrolling</span></h1>
+        
+        	<h2>Scrollmenu - Buttons fade in and out (Position Top &amp; Bottom)</h2>
+            
+            <script type="text/javascript">
+                // Scroll to Top
+                $(function () {$(window).scroll(function () {if ($(this).scrollTop() > 100) $('.slide-top-fade').fadeIn();else $('.slide-top-fade').fadeOut();});
+                $('.slide-top-fade').click(function () { $('body,html').animate({ scrollTop: 0 }, 500); return false;});
+                });
+            	// Scroll to Bottom
+                $(function () {$(window).scroll(function () {if ($(document).height() - $(window).height() == $(this).scrollTop()) $('.slide-bottom-fade').fadeOut();else $('.slide-bottom-fade').fadeIn();});
+                $('.slide-bottom-fade').click(function () { $('body,html').animate({ scrollTop: $(document).height() - $(window).height() }, 500); return false;});
+                });
+            </script>
+            
+            <div class="scrollmenu style2 white topleft slide-bottom-fade">
+            	<div class="scrollmenu-inner">
+                	<div class="scrollmenu-inner-bottom">
+                    	<div class="scroll-button sbottom-1 scroll-bottom slide-bottom-fade">&nbsp;</div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="scrollmenu style2 white bottomleft slide-top-fade">
+            	<div class="scrollmenu-inner">
+                	<div class="scrollmenu-inner-top">
+                		<div class="scroll-button stop-1 scroll-top slide-top-fade">&nbsp;</div>
+                    </div>
+                </div>
+            </div>
+            
+            
+            
+            <div class="scrollmenu style2 black topright slide-bottom-fade">
+            	<div class="scrollmenu-inner">
+                	<div class="scrollmenu-inner-bottom">
+                    	<div class="scroll-button sbottom-1 scroll-bottom slide-bottom-fade">&nbsp;</div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="scrollmenu style2 black bottomright slide-top-fade">
+            	<div class="scrollmenu-inner">
+                	<div class="scrollmenu-inner-top">
+                		<div class="scroll-button stop-1 scroll-top slide-top-fade">&nbsp;</div>
+                    </div>
+                </div>
+            </div>
+            
+            
+            <!-- -->
+            
+            
+            <div class="content">
+            	<div class="content-in">
+                
+                    <h2>Lorem ipsum dolor sit amet, consectetuer adipiscing elit</h2>
+                    
+                    Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. 
+                    Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem. Nulla consequat massa quis enim. Donec pede justo, fringilla vel, aliquet nec, vulputate eget, arcu. 
+                    <br><br>
+                    In enim justo, rhoncus ut, imperdiet a, venenatis vitae, justo. Nullam dictum felis eu pede mollis pretium. Integer tincidunt.
+                    
+                    <h2>Lorem ipsum dolor sit amet, consectetuer adipiscing elit</h2>
+                    
+                    Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. 
+                    Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem. Nulla consequat massa quis enim. Donec pede justo, fringilla vel, aliquet nec, vulputate eget, arcu. 
+                    <br><br>
+                    In enim justo, rhoncus ut, imperdiet a, venenatis vitae, justo. Nullam dictum felis eu pede mollis pretium. Integer tincidunt.
+                    
+                    <h2>Lorem ipsum dolor sit amet, consectetuer adipiscing elit</h2>
+                    
+                    Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. 
+                    Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem. Nulla consequat massa quis enim. Donec pede justo, fringilla vel, aliquet nec, vulputate eget, arcu. 
+                    <br><br>
+                    In enim justo, rhoncus ut, imperdiet a, venenatis vitae, justo. Nullam dictum felis eu pede mollis pretium. Integer tincidunt.
+                    
+                    <h2>Lorem ipsum dolor sit amet, consectetuer adipiscing elit</h2>
+                    
+                    Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. 
+                    Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem. Nulla consequat massa quis enim. Donec pede justo, fringilla vel, aliquet nec, vulputate eget, arcu. 
+                    <br><br>
+                    In enim justo, rhoncus ut, imperdiet a, venenatis vitae, justo. Nullam dictum felis eu pede mollis pretium. Integer tincidunt.
+                    
+                    <h2>Lorem ipsum dolor sit amet, consectetuer adipiscing elit</h2>
+                    
+                    Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. 
+                    Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem. Nulla consequat massa quis enim. Donec pede justo, fringilla vel, aliquet nec, vulputate eget, arcu. 
+                    <br><br>
+                    In enim justo, rhoncus ut, imperdiet a, venenatis vitae, justo. Nullam dictum felis eu pede mollis pretium. Integer tincidunt.
+                    
+                    <h2>Lorem ipsum dolor sit amet, consectetuer adipiscing elit</h2>
+                    
+                    Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. 
+                    Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem. Nulla consequat massa quis enim. Donec pede justo, fringilla vel, aliquet nec, vulputate eget, arcu. 
+                    <br><br>
+                    In enim justo, rhoncus ut, imperdiet a, venenatis vitae, justo. Nullam dictum felis eu pede mollis pretium. Integer tincidunt.
+                    
+                    <h2>Lorem ipsum dolor sit amet, consectetuer adipiscing elit</h2>
+                    
+                    Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. 
+                    Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem. Nulla consequat massa quis enim. Donec pede justo, fringilla vel, aliquet nec, vulputate eget, arcu. 
+                    <br><br>
+                    In enim justo, rhoncus ut, imperdiet a, venenatis vitae, justo. Nullam dictum felis eu pede mollis pretium. Integer tincidunt.
+                    
+                    <h2>Lorem ipsum dolor sit amet, consectetuer adipiscing elit</h2>
+                    
+                    Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. 
+                    Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem. Nulla consequat massa quis enim. Donec pede justo, fringilla vel, aliquet nec, vulputate eget, arcu. 
+                    <br><br>
+                    In enim justo, rhoncus ut, imperdiet a, venenatis vitae, justo. Nullam dictum felis eu pede mollis pretium. Integer tincidunt.
+                
+                </div>
+            </div>
+            
+            
+    	</div>
+        
+    </body>
+
+</html>

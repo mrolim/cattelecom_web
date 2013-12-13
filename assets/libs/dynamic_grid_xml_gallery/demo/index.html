@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="en" class="no-js">
+<head>
+	<meta charset="UTF-8" />
+	
+	<title>Dynamic Grid</title>
+	
+	<meta name="description" content="" />
+	<meta name="keywords" value="" />
+	
+	<link rel="stylesheet" href="css/layout.css" type="text/css" />
+	<link rel="stylesheet" href="css/dynamic.grid.css" type="text/css" />
+	<style>
+		.shell > div {
+			margin: 40px;
+		}
+	</style>
+</head>
+<body>
+	<div class="shell" style="width: 800px; margin: 0 auto;">
+		<div id="grid1"></div>
+		<div id="grid2"></div>
+		<div id="grid3"></div>
+		<div id="grid4"></div>
+		<div id="grid5"></div>
+		<div id="grid6"></div>
+		<div id="grid7"></div>
+		<div id="grid8"></div>
+	</div>
+	
+	<script src="js/jquery.min.js"></script>
+	<script src="js/dynamic.grid.gallery.js"></script>
+	
+	<script>
+		(function($, undefined) {
+			$(document).ready(function() {
+				$('#grid1').dynamicGallery({
+					src : 'gallery.xml',
+					width : 400,
+					height : 400,
+					cols : 4,
+					min_rows : 2,
+					max_rows : 3,
+					random_heights : true,
+					padding: 1,
+					interval : 2000,
+					speed : 1000,
+					scale_images : true,
+					center_images : true,
+					click_action : 'lightbox',
+					show_title_in_lightbox : true
+				});
+				
+				$('#grid2').dynamicGallery({
+					src : 'gallery.xml',
+					height : 400,
+					cols : 4,
+					min_rows : 1,
+					max_rows : 2,
+					random_heights : false,
+					padding: 1,
+					interval : 2000,
+					speed : 1000,
+					easing : 'easeOutQuad',
+					scale_images : false,
+					center_images : true,
+					click_action : 'lightbox',
+					show_title_in_lightbox : true
+				});
+				
+				$('#grid3').dynamicGallery({
+					src : 'gallery.xml',
+					height : 400,
+					cols : 3,
+					min_rows : 2,
+					max_rows : 3,
+					random_heights : true,
+					padding: 5,
+					interval : 2000,
+					speed : 800,
+					easing : 'easeOutElastic',
+					scale_images : true,
+					center_images : true,
+					click_action : 'lightbox', // or "link",
+					show_title_in_lightbox : true
+				});
+				
+				$('#grid4').dynamicGallery({
+					src : 'gallery.xml',
+					width : 600,
+					height : 400,
+					cols : 3,
+					min_rows : 2,
+					max_rows : 2,
+					random_heights : false,
+					padding: 0,
+					interval : 2000,
+					speed : 1200,
+					easing : 'easeOutBounce',
+					scale_images : true,
+					center_images : true,
+					click_action : 'lightbox', // or "link",
+					show_title_in_lightbox : true
+				});
+				
+				$('#grid5').dynamicGallery({
+					src : 'gallery.xml',
+					width : 400,
+					height : 400,
+					cols : 2,
+					min_rows : 2,
+					max_rows : 2,
+					random_heights : false,
+					padding: 1,
+					interval : 2000,
+					speed : 1000,
+					easing : 'easeOutQuart',
+					scale_images : true,
+					center_images : true,
+					click_action : 'lightbox', // or "link",
+					show_title_in_lightbox : true
+				});
+				
+				$('#grid6').dynamicGallery({
+					src : 'gallery.xml',
+					width : 140,
+					height : 400,
+					cols : 1,
+					min_rows : 3,
+					max_rows : 3,
+					random_heights : false,
+					padding: 3,
+					interval : 2000,
+					speed : 1200,
+					easing : 'easeOutElastic',
+					scale_images : true,
+					center_images : true,
+					click_action : 'lightbox', // or "link",
+					show_title_in_lightbox : true
+				});
+				
+				$('#grid7').dynamicGallery({
+					src : 'gallery.xml',
+					height : 400,
+					cols : 1,
+					min_rows : 1,
+					max_rows : 1,
+					random_heights : false,
+					padding: 0,
+					interval : 3000,
+					speed : 1200,
+					easing : 'easeOutBounce',
+					scale_images : true,
+					center_images : true,
+					click_action : 'lightbox', // or "link",
+					show_title_in_lightbox : true
+				});
+				
+				$('#grid8').dynamicGallery({
+					src : 'gallery.xml',
+					height : 400,
+					cols : 4,
+					min_rows : 3,
+					max_rows : 3,
+					random_heights : false,
+					padding: 1,
+					interval : 2000,
+					speed : 800,
+					easing : 'easeOutQuart',
+					scale_images : true,
+					center_images : true,
+					click_action : 'lightbox', // or "link",
+					show_title_in_lightbox : true
+				});
+			});
+		})(jQuery);
+	</script>
+</body>
+</html>

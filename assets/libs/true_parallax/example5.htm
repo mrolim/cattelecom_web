@@ -1,0 +1,290 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+	<meta name="description" content="Real Parallax effect jQuery plugin" />
+	<title>Parallax: chains and playback</title>
+
+	  
+	<!-- Including styles -->
+	<link type="text/css" href="css/style.css" rel="stylesheet" />	
+	
+	
+	<!-- Including jQuery -->
+	<script type="text/javascript" src="js/jquery-1.7.1.min.js"></script>
+	
+	<!-- Including parallax plugin -->
+	<script type="text/javascript" src="js/jquery.real-parallax.js"></script>
+	
+		
+	<script type="text/javascript">
+	   
+		$(document).ready(function() 
+			{ 
+				//START PARALLAX					 
+				$('#myParallax1').parallax({width: 750,  height: 370,focusZ:10, sensitivityY:-0.7, sensitivityX:-0.9, easingCoefficient:20}); 
+							
+				//add some actions to chain
+				$('#myParallax1').parallax('addToChain','mouseTo', {x:0, y:0});
+				$('#myParallax1').parallax('addToChain','mouseTo', {x:390, y:270});
+				$('#myParallax1').parallax('addToChain','mouseTo', {x:390, y:0});
+				$('#myParallax1').parallax('addToChain','mouseTo', {x:0, y:270});
+				$('#myParallax1').parallax('addToChain','mouseToRandom');
+			} 
+		);
+		
+		function toggle(showHideDiv) {
+			var ele = document.getElementById(showHideDiv);			
+			if(ele.style.display == "block") {
+				ele.style.display = "none";				
+			}
+			else {
+				ele.style.display = "block";				
+			}
+		} 
+		
+		
+		function mouseSwitch(){
+		  	var mouseEnabled=document.getElementById("mouseenable").checked;
+		  	document.getElementById("mousemove").disabled=!mouseEnabled;				
+			document.getElementById("mouseclick").disabled=!mouseEnabled;				
+			$('#myParallax1').parallax('option','enableMouse',mouseEnabled);						
+		}
+		
+		function mouseSwitchMode(){
+		  	var mouseClick=document.getElementById("mouseclick").checked;										
+			$('#myParallax1').parallax('option','activateOnClick',mouseClick);						
+		}
+		
+		
+		
+	</script>	
+
+	
+</head>
+
+
+	<body>
+		
+		
+		
+		<div class="row">
+			
+			<div class="thumb_img border-box">
+			<p><a href="index.html">&lt;&lt; back to main page</a></p></br>
+			<h4>Contents</h4>
+			
+			<ul>			
+			<li><a href="#chain">Chain of actions and playback</a></li>								
+			</ul>
+			
+			</div>
+					
+			
+			<h2>Chains and playback</h2>			
+			<p>
+			Below you will find working example(s) and complete, ready to use HTML code for each example.
+			</p>
+			<p>Remember: always include the correct path to jQuery library and the parallax plugin:</p>
+			
+			<!-- CODE -->
+			<div class="container_code">
+<pre class="dr_hl_lang_html"><span class="html_def"> </span><span class="html_com">&lt;!-- PROVIDE THE CORRECT PATH TO .js FILES --&gt;</span><span class="html_def">
+</span><span class="html_tagop">&lt;</span><span class="html_tag">script</span><span class="html_def"> </span><span class="html_attr">type</span><span class="html_attrop">=</span><span class="html_attrvalue">"text/javascript"</span><span class="html_def"> </span><span class="html_attr">src</span><span class="html_attrop">=</span><span class="html_attrvalue">"/path/to/jquery-latest.js"</span><span class="html_tagop">&gt;&lt;/</span><span class="html_tag">script</span><span class="html_tagop">&gt;</span><span class="html_def"> 
+</span><span class="html_tagop">&lt;</span><span class="html_tag">script</span><span class="html_def"> </span><span class="html_attr">type</span><span class="html_attrop">=</span><span class="html_attrvalue">"text/javascript"</span><span class="html_def"> </span><span class="html_attr">src</span><span class="html_attrop">=</span><span class="html_attrvalue">"/path/to/jquery.real-parallax.js"</span><span class="html_tagop">&gt;&lt;/</span><span class="html_tag">script</span><span class="html_tagop">&gt;</span></pre>
+                </div>
+			<!-- END OF CODE -->
+			
+		</div>
+		
+		
+		
+		<hr/><div class="clearfix"></div>
+		
+		
+		<div class="row">				
+			<a name="chain"></a>
+			<h2>Chain of actions and playback</h2>			
+			
+			<div id="myParallax1" class="box">        
+				<div style="left:-1px;top:-1px;" data-lock="yes"><img src="img/planets/stars.jpg"/></div>
+				<div id="planet1" style="left:50%;top:20%;" data-z="70"><img src="img/planets/planet1.png" width="86px" height="87px"/></div>
+				<div id="sun" style="left:40%;top:30%;" data-z="0"><img src="img/planets/sun.png" width="118px" height="102px"/></div>
+				<div id="planet2" style="left:25%;top:30%;" data-z="-70"><img src="img/planets/planet2.png" width="190px" height="191px"/></div>
+			</div>
+			
+			
+			
+			<div class="controls">	
+				
+				<table>				  
+				  <tr>					
+					<td>
+						<ul><h5>Mouse emulation</h5>
+						<li><a href="#" onmousedown="$('#myParallax1').parallax('mouseTo', {x:0, y:0})" onClick="return false"> mouse to (0px,0px) </a></li>
+						<li><a href="#" onmousedown="$('#myParallax1').parallax('mouseToRatio', {x:0.7, y:0.9})" onClick="return false"> mouse to (70%,90%)</a></li>
+						<li><a href="#" onmousedown="$('#myParallax1').parallax('mouseToRandom')" onClick="return false"> mouse to random position </a></li>
+						<li><a href="#" onmousedown="$('#myParallax1').parallax('reset')" onClick="return false"> mouse to center </a></li>
+						</ul>
+					</td>
+					<td>
+						<ul><h5>Layers manipulation</h5>
+						<li><a href="#" onmousedown="$('#myParallax1').parallax('layer','sun',{x:Math.random()*700, y:Math.random()*300})" onClick="return false">replace the SUN layer</a></li>
+						<li><a href="#" onmousedown="$('#myParallax1').parallax('centerTo', {id:'planet1', align:'tr', offx:350, offy:-30})" onClick="return false">blue planet to the right</a></li>
+						<li><a href="#" onmousedown="$('#myParallax1').parallax('centerTo', {id:'planet2', align:'bl', offx:-100, offy:-30})" onClick="return false">sandy planet up</a></li>
+						<li>&nbsp;</li>
+						</ul>
+					</td>
+				  </tr>
+				 
+				 
+				  <tr>
+					<td>
+						<form>
+							<input type="checkbox" id="mouseenable" checked onclick="mouseSwitch()"/><label for="mouseenable"> enable mouse</label><br>
+							<input type="radio" name="group1" value="1" id="mousemove" checked onchange="mouseSwitchMode()"/><label for="mousemove"> on mouse move</label><br>
+							<input type="radio" name="group1" value="2" id="mouseclick" onchange="mouseSwitchMode()"/><label for="mouseclick"> on mouse click</label>
+						</form>
+					</td>
+					<td>
+						<ul><h5>Auto playback</h5>						
+						<li><a id="play" class="button" href="#" onmousedown="$('#myParallax1').parallax('startChain', true)" onClick="return false"> start auto play </a></li>
+						<li><a id="stop" class="button" href="#" onmousedown="$('#myParallax1').parallax('stopChain')" onClick="return false"> stop </a></li>
+						<li><a id="pause" class="button" href="#" onmousedown="$('#myParallax1').parallax('triggerPause')" onClick="return false"> trigger pause </a></li>
+						<li><a id="pause3s" class="button" href="#" onmousedown="$('#myParallax1').parallax('pause',3000)" onClick="return false"> pause 3s </a></li>
+						</ul>
+					</td>
+					
+				  </tr>				  
+				</table>
+					
+			</div>
+		
+			
+			
+					
+			<h4>HTML code</h4>
+			<p>Complete html code of example above (<a href="javascript:toggle('e1');">show / hide</a>)</p>
+			<div id="e1" style="display: none">
+			<!-- CODE -->
+			 <div class="container_code">
+<pre class="dr_hl_lang_html"><span class="html_tagop">&lt;</span><span class="html_doctype">!DOCTYPE</span><span class="html_def"> </span><span class="html_doctype">html</span><span class="html_tagop">&gt;</span><span class="html_def">
+</span><span class="html_tagop">&lt;</span><span class="html_tag">html</span><span class="html_def"> </span><span class="html_attr">xmlns</span><span class="html_attrop">=</span><span class="html_attrvalue">"http://www.w3.org/1999/xhtml"</span><span class="html_tagop">&gt;</span><span class="html_def">
+    </span><span class="html_tagop">&lt;</span><span class="html_tag">head</span><span class="html_tagop">&gt;</span><span class="html_def">
+        </span><span class="html_tagop">&lt;</span><span class="html_tag">meta</span><span class="html_def"> </span><span class="html_attr">http-equiv</span><span class="html_attrop">=</span><span class="html_attrvalue">"Content-Type"</span><span class="html_def"> </span><span class="html_attr">content</span><span class="html_attrop">=</span><span class="html_attrvalue">"text/html; charset=UTF-8"</span><span class="html_def"> </span><span class="html_tagop">/&gt;</span><span class="html_def">
+        </span><span class="html_tagop">&lt;</span><span class="html_tag">meta</span><span class="html_def"> </span><span class="html_attr">name</span><span class="html_attrop">=</span><span class="html_attrvalue">"description"</span><span class="html_def"> </span><span class="html_attr">content</span><span class="html_attrop">=</span><span class="html_attrvalue">"Real Parallax effect jQuery plugin"</span><span class="html_def"> </span><span class="html_tagop">/&gt;</span><span class="html_def">
+        </span><span class="html_tagop">&lt;</span><span class="html_tag">title</span><span class="html_tagop">&gt;</span><span class="html_def">Parallax</span><span class="html_tagop">&lt;/</span><span class="html_tag">title</span><span class="html_tagop">&gt;</span><span class="html_def">
+        
+        </span><span class="html_tagop">&lt;</span><span class="html_tag">style</span><span class="html_def"> </span><span class="html_attr">type</span><span class="html_attrop">=</span><span class="html_attrvalue">"text/css"</span><span class="html_tagop">&gt;</span><span class="css_def">
+        </span><span class="css_class">.box</span><span class="css_def">{
+            </span><span class="css_prop">position</span><span class="css_def">:</span><span class="css_propvalue"> relative</span><span class="css_def">;
+            </span><span class="css_prop">overflow</span><span class="css_def">:</span><span class="css_propvalue">hidden</span><span class="css_def">;
+            </span><span class="css_prop">padding</span><span class="css_def">:</span><span class="css_propvalue"> 0px</span><span class="css_def">;   
+            </span><span class="css_prop">margin</span><span class="css_def">:</span><span class="css_propvalue"> 0px</span><span class="css_def">;
+            </span><span class="css_prop">border</span><span class="css_def">:</span><span class="css_propvalue">1px solid #ccc</span><span class="css_def">;          
+        }
+        </span><span class="html_tagop">&lt;/</span><span class="html_tag">style</span><span class="html_tagop">&gt;</span><span class="html_def">
+        
+        </span><span class="html_com">&lt;!-- PROVIDE THE CORRECT PATH TO .js FILES --&gt;</span><span class="html_def">
+        </span><span class="html_tagop">&lt;</span><span class="html_tag">script</span><span class="html_def"> </span><span class="html_attr">type</span><span class="html_attrop">=</span><span class="html_attrvalue">"text/javascript"</span><span class="html_def"> </span><span class="html_attr">src</span><span class="html_attrop">=</span><span class="html_attrvalue">"/path/to/jquery-latest.js"</span><span class="html_tagop">&gt;&lt;/</span><span class="html_tag">script</span><span class="html_tagop">&gt;</span><span class="html_def"> 
+        </span><span class="html_tagop">&lt;</span><span class="html_tag">script</span><span class="html_def"> </span><span class="html_attr">type</span><span class="html_attrop">=</span><span class="html_attrvalue">"text/javascript"</span><span class="html_def"> </span><span class="html_attr">src</span><span class="html_attrop">=</span><span class="html_attrvalue">"/path/to/jquery.real-parallax.js"</span><span class="html_tagop">&gt;&lt;/</span><span class="html_tag">script</span><span class="html_tagop">&gt;</span><span class="html_def"> 
+            
+        </span><span class="html_tagop">&lt;</span><span class="html_tag">script</span><span class="html_def"> </span><span class="html_attr">type</span><span class="html_attrop">=</span><span class="html_attrvalue">"text/javascript"</span><span class="html_tagop">&gt;</span><span class="jscript_def">
+            $</span><span class="jscript_op">(</span><span class="jscript_prop">document</span><span class="jscript_op">).</span><span class="jscript_def">ready</span><span class="jscript_op">(</span><span class="jscript_keyword">function</span><span class="jscript_op">()</span><span class="jscript_def"> 
+                </span><span class="jscript_op">{</span><span class="jscript_def"> 
+                    </span><span class="jscript_com">//START PARALLAX                     
+</span><span class="jscript_def">                    $</span><span class="jscript_op">(</span><span class="jscript_string">'#parallaxID'</span><span class="jscript_op">).</span><span class="jscript_def">parallax</span><span class="jscript_op">({</span><span class="jscript_def">width</span><span class="jscript_op">:</span><span class="jscript_def"> </span><span class="jscript_number">750</span><span class="jscript_op">,</span><span class="jscript_def">  height</span><span class="jscript_op">:</span><span class="jscript_def"> </span><span class="jscript_number">370</span><span class="jscript_op">,</span><span class="jscript_def">focusZ</span><span class="jscript_op">:</span><span class="jscript_number">10</span><span class="jscript_op">,</span><span class="jscript_def"> sensitivityY</span><span class="jscript_op">:-</span><span class="jscript_number">0.7</span><span class="jscript_op">,</span><span class="jscript_def"> sensitivityX</span><span class="jscript_op">:-</span><span class="jscript_number">0.9</span><span class="jscript_op">,</span><span class="jscript_def"> easingCoefficient</span><span class="jscript_op">:</span><span class="jscript_number">20</span><span class="jscript_op">});</span><span class="jscript_def"> 
+                                
+                    </span><span class="jscript_com">//add some actions to chain
+</span><span class="jscript_def">                    $</span><span class="jscript_op">(</span><span class="jscript_string">'#parallaxID'</span><span class="jscript_op">).</span><span class="jscript_def">parallax</span><span class="jscript_op">(</span><span class="jscript_string">'addToChain'</span><span class="jscript_op">,</span><span class="jscript_string">'mouseTo'</span><span class="jscript_op">,</span><span class="jscript_def"> </span><span class="jscript_op">{</span><span class="jscript_def">x</span><span class="jscript_op">:</span><span class="jscript_number">0</span><span class="jscript_op">,</span><span class="jscript_def"> y</span><span class="jscript_op">:</span><span class="jscript_number">0</span><span class="jscript_op">});</span><span class="jscript_def">
+                    $</span><span class="jscript_op">(</span><span class="jscript_string">'#parallaxID'</span><span class="jscript_op">).</span><span class="jscript_def">parallax</span><span class="jscript_op">(</span><span class="jscript_string">'addToChain'</span><span class="jscript_op">,</span><span class="jscript_string">'mouseTo'</span><span class="jscript_op">,</span><span class="jscript_def"> </span><span class="jscript_op">{</span><span class="jscript_def">x</span><span class="jscript_op">:</span><span class="jscript_number">390</span><span class="jscript_op">,</span><span class="jscript_def"> y</span><span class="jscript_op">:</span><span class="jscript_number">270</span><span class="jscript_op">});</span><span class="jscript_def">
+                    $</span><span class="jscript_op">(</span><span class="jscript_string">'#parallaxID'</span><span class="jscript_op">).</span><span class="jscript_def">parallax</span><span class="jscript_op">(</span><span class="jscript_string">'addToChain'</span><span class="jscript_op">,</span><span class="jscript_string">'mouseTo'</span><span class="jscript_op">,</span><span class="jscript_def"> </span><span class="jscript_op">{</span><span class="jscript_def">x</span><span class="jscript_op">:</span><span class="jscript_number">390</span><span class="jscript_op">,</span><span class="jscript_def"> y</span><span class="jscript_op">:</span><span class="jscript_number">0</span><span class="jscript_op">});</span><span class="jscript_def">
+                    $</span><span class="jscript_op">(</span><span class="jscript_string">'#parallaxID'</span><span class="jscript_op">).</span><span class="jscript_def">parallax</span><span class="jscript_op">(</span><span class="jscript_string">'addToChain'</span><span class="jscript_op">,</span><span class="jscript_string">'mouseTo'</span><span class="jscript_op">,</span><span class="jscript_def"> </span><span class="jscript_op">{</span><span class="jscript_def">x</span><span class="jscript_op">:</span><span class="jscript_number">0</span><span class="jscript_op">,</span><span class="jscript_def"> y</span><span class="jscript_op">:</span><span class="jscript_number">270</span><span class="jscript_op">});</span><span class="jscript_def">
+                    $</span><span class="jscript_op">(</span><span class="jscript_string">'#parallaxID'</span><span class="jscript_op">).</span><span class="jscript_def">parallax</span><span class="jscript_op">(</span><span class="jscript_string">'addToChain'</span><span class="jscript_op">,</span><span class="jscript_string">'mouseToRandom'</span><span class="jscript_op">);</span><span class="jscript_def">
+                </span><span class="jscript_op">}</span><span class="jscript_def"> 
+            </span><span class="jscript_op">);</span><span class="jscript_def">
+            
+            </span><span class="jscript_keyword">function</span><span class="jscript_def"> mouseSwitch</span><span class="jscript_op">(){</span><span class="jscript_def">
+            </span><span class="jscript_invalid">  </span><span class="jscript_def">  </span><span class="jscript_keyword">var</span><span class="jscript_def"> mouseEnabled</span><span class="jscript_op">=</span><span class="jscript_prop">document</span><span class="jscript_op">.</span><span class="jscript_method">getElementById</span><span class="jscript_op">(</span><span class="jscript_string">"mouseenable"</span><span class="jscript_op">).</span><span class="jscript_prop">checked</span><span class="jscript_op">;</span><span class="jscript_def">
+            </span><span class="jscript_invalid">  </span><span class="jscript_def">  </span><span class="jscript_prop">document</span><span class="jscript_op">.</span><span class="jscript_method">getElementById</span><span class="jscript_op">(</span><span class="jscript_string">"mousemove"</span><span class="jscript_op">).</span><span class="jscript_prop">disabled</span><span class="jscript_op">=!</span><span class="jscript_def">mouseEnabled</span><span class="jscript_op">;</span><span class="jscript_def">                
+                </span><span class="jscript_prop">document</span><span class="jscript_op">.</span><span class="jscript_method">getElementById</span><span class="jscript_op">(</span><span class="jscript_string">"mouseclick"</span><span class="jscript_op">).</span><span class="jscript_prop">disabled</span><span class="jscript_op">=!</span><span class="jscript_def">mouseEnabled</span><span class="jscript_op">;</span><span class="jscript_def">               
+                $</span><span class="jscript_op">(</span><span class="jscript_string">'#parallaxID'</span><span class="jscript_op">).</span><span class="jscript_def">parallax</span><span class="jscript_op">(</span><span class="jscript_string">'option'</span><span class="jscript_op">,</span><span class="jscript_string">'enableMouse'</span><span class="jscript_op">,</span><span class="jscript_def">mouseEnabled</span><span class="jscript_op">);</span><span class="jscript_def">                     
+            </span><span class="jscript_op">}</span><span class="jscript_def">
+            
+            </span><span class="jscript_keyword">function</span><span class="jscript_def"> mouseSwitchMode</span><span class="jscript_op">(){</span><span class="jscript_def">
+            </span><span class="jscript_invalid">  </span><span class="jscript_def">  </span><span class="jscript_keyword">var</span><span class="jscript_def"> mouseClick</span><span class="jscript_op">=</span><span class="jscript_prop">document</span><span class="jscript_op">.</span><span class="jscript_method">getElementById</span><span class="jscript_op">(</span><span class="jscript_string">"mouseclick"</span><span class="jscript_op">).</span><span class="jscript_prop">checked</span><span class="jscript_op">;</span><span class="jscript_def">                                       
+                $</span><span class="jscript_op">(</span><span class="jscript_string">'#parallaxID'</span><span class="jscript_op">).</span><span class="jscript_def">parallax</span><span class="jscript_op">(</span><span class="jscript_string">'option'</span><span class="jscript_op">,</span><span class="jscript_string">'activateOnClick'</span><span class="jscript_op">,</span><span class="jscript_def">mouseClick</span><span class="jscript_op">);</span><span class="jscript_def">                           
+            </span><span class="jscript_op">}</span><span class="jscript_def">
+        
+        </span><span class="html_tagop">&lt;/</span><span class="html_tag">script</span><span class="html_tagop">&gt;</span><span class="html_def">   
+        
+    </span><span class="html_tagop">&lt;/</span><span class="html_tag">head</span><span class="html_tagop">&gt;</span><span class="html_def">
+    
+    </span><span class="html_tagop">&lt;</span><span class="html_tag">body</span><span class="html_tagop">&gt;</span><span class="html_def">   
+            
+        </span><span class="html_com">&lt;!-- PARALLAX --&gt;</span><span class="html_def">
+        </span><span class="html_tagop">&lt;</span><span class="html_tag">div</span><span class="html_def"> </span><span class="html_attr">id</span><span class="html_attrop">=</span><span class="html_attrvalue">"parallaxID"</span><span class="html_def"> </span><span class="html_attr">class</span><span class="html_attrop">=</span><span class="html_attrvalue">"box"</span><span class="html_tagop">&gt;</span><span class="html_def">        
+            </span><span class="html_tagop">&lt;</span><span class="html_tag">div</span><span class="html_def"> </span><span class="html_attr">style</span><span class="html_attrop">=</span><span class="html_attrvalue">"left:-1px;top:-1px;"</span><span class="html_def"> </span><span class="html_attr">data-lock</span><span class="html_attrop">=</span><span class="html_attrvalue">"yes"</span><span class="html_tagop">&gt;&lt;</span><span class="html_tag">img</span><span class="html_def"> </span><span class="html_attr">src</span><span class="html_attrop">=</span><span class="html_attrvalue">"img/planets/stars.jpg"</span><span class="html_tagop">/&gt;&lt;/</span><span class="html_tag">div</span><span class="html_tagop">&gt;</span><span class="html_def">
+            </span><span class="html_tagop">&lt;</span><span class="html_tag">div</span><span class="html_def"> </span><span class="html_attr">id</span><span class="html_attrop">=</span><span class="html_attrvalue">"planet1"</span><span class="html_def"> </span><span class="html_attr">style</span><span class="html_attrop">=</span><span class="html_attrvalue">"left:50%;top:20%;"</span><span class="html_def"> </span><span class="html_attr">data-z</span><span class="html_attrop">=</span><span class="html_attrvalue">"70"</span><span class="html_tagop">&gt;&lt;</span><span class="html_tag">img</span><span class="html_def"> </span><span class="html_attr">src</span><span class="html_attrop">=</span><span class="html_attrvalue">"img/planets/planet1.png"</span><span class="html_tagop">/&gt;&lt;/</span><span class="html_tag">div</span><span class="html_tagop">&gt;</span><span class="html_def">
+            </span><span class="html_tagop">&lt;</span><span class="html_tag">div</span><span class="html_def"> </span><span class="html_attr">id</span><span class="html_attrop">=</span><span class="html_attrvalue">"sun"</span><span class="html_def"> </span><span class="html_attr">style</span><span class="html_attrop">=</span><span class="html_attrvalue">"left:40%;top:30%;"</span><span class="html_def"> </span><span class="html_attr">data-z</span><span class="html_attrop">=</span><span class="html_attrvalue">"0"</span><span class="html_tagop">&gt;&lt;</span><span class="html_tag">img</span><span class="html_def"> </span><span class="html_attr">src</span><span class="html_attrop">=</span><span class="html_attrvalue">"img/planets/sun.png"</span><span class="html_tagop">/&gt;&lt;/</span><span class="html_tag">div</span><span class="html_tagop">&gt;</span><span class="html_def">
+            </span><span class="html_tagop">&lt;</span><span class="html_tag">div</span><span class="html_def"> </span><span class="html_attr">id</span><span class="html_attrop">=</span><span class="html_attrvalue">"planet2"</span><span class="html_def"> </span><span class="html_attr">style</span><span class="html_attrop">=</span><span class="html_attrvalue">"left:25%;top:30%;"</span><span class="html_def"> </span><span class="html_attr">data-z</span><span class="html_attrop">=</span><span class="html_attrvalue">"-70"</span><span class="html_tagop">&gt;&lt;</span><span class="html_tag">img</span><span class="html_def"> </span><span class="html_attr">src</span><span class="html_attrop">=</span><span class="html_attrvalue">"img/planets/planet2.png"</span><span class="html_tagop">/&gt;&lt;/</span><span class="html_tag">div</span><span class="html_tagop">&gt;</span><span class="html_def">
+        </span><span class="html_tagop">&lt;/</span><span class="html_tag">div</span><span class="html_tagop">&gt;</span><span class="html_def">
+                
+        </span><span class="html_com">&lt;!-- CONTROLS --&gt;</span><span class="html_def">
+        </span><span class="html_tagop">&lt;</span><span class="html_tag">table</span><span class="html_tagop">&gt;</span><span class="html_def">               
+          </span><span class="html_tagop">&lt;</span><span class="html_tag">tr</span><span class="html_tagop">&gt;</span><span class="html_def">                  
+            </span><span class="html_tagop">&lt;</span><span class="html_tag">td</span><span class="html_tagop">&gt;</span><span class="html_def">
+                </span><span class="html_tagop">&lt;</span><span class="html_tag">ul</span><span class="html_tagop">&gt;&lt;</span><span class="html_tag">h5</span><span class="html_tagop">&gt;</span><span class="html_def">Mouse emulation</span><span class="html_tagop">&lt;/</span><span class="html_tag">h5</span><span class="html_tagop">&gt;</span><span class="html_def">
+                </span><span class="html_tagop">&lt;</span><span class="html_tag">li</span><span class="html_tagop">&gt;&lt;</span><span class="html_tag">a</span><span class="html_def"> </span><span class="html_attr">href</span><span class="html_attrop">=</span><span class="html_attrvalue">"#"</span><span class="html_def"> </span><span class="html_attr">onmousedown</span><span class="html_attrop">=</span><span class="html_attrvalue">"$('#parallaxID').parallax('mouseTo', {x:0, y:0})"</span><span class="html_def"> </span><span class="html_attr">onClick</span><span class="html_attrop">=</span><span class="html_attrvalue">"return false"</span><span class="html_tagop">&gt;</span><span class="html_def"> mouse to (0px,0px) </span><span class="html_tagop">&lt;/</span><span class="html_tag">a</span><span class="html_tagop">&gt;&lt;/</span><span class="html_tag">li</span><span class="html_tagop">&gt;</span><span class="html_def">
+                </span><span class="html_tagop">&lt;</span><span class="html_tag">li</span><span class="html_tagop">&gt;&lt;</span><span class="html_tag">a</span><span class="html_def"> </span><span class="html_attr">href</span><span class="html_attrop">=</span><span class="html_attrvalue">"#"</span><span class="html_def"> </span><span class="html_attr">onmousedown</span><span class="html_attrop">=</span><span class="html_attrvalue">"$('#parallaxID').parallax('mouseToRatio', {x:0.7, y:0.9})"</span><span class="html_def"> </span><span class="html_attr">onClick</span><span class="html_attrop">=</span><span class="html_attrvalue">"return false"</span><span class="html_tagop">&gt;</span><span class="html_def"> mouse to (70%,90%)</span><span class="html_tagop">&lt;/</span><span class="html_tag">a</span><span class="html_tagop">&gt;&lt;/</span><span class="html_tag">li</span><span class="html_tagop">&gt;</span><span class="html_def">
+                </span><span class="html_tagop">&lt;</span><span class="html_tag">li</span><span class="html_tagop">&gt;&lt;</span><span class="html_tag">a</span><span class="html_def"> </span><span class="html_attr">href</span><span class="html_attrop">=</span><span class="html_attrvalue">"#"</span><span class="html_def"> </span><span class="html_attr">onmousedown</span><span class="html_attrop">=</span><span class="html_attrvalue">"$('#parallaxID').parallax('mouseToRandom')"</span><span class="html_def"> </span><span class="html_attr">onClick</span><span class="html_attrop">=</span><span class="html_attrvalue">"return false"</span><span class="html_tagop">&gt;</span><span class="html_def"> mouse to random position </span><span class="html_tagop">&lt;/</span><span class="html_tag">a</span><span class="html_tagop">&gt;&lt;/</span><span class="html_tag">li</span><span class="html_tagop">&gt;</span><span class="html_def">
+                </span><span class="html_tagop">&lt;</span><span class="html_tag">li</span><span class="html_tagop">&gt;&lt;</span><span class="html_tag">a</span><span class="html_def"> </span><span class="html_attr">href</span><span class="html_attrop">=</span><span class="html_attrvalue">"#"</span><span class="html_def"> </span><span class="html_attr">onmousedown</span><span class="html_attrop">=</span><span class="html_attrvalue">"$('#parallaxID').parallax('reset')"</span><span class="html_def"> </span><span class="html_attr">onClick</span><span class="html_attrop">=</span><span class="html_attrvalue">"return false"</span><span class="html_tagop">&gt;</span><span class="html_def"> mouse to center </span><span class="html_tagop">&lt;/</span><span class="html_tag">a</span><span class="html_tagop">&gt;&lt;/</span><span class="html_tag">li</span><span class="html_tagop">&gt;</span><span class="html_def">
+                </span><span class="html_tagop">&lt;/</span><span class="html_tag">ul</span><span class="html_tagop">&gt;</span><span class="html_def">
+            </span><span class="html_tagop">&lt;/</span><span class="html_tag">td</span><span class="html_tagop">&gt;</span><span class="html_def">
+            </span><span class="html_tagop">&lt;</span><span class="html_tag">td</span><span class="html_tagop">&gt;</span><span class="html_def">
+                </span><span class="html_tagop">&lt;</span><span class="html_tag">ul</span><span class="html_tagop">&gt;&lt;</span><span class="html_tag">h5</span><span class="html_tagop">&gt;</span><span class="html_def">Layers manipulation</span><span class="html_tagop">&lt;/</span><span class="html_tag">h5</span><span class="html_tagop">&gt;</span><span class="html_def">
+                </span><span class="html_tagop">&lt;</span><span class="html_tag">li</span><span class="html_tagop">&gt;&lt;</span><span class="html_tag">a</span><span class="html_def"> </span><span class="html_attr">href</span><span class="html_attrop">=</span><span class="html_attrvalue">"#"</span><span class="html_def"> </span><span class="html_attr">onmousedown</span><span class="html_attrop">=</span><span class="html_attrvalue">"$('#parallaxID').parallax('layer','sun',{x:Math.random()*700, y:Math.random()*300})"</span><span class="html_def"> </span><span class="html_attr">onClick</span><span class="html_attrop">=</span><span class="html_attrvalue">"return false"</span><span class="html_tagop">&gt;</span><span class="html_def">replace the SUN layer</span><span class="html_tagop">&lt;/</span><span class="html_tag">a</span><span class="html_tagop">&gt;&lt;/</span><span class="html_tag">li</span><span class="html_tagop">&gt;</span><span class="html_def">
+                </span><span class="html_tagop">&lt;</span><span class="html_tag">li</span><span class="html_tagop">&gt;&lt;</span><span class="html_tag">a</span><span class="html_def"> </span><span class="html_attr">href</span><span class="html_attrop">=</span><span class="html_attrvalue">"#"</span><span class="html_def"> </span><span class="html_attr">onmousedown</span><span class="html_attrop">=</span><span class="html_attrvalue">"$('#parallaxID').parallax('centerTo', {id:'planet1', align:'tr', offx:350, offy:-30})"</span><span class="html_def"> </span><span class="html_attr">onClick</span><span class="html_attrop">=</span><span class="html_attrvalue">"return false"</span><span class="html_tagop">&gt;</span><span class="html_def">blue planet to the right</span><span class="html_tagop">&lt;/</span><span class="html_tag">a</span><span class="html_tagop">&gt;&lt;/</span><span class="html_tag">li</span><span class="html_tagop">&gt;</span><span class="html_def">
+                </span><span class="html_tagop">&lt;</span><span class="html_tag">li</span><span class="html_tagop">&gt;&lt;</span><span class="html_tag">a</span><span class="html_def"> </span><span class="html_attr">href</span><span class="html_attrop">=</span><span class="html_attrvalue">"#"</span><span class="html_def"> </span><span class="html_attr">onmousedown</span><span class="html_attrop">=</span><span class="html_attrvalue">"$('#parallaxID').parallax('centerTo', {id:'planet2', align:'bl', offx:-100, offy:-30})"</span><span class="html_def"> </span><span class="html_attr">onClick</span><span class="html_attrop">=</span><span class="html_attrvalue">"return false"</span><span class="html_tagop">&gt;</span><span class="html_def">sandy planet up</span><span class="html_tagop">&lt;/</span><span class="html_tag">a</span><span class="html_tagop">&gt;&lt;/</span><span class="html_tag">li</span><span class="html_tagop">&gt;</span><span class="html_def">
+                </span><span class="html_tagop">&lt;</span><span class="html_tag">li</span><span class="html_tagop">&gt;</span><span class="html_def">&amp;nbsp;</span><span class="html_tagop">&lt;/</span><span class="html_tag">li</span><span class="html_tagop">&gt;</span><span class="html_def">
+                </span><span class="html_tagop">&lt;/</span><span class="html_tag">ul</span><span class="html_tagop">&gt;</span><span class="html_def">
+            </span><span class="html_tagop">&lt;/</span><span class="html_tag">td</span><span class="html_tagop">&gt;</span><span class="html_def">
+          </span><span class="html_tagop">&lt;/</span><span class="html_tag">tr</span><span class="html_tagop">&gt;</span><span class="html_def">
+                 
+          </span><span class="html_tagop">&lt;</span><span class="html_tag">tr</span><span class="html_tagop">&gt;</span><span class="html_def">
+            </span><span class="html_tagop">&lt;</span><span class="html_tag">td</span><span class="html_tagop">&gt;</span><span class="html_def">
+                </span><span class="html_tagop">&lt;</span><span class="html_tag">form</span><span class="html_tagop">&gt;</span><span class="html_def">
+                    </span><span class="html_tagop">&lt;</span><span class="html_tag">input</span><span class="html_def"> </span><span class="html_attr">type</span><span class="html_attrop">=</span><span class="html_attrvalue">"checkbox"</span><span class="html_def"> </span><span class="html_attr">id</span><span class="html_attrop">=</span><span class="html_attrvalue">"mouseenable"</span><span class="html_def"> </span><span class="html_attr">checked</span><span class="html_def"> </span><span class="html_attr">onclick</span><span class="html_attrop">=</span><span class="html_attrvalue">"mouseSwitch()"</span><span class="html_tagop">/&gt;&lt;</span><span class="html_tag">label</span><span class="html_def"> </span><span class="html_attr">for</span><span class="html_attrop">=</span><span class="html_attrvalue">"mouseenable"</span><span class="html_tagop">&gt;</span><span class="html_def"> enable mouse</span><span class="html_tagop">&lt;/</span><span class="html_tag">label</span><span class="html_tagop">&gt;&lt;</span><span class="html_tag">br</span><span class="html_tagop">&gt;</span><span class="html_def">
+                    </span><span class="html_tagop">&lt;</span><span class="html_tag">input</span><span class="html_def"> </span><span class="html_attr">type</span><span class="html_attrop">=</span><span class="html_attrvalue">"radio"</span><span class="html_def"> </span><span class="html_attr">name</span><span class="html_attrop">=</span><span class="html_attrvalue">"group1"</span><span class="html_def"> </span><span class="html_attr">value</span><span class="html_attrop">=</span><span class="html_attrvalue">"1"</span><span class="html_def"> </span><span class="html_attr">id</span><span class="html_attrop">=</span><span class="html_attrvalue">"mousemove"</span><span class="html_def"> </span><span class="html_attr">checked</span><span class="html_def"> </span><span class="html_attr">onchange</span><span class="html_attrop">=</span><span class="html_attrvalue">"mouseSwitchMode()"</span><span class="html_tagop">/&gt;&lt;</span><span class="html_tag">label</span><span class="html_def"> </span><span class="html_attr">for</span><span class="html_attrop">=</span><span class="html_attrvalue">"mousemove"</span><span class="html_tagop">&gt;</span><span class="html_def"> on mouse move</span><span class="html_tagop">&lt;/</span><span class="html_tag">label</span><span class="html_tagop">&gt;&lt;</span><span class="html_tag">br</span><span class="html_tagop">&gt;</span><span class="html_def">
+                    </span><span class="html_tagop">&lt;</span><span class="html_tag">input</span><span class="html_def"> </span><span class="html_attr">type</span><span class="html_attrop">=</span><span class="html_attrvalue">"radio"</span><span class="html_def"> </span><span class="html_attr">name</span><span class="html_attrop">=</span><span class="html_attrvalue">"group1"</span><span class="html_def"> </span><span class="html_attr">value</span><span class="html_attrop">=</span><span class="html_attrvalue">"2"</span><span class="html_def"> </span><span class="html_attr">id</span><span class="html_attrop">=</span><span class="html_attrvalue">"mouseclick"</span><span class="html_def"> </span><span class="html_attr">onchange</span><span class="html_attrop">=</span><span class="html_attrvalue">"mouseSwitchMode()"</span><span class="html_tagop">/&gt;&lt;</span><span class="html_tag">label</span><span class="html_def"> </span><span class="html_attr">for</span><span class="html_attrop">=</span><span class="html_attrvalue">"mouseclick"</span><span class="html_tagop">&gt;</span><span class="html_def"> on mouse click</span><span class="html_tagop">&lt;/</span><span class="html_tag">label</span><span class="html_tagop">&gt;</span><span class="html_def">
+                </span><span class="html_tagop">&lt;/</span><span class="html_tag">form</span><span class="html_tagop">&gt;</span><span class="html_def">
+            </span><span class="html_tagop">&lt;/</span><span class="html_tag">td</span><span class="html_tagop">&gt;</span><span class="html_def">
+            </span><span class="html_tagop">&lt;</span><span class="html_tag">td</span><span class="html_tagop">&gt;</span><span class="html_def">
+                </span><span class="html_tagop">&lt;</span><span class="html_tag">ul</span><span class="html_tagop">&gt;&lt;</span><span class="html_tag">h5</span><span class="html_tagop">&gt;</span><span class="html_def">Auto playback</span><span class="html_tagop">&lt;/</span><span class="html_tag">h5</span><span class="html_tagop">&gt;</span><span class="html_def">                      
+                </span><span class="html_tagop">&lt;</span><span class="html_tag">li</span><span class="html_tagop">&gt;&lt;</span><span class="html_tag">a</span><span class="html_def"> </span><span class="html_attr">id</span><span class="html_attrop">=</span><span class="html_attrvalue">"play"</span><span class="html_def"> </span><span class="html_attr">class</span><span class="html_attrop">=</span><span class="html_attrvalue">"button"</span><span class="html_def"> </span><span class="html_attr">href</span><span class="html_attrop">=</span><span class="html_attrvalue">"#"</span><span class="html_def"> </span><span class="html_attr">onmousedown</span><span class="html_attrop">=</span><span class="html_attrvalue">"$('#parallaxID').parallax('startChain', true)"</span><span class="html_def"> </span><span class="html_attr">onClick</span><span class="html_attrop">=</span><span class="html_attrvalue">"return false"</span><span class="html_tagop">&gt;</span><span class="html_def"> start auto play </span><span class="html_tagop">&lt;/</span><span class="html_tag">a</span><span class="html_tagop">&gt;&lt;/</span><span class="html_tag">li</span><span class="html_tagop">&gt;</span><span class="html_def">
+                </span><span class="html_tagop">&lt;</span><span class="html_tag">li</span><span class="html_tagop">&gt;&lt;</span><span class="html_tag">a</span><span class="html_def"> </span><span class="html_attr">id</span><span class="html_attrop">=</span><span class="html_attrvalue">"stop"</span><span class="html_def"> </span><span class="html_attr">class</span><span class="html_attrop">=</span><span class="html_attrvalue">"button"</span><span class="html_def"> </span><span class="html_attr">href</span><span class="html_attrop">=</span><span class="html_attrvalue">"#"</span><span class="html_def"> </span><span class="html_attr">onmousedown</span><span class="html_attrop">=</span><span class="html_attrvalue">"$('#parallaxID').parallax('stopChain')"</span><span class="html_def"> </span><span class="html_attr">onClick</span><span class="html_attrop">=</span><span class="html_attrvalue">"return false"</span><span class="html_tagop">&gt;</span><span class="html_def"> stop </span><span class="html_tagop">&lt;/</span><span class="html_tag">a</span><span class="html_tagop">&gt;&lt;/</span><span class="html_tag">li</span><span class="html_tagop">&gt;</span><span class="html_def">
+                </span><span class="html_tagop">&lt;</span><span class="html_tag">li</span><span class="html_tagop">&gt;&lt;</span><span class="html_tag">a</span><span class="html_def"> </span><span class="html_attr">id</span><span class="html_attrop">=</span><span class="html_attrvalue">"pause"</span><span class="html_def"> </span><span class="html_attr">class</span><span class="html_attrop">=</span><span class="html_attrvalue">"button"</span><span class="html_def"> </span><span class="html_attr">href</span><span class="html_attrop">=</span><span class="html_attrvalue">"#"</span><span class="html_def"> </span><span class="html_attr">onmousedown</span><span class="html_attrop">=</span><span class="html_attrvalue">"$('#parallaxID').parallax('triggerPause')"</span><span class="html_def"> </span><span class="html_attr">onClick</span><span class="html_attrop">=</span><span class="html_attrvalue">"return false"</span><span class="html_tagop">&gt;</span><span class="html_def"> trigger pause </span><span class="html_tagop">&lt;/</span><span class="html_tag">a</span><span class="html_tagop">&gt;&lt;/</span><span class="html_tag">li</span><span class="html_tagop">&gt;</span><span class="html_def">
+                </span><span class="html_tagop">&lt;</span><span class="html_tag">li</span><span class="html_tagop">&gt;&lt;</span><span class="html_tag">a</span><span class="html_def"> </span><span class="html_attr">id</span><span class="html_attrop">=</span><span class="html_attrvalue">"pause3s"</span><span class="html_def"> </span><span class="html_attr">class</span><span class="html_attrop">=</span><span class="html_attrvalue">"button"</span><span class="html_def"> </span><span class="html_attr">href</span><span class="html_attrop">=</span><span class="html_attrvalue">"#"</span><span class="html_def"> </span><span class="html_attr">onmousedown</span><span class="html_attrop">=</span><span class="html_attrvalue">"$('#parallaxID').parallax('pause',3000)"</span><span class="html_def"> </span><span class="html_attr">onClick</span><span class="html_attrop">=</span><span class="html_attrvalue">"return false"</span><span class="html_tagop">&gt;</span><span class="html_def"> pause 3s </span><span class="html_tagop">&lt;/</span><span class="html_tag">a</span><span class="html_tagop">&gt;&lt;/</span><span class="html_tag">li</span><span class="html_tagop">&gt;</span><span class="html_def">
+                </span><span class="html_tagop">&lt;/</span><span class="html_tag">ul</span><span class="html_tagop">&gt;</span><span class="html_def">
+            </span><span class="html_tagop">&lt;/</span><span class="html_tag">td</span><span class="html_tagop">&gt;</span><span class="html_def">
+            
+          </span><span class="html_tagop">&lt;/</span><span class="html_tag">tr</span><span class="html_tagop">&gt;</span><span class="html_def">               
+        </span><span class="html_tagop">&lt;/</span><span class="html_tag">table</span><span class="html_tagop">&gt;</span><span class="html_def">
+        
+    </span><span class="html_tagop">&lt;/</span><span class="html_tag">body</span><span class="html_tagop">&gt;</span><span class="html_def">
+</span><span class="html_tagop">&lt;/</span><span class="html_tag">html</span><span class="html_tagop">&gt;</span></pre>
+                </div>
+			<!-- END OF CODE -->			
+			</div>
+			
+			
+			
+		</div>
+		
+		<hr/><div class="clearfix"></div>
+		
+		
+		
+	
+	</body>
+</html>

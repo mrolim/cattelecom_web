@@ -1,0 +1,21 @@
+.playbacks ul{list-style-type:none;}
+.playbacks a{text-decoration: underline;}
+
+.button{display: block;	width: 30px;height: 29px;left: 0px;outline: none; float:left;}
+#play{	background-image: url(../img/buttons/play.png);	}
+#play:hover{background: transparent url(../img/buttons/play_hover.png) bottom left no-repeat;}
+
+#playfast{	background-image: url(../img/buttons/play_fast.png);	}
+#playfast:hover{background: transparent url(../img/buttons/play_fast_hover.png) bottom left no-repeat;}
+
+#back{	background-image: url(../img/buttons/back.png);	}
+#back:hover{background: transparent url(../img/buttons/back_hover.png) bottom left no-repeat;}
+
+#backfast{	background-image: url(../img/buttons/back_fast.png);	}
+#backfast:hover{background: transparent url(../img/buttons/back_fast_hover.png) bottom left no-repeat;}
+
+#pause{	background-image: url(../img/buttons/pause.png);	}
+#pause:hover{background: transparent url(../img/buttons/pause_hover.png) bottom left no-repeat;}
+
+#stop{	background-image: url(../img/buttons/stop.png);	}
+#stop:hover{background: transparent url(../img/buttons/stop_hover.png) bottom left no-repeat;}

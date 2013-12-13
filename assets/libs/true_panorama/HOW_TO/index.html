@@ -1,0 +1,518 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+	<meta name="description" content="Panorama effect jQuery plugin image viewer" />
+	<title>panorama</title>
+
+	  
+	<!-- Including styles -->
+	<link type="text/css" href="css/style.css" rel="stylesheet" />	
+	
+	
+	<!-- Including jQuery -->
+	<script type="text/javascript" src="js/jquery-1.7.1.min.js"></script>
+	<script type="text/javascript" src="js/highlight.js"></script>
+	
+	
+		
+	<script type="text/javascript">	   
+		
+		$(document).ready(function(){
+			$('pre.code').highlight({source:false, zebra:false, indent:'space', list:'ul'});
+		});
+		
+		function toggle(showHideDiv) {
+			var ele = document.getElementById(showHideDiv);			
+			if(ele.style.display == "block") {
+				ele.style.display = "none";				
+			}
+			else {
+				ele.style.display = "block";				
+			}
+		} 
+		
+	</script>	
+
+	
+</head>
+
+
+	<body>
+				
+		<div class="row">
+        		
+			
+			<!-- begin of logocloud	-->
+			<div id="log"><h1>Panorama: Quick Start Guide</h1></div>   
+			<!-- end of logocloud -->
+			
+		</div>
+		
+		<hr/><div class="clearfix"></div>		
+				
+		
+		
+		<div class="row">
+			<div id="log"></div>	
+			<div class="thumb_img border-box">
+			<h4>Contents</h4>
+			
+			<ul>
+			<li><a href="#Introduction">Introduction</a></li>
+			<li><a href="#Examples">Examples</a></li>
+			<li><a href="#Start">Getting started</a></li>
+			<li><a href="#Pattern">Pattern overlay</a></li>	
+			<li><a href="#Logo">Adding Logo/text</a></li>	
+			<li><a href="#Preloader">Adding preloader</a></li>	
+			<li><a href="#Settings">Settings</a></li>			
+			<li><a href="#sizing">Setting the size of the panorama</a></li>		
+			<li><a href="#Methods">Methods</a></li>					
+			<li><a href="#Compatibility">Browser Compatibility</a></li>			
+			<li><a href="#FAQ">FAQ</a></li>			
+			<li><a href="#Support">Support</a></li>			
+			</ul>
+			</div>
+					
+			<a name="Introduction"></a>
+			<h2>Introduction</h2>			
+			<p>Real Panorama is a small jQuery Plugin that helps you to apply moving panorama effect to any of your images. It has many useful features including:
+			</p>
+			<ul>
+
+
+			<li>Fullscreen, fullwidth or fixed size modes</li>
+			<li>100% Responsive</li>
+			<li>Mouse controllable</li>
+			<li>Touchscreen support</li>		
+			</ul>
+			<p>If you like "Panorama" - rate it  :) </br><img src="img/stars.jpg"/></p>					
+		</div>
+		
+		
+		
+		<hr/><div class="clearfix"></div>
+		
+		
+		
+		<div class="row">	
+			<a name="Examples"></a>
+			<h2>Examples</h2>
+			<p>The fastest and easiest way to start using "Panorama" are examples. In folder "upload" you will find ready-to-use templates, you can preview them and choose your favorite right here:</p>
+			</br>
+			<h4>Basic</h4>
+			<ul>
+			<li><a href="../upload/template_1.html">Constructing simple panorama</a></li>
+			<li><a href="../upload/template_2.html">Fullscreen panorama</a></li>
+			<li><a href="../upload/template_3.html">Fullwidth panorama</a></li>
+			<li><a href="../upload/template_4.html">Fixed W/H ratio panorama</a></li>
+			<li><a href="../upload/template_5.html">Fixed size panorama</a></li>
+			<li><a href="../upload/template_6.html">External control</a></li>
+			</ul>
+			</br>
+			<h4>Advanced</h4>
+			<ul>
+			<li><a href="../upload/template_7.html">Using with colorbox</a></li>
+			
+			</ul>
+		
+		</div>
+		
+		<hr/><div class="clearfix"></div>
+		
+		
+		
+		<div class="row">				
+			<a name="Start"></a>
+			<h2>Getting started</h2>			
+			<p>To use the plugin, include the jQuery library and Panorama plugin inside the &lt;head&gt; tag of your HTML document:</p>
+			
+<pre class="code" lang="html">
+<script2 type="text/javascript" src="/path/to/jquery-latest.js"></script2> 
+<script2 type="text/javascript" src="/path/to/jquery.panorama.min.js"></script2>
+</pre>
+			
+			
+			
+			
+			</br>
+			<p>Define the WIDTH of the panorama (to make panorama responsive set width of the panorama in percents) and other styles if necessary. If you already know the HEIGHT of panorama image to display its reccomended to define it here as well (to avoid not necessary resizing on image load):</p>
+			
+<pre class="code" lang="css">
+#mypanorama {
+	width:350px;
+	height:200px;
+	border:1px solid #333;	
+}
+</pre>			
+			
+
+				
+			<p>!!!  Note: To make panorama responsive set width of the panorama in percents, e.g: <strong>#mypanorama {width:100%;}</strong></p>
+			
+			
+			
+			</br>
+			<p>Use the following format inside the &lt;body&gt; tag of your HTML document:</p>
+			
+<pre class="code" lang="html">
+<div id="mypanorama">
+    <div class="panorama_img">
+		<img src="path/to/panorama.jpg">
+	</div>
+</div>
+</pre>			
+			
+
+				
+			<p>Note: to avoid loading of the panorama image before plugin is applied use attribute data-src instead of src</p>
+			
+<pre class="code" lang="html">
+<img data-src="path/to/panorama.jpg">
+</pre>
+			</br>
+			<p>Start panorama when the document is loaded:</p>
+			
+<pre class="code" lang="js">
+$(document).ready(function() 
+    { 
+        $("#mypanorama").panorama();
+    } 
+);
+</pre>	
+			
+
+			
+			</br>
+			
+			<p>All together: simplest html file (<a href="javascript:toggle('e1');">show / hide</a>)</p>
+			<div id="e1" style="display: none">
+			<p>dont forget to chage the path to .js files</p>
+			
+<pre class="code" lang="html">
+<!2DOCTYPE html>
+<html2>
+    <head2>
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+        <meta name="description" content="Real Panorama jQuery plugin" />
+        <title>Panorama</title>
+        
+		<!-- panorama width (can be set in external css file)	-->
+		<style type="text/css">
+			#mypanorama {width:350px;}			
+		</style>
+		
+		<!-- include jquery and panorama plugin (make sure the paths are correct) -->
+        <script2 type="text/javascript" src="/path/to/jquery-latest.js"></script2> 
+        <script2 type="text/javascript" src="/path/to/jquery.panorama.min.js"></script2> 
+        
+		<!-- start panorama on document ready -->
+        <script2 type="text/javascript">
+            $(document).ready(function(){ 
+                $("#mypanorama").panorama();
+            });
+        </script2> 
+		
+    </head2>
+    <body2>
+    
+		<!-- panorama starts here -->
+        <div id="mypanorama">
+			<div class="panorama_img">
+				<img src="path/to/panorama.jpg">
+			</div>
+		</div>
+		<!-- panorama ends here -->
+        
+    </body2>
+</html2>			
+</pre>			
+			
+			
+			</div>
+			
+		</div>
+		
+		
+		<hr/><div class="clearfix"></div>
+		
+		
+		<div class="row">	
+			<a name="Pattern"></a>
+			<h2>Pattern overlay</h2>
+			<p>To overlay panorama with the pattern use background-image css style.</p>
+			
+<pre class="code" lang="css">
+#mypanorama {
+	width:350px;
+	background-image:url('path/to/pattern.png');
+}
+</pre>		
+
+Note: if you want to increase rendering performance of some very old browsers (like IE7) use big sized pattern images.		
+			
+		</div>	
+			
+		<hr/><div class="clearfix"></div>
+		
+		
+		<div class="row">	
+			<a name="Logo"></a>
+			<h2>Adding Logo/text</h2>
+			<p>To add your content inside of panorama use the following markup:</p>
+			
+<pre class="code" lang="html">
+<div id="mypanorama">
+	<div class="panorama_img"><img data-src="img/pan_3.jpg"></div>
+	<div class="panorama_titel">Your HTML formatted content (e.g. LOGO or text) here</div>
+</div>
+</pre>		
+
+Note: you can style DIV .panorama_titel as you like with CSS.		
+			
+		</div>	
+			
+		
+		
+		<hr/><div class="clearfix"></div>
+		
+		
+		<div class="row">	
+			<a name="Preloader"></a>
+			<h2>Adding preloader</h2>
+			<p>To add preloader use the following markup (it will add 32x32 loading.gif in center of the panorama):</p>
+			
+<pre class="code" lang="html">
+<div id="mypanorama">
+	<div class="panorama_img"><img data-src="img/pan_3.jpg"></div>
+	<div class="panorama_preloader" style="margin: 0 auto; width:32px; top:50%; margin-top: -16px;"><img src="path/to/loading.gif"></div>	
+</div>	
+</pre>		
+	
+		</div>	
+			
+		
+		
+		<hr/><div class="clearfix"></div>
+		
+		
+		<div class="row">	
+			<a name="Settings"></a>
+			<h2>Settings</h2>
+			<p>Panorama has sattings you can pass in at initialization to achieve different effects.</p>
+			
+			
+			
+			
+			<p><a href="javascript:toggle('t2b');">show / hide</a></p>
+						
+			<div id="t2b" style="display: none">			
+<pre class="code" lang="js">
+$(document).ready(function(){
+
+	//START panorama
+	$('#mypanorama').panorama({
+
+		//all settings are optional, you can delete them or provide your values (default values are shown here)
+	
+		size		: false,	//See 'Setting the size of the panorama' section			
+		speed		: 20,		//target speed px/sec (if negative - move to opposite direction on start, if zero - not moving at start)
+		move		: 200,		//max speed px/sec on mouse move (if negative - inverted sensitivity, if zero - not sensitive)
+		wheel		: 1,		//sensitivity on mouse wheel (if negative - inverted sensitivity, if zero - not sensitive)					
+		drag		: 1,		//sensitivity on drag (if negative - inverted sensitivity, if zero - not sensitive)			
+		gravity		: 200,		//max speed px/sec on mobile device movement (if negative - inverted sensitivity, if zero - not sensitive. In use only if mobile device hardware supports this feature)			
+		attenuation	: 4,		//attenuation koefficient (not negative number)
+		fade		: 300,		//fade on image load in milliseconds (set to zero to remove fade effect. Fade is forced to be zero on mobile devices)
+		fps			: 60		//default fps limit
+		
+	}); 
+
+});			
+</pre> 		
+	</div>		
+			
+			
+	
+</div>
+		
+		
+		<hr/><div class="clearfix"></div>
+		
+		
+		<div class="row">	
+			<a name="sizing"></a>
+			<h2>Setting the size of the panorama</h2>
+			<p>The correct way to set the WIDTH of the panorama is using CSS</p>
+			
+			
+<pre class="code" lang="css">
+#mypanorama {width:350px;}
+</pre>			
+		
+		
+		<p>If you want to make it responsive (or WULLWIDTH) - use percents instead of pixels, e.g.</p>
+			
+			
+<pre class="code" lang="css">
+#mypanorama {width:100%;}
+</pre>			
+		
+		<p>To set HEIGHT of the panorama use "size" setting. For FIXED size of panorama use e.g. size = '100px' then height will be equal to 100 pixels (and panorama image will be scaled to fit 100px height).
+		</p>
+					
+<pre class="code" lang="js">
+$(document).ready(function(){ 
+	$("#mypanorama").panorama({
+		size : '100px',   // NOTE: dont forget to use 'px' at the end, e.g. '100px' or '150px'
+	});  
+});	
+</pre>			
+		
+		
+		<p>To set fixed WIDTH/HEIGHT ratio of the panorama set "size" setting to number, e.g. if size = 1 then height will be the same as width. Or if size = 2 then height will be always = width/2 (twice as less then width). Always! even if width is given in %.
+		</p>
+					
+<pre class="code" lang="js">
+$(document).ready(function(){ 
+	$("#mypanorama").panorama({
+		size : 2,   // NOTE: without 'px' at the end (in contrast to preveous example) size represent width/height ratio !!!
+	});  
+});	
+</pre>			
+		
+			
+		<p>To set panorama in FULLSCREEN mode set size = 'fullscreen' (or true)
+		</p>
+					
+<pre class="code" lang="js">
+$(document).ready(function(){ 
+	$("#mypanorama").panorama({
+		size : true,   // set 'fullscreen' or true
+	});  
+});	
+</pre>			
+		
+		
+		<p>Note: if you do NOT provide "size" parameter or set size=false  -  the height of the image will be used.
+		</p>
+		
+	
+		</div>
+		
+		
+		
+		
+		
+		<hr/><div class="clearfix"></div>
+		
+		
+		<div class="row">	
+			<a name="Methods"></a>
+			<h2>Methods</h2>
+			<p>This part is for advanced users only. If you dont know how to use methods - you dont need to reed this section. Tags panorama plugin has a number of methods, especially useful then you want to change parameters or affect panorama at any time directly from your HTML page. Here are all the methods available with examples on how to execute them from your HTML page:</p>
+			
+			
+			<p><a href="javascript:toggle('t2a');">show / hide</a></p>
+						
+			<div id="t2a" style="display: none">			
+<pre class="code" lang="js">
+// to change properties of panorama
+$('#mypanorama').panorama('option', 'speed', -200);     //set movement speed to -200px/sec
+$('#mypanorama').panorama('option', 'move', 400);     //set maximal speed on mouse move to 400px/sec (if zero - mouse nonsensitive)
+$('#mypanorama').panorama('option', 'gravity', 200);     //set maximal speed on mobile device movement to 200px/sec (if zero - non-sensitive)
+$('#mypanorama').panorama('option', 'wheel', 2);     //sensitivity on mouse wheel (if zero - mouse wheel nonsensitive)
+$('#mypanorama').panorama('option', 'drag', 1);     //sensitivity on drag (if zero - non-draggable)
+$('#mypanorama').panorama('option', 'attenuation', 4);     //attenuation koefficient (if zero - non-attenuating)
+$('#mypanorama').panorama('option', 'fade', 800);     //image fade on load in milliseconds(if zero - no fade effect)
+$('#mypanorama').panorama('option', 'fps', 60);     //target frames per second (60 or less - reccomended)
+
+
+// to emulate mouse movements and to interact with panorama
+$('#mypanorama').panorama('play');					    //start panorama movement speed defined in settings
+$('#mypanorama').panorama('play', 200);					//start panorama movement with 200px/sec
+$('#mypanorama').panorama('pause');					    //pause panorama	
+$('#mypanorama').panorama('pause', 3000);				//pause panorama for 3 seconds
+</pre> 			
+</div>			
+			
+		
+		
+		</div>
+		
+		<hr/><div class="clearfix"></div>
+		
+		
+		<div class="row">	
+			<a name="Compatibility"></a>
+			<h2>Browser Compatibility</h2>
+			<p>tags panorama plugin has been tested successfully in the following browsers with Javascript enabled:</p>
+			<ul>
+				<li>Firefox</li>				
+				<li>Safari</li>
+				<li>Opera</li>
+				<li>Chrome</li>
+				<li>Internet Explorer 8+</li>
+			</ul>
+    
+    <p><a class="external" href="http://docs.jquery.com/Browser_Compatibility">jQuery Browser Compatibility</a></p>
+    <p>Mobile friendly (tested on iPhones, iPad). *Performance on different browsers (especially old IE7) may differ due to different mechanism of page/image rendering.</p>
+		
+		</div>
+		
+		<hr/><div class="clearfix"></div>
+		
+		
+		<div class="row">	
+			<a name="FAQ"></a>
+			<h2>FAQ</h2>
+			<p>Q: My panorama image doesn't show up. Why?</p>
+			<p>A: Some browsers (particularly mobile browsers) may have the limitations on maximal image dimentions. Make sure that your panorama image is as small as possible: <br>
+			1) If your image is 6000px height it makes sence to resize it to e.g. 1000px height which is enought to completely fit into almost any screen size/resolution.<br>
+			2) If you want to show panorama with e.g. height=100px its always good to resize the big image to final height (100px).
+			</p>
+			
+			<br>
+			
+			<p>Q: My panorama image loads too long. Why?</p>
+			<p>A: The size of your image could be too big (up to several Mb). <br>
+			1) Reduce the size of the image (1000px or less in height and 72 DPI will be fine).<br>
+			2) If you want to show panorama with some certain height (see settings "size") its always good to resize the big image to final height.
+			</p>
+			<br>
+			
+			<p>Q: I have super huge wide panorama. Can i split my huge panoramic image into several images?</p>
+			<p>A: Yes you can split the image into several parts and use the following markup:</p>
+			
+<pre class="code" lang="html">
+<div id="mypanorama">
+	<div class="panorama_img">
+		List of all panorama image parts here (in order they should appear)
+		<img data-src="path/to/part1.jpg">
+		<img data-src="path/to/part2.jpg">
+		<img data-src="path/to/part3.jpg">
+	</div>
+</div>	
+</pre>	
+			
+			<br>
+			
+			<p>Q: Image is not showing inside of colorbox. Why?</p>
+			<p>A: Make sure the path to image is correct. NEVER use size:'fullscreen' then starting panorama inside of COLORBOX!</p>
+			
+		
+		</div>
+		
+	
+		<hr/><div class="clearfix"></div>
+		
+		
+		<div class="row">	
+			<a name="Support"></a>
+			<h2>Support</h2>
+			<p>Support is available through the <a href="http://codecanyon.net/user/Sandi" target="_blank">Codecanyon</a></p>
+		
+		</div>
+		
+	
+	</body>
+</html>

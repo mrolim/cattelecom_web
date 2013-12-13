@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html>
+
+    <head>
+    
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+        <title>Documentation - CSS3 Scrollbar</title>
+        <link rel="stylesheet" href="style.css" type="text/css" />
+        
+    </head>
+    
+    </head>
+
+    <body class="absolute">
+    
+        <div class="container">
+        
+        	<div class="logo">
+        		<img src="icons/creative-dive.png">
+    		</div>
+    
+            <h1><span class="color blue">Documentation</span> - CSS3 Scrollbar</h1>
+            
+            <div class="description">
+                This documentation will help you in the processing to include CSS3 Scrollbar
+            </div>
+        
+            <div class="content">
+            	<div class="content-in">
+                	<h3>1. Installation</h3>
+                    
+                    1.1. Insert the <code>style-blue.css</code> or other css-color file in the <code>head</code>-tag of your html file.
+                    
+<pre>
+    <code>
+        &lt;!DOCTYPE html&gt;
+        &lt;html&gt;
+            &lt;head&gt;
+            	<span class="color green">
+                &lt;link rel="stylesheet" href="style-blue.css" type="text/css" &gt;
+                </span>
+            &lt;/head&gt;
+            &lt;body&gt;
+            &lt;/body&gt;
+        &lt;/html&gt;
+    </code>
+</pre>
+                    
+                    1.3. So you can see the css Scrollbar on the live page.
+                    
+            	</div>
+            </div>
+            
+            <div class="content">
+            	<div class="content-in">
+                	<h3>2. Scrollbar</h3> 
+                          
+                    2.1. You can edit the Scrollbar <code>-webkit-scrollbar</code>.
+                    
+<pre>
+    <code>
+       	.scrollbar-1<span class="color green">::-webkit-scrollbar</span>
+        {
+        width:13px;height:13px;
+        background:transparent
+        }
+    </code>
+</pre>
+                    
+            	</div>
+            </div>
+            
+            <div class="content">
+            	<div class="content-in">
+                	<h3>3. Scrollbar Track</h3> 
+                          
+                    3.1. You can edit the Scrollbar Track <code>-webkit-scrollbar-track</code>.
+                    
+<pre>
+    <code>
+       	.scrollbar-1<span class="color green">::-webkit-scrollbar-track</span>
+        {
+        background:#6fa1d4
+        }
+    </code>
+</pre>
+                    
+            	</div>
+            </div>
+            
+            <div class="content">
+            	<div class="content-in">
+                	<h3>4. Scrollbar Corner</h3> 
+                          
+                    4.1. You can edit the Scrollbar Track <code>-webkit-scrollbar-corner</code>.
+                    
+<pre>
+    <code>
+       	.scrollbar-1<span class="color green">::-webkit-scrollbar-corner</span>
+        {
+        background:#6fa1d4
+        }
+    </code>
+</pre>
+                    
+            	</div>
+            </div>
+            
+            <div class="content">
+            	<div class="content-in">
+                	<h3>5. Scrollbar Button</h3> 
+                          
+                    5.1. You can edit the Scrollbar Track <code>-webkit-scrollbar-button</code>.
+                    
+<pre>
+    <code>
+       	.scrollbar-1<span class="color green">::-webkit-scrollbar-button</span>
+        {
+        width:13px;height:13px
+        }
+    </code>
+</pre>
+                    
+            	</div>
+            </div>
+            
+            <div class="content">
+            	<div class="content-in">
+                	<h3>6. Scrollbar Button</h3> 
+                          
+                    6.1. You can edit the Scrollbar Track <code>-webkit-scrollbar-button</code>.
+                    
+<pre>
+    <code>
+       	.scrollbar-1<span class="color green">::-webkit-scrollbar-button</span>
+        {
+        width:13px;height:13px
+        }
+    </code>
+</pre>
+
+					6.1. Using own icons.
+                    
+<pre>
+    <code>
+       	.scrollbar-1::-webkit-scrollbar-button<span class="color green">:horizontal:decrement</span> {background:#6fa1d4 url("icons/horizontal-decrement-arrow.gif") center center no-repeat}
+        .scrollbar-1::-webkit-scrollbar-button<span class="color green">:horizontal:increment</span> {background:#6fa1d4 url("icons/horizontal-increment-arrow.gif") center center no-repeat}
+        .scrollbar-1::-webkit-scrollbar-button<span class="color green">:vertical:decrement</span> {background:#6fa1d4 url("icons/vertical-decrement-arrow.gif") center center no-repeat}
+        .scrollbar-1::-webkit-scrollbar-button<span class="color green">:vertical:increment</span> {background:#6fa1d4 url("icons/vertical-increment-arrow.gif") center center no-repeat}
+    </code>
+</pre>              
+                    
+            	</div>
+            </div>
+            
+            
+            
+            
+        </div>
+        
+    </body>
+
+</html>

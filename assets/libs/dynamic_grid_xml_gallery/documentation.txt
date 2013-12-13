@@ -1,0 +1,169 @@
+Dynamic Grid: XML Gallery
+Documentation
+
+by Nikolay Dyankov Design
+
+1. Installation
+2. How to use
+	2.1. Putting content with XML
+	2.2. Putting content with HTML
+	2.3. Launching the plugin
+	2.4. Settings
+3. Support
+
+-------------------------------------
+1. Installation
+
+1. Copy gynamic.grid.css to your css folder.
+2. Copy dynamic.grid.gallery.js to your js folder.
+3. Copy the images from the "img" folder to your images folder and adjust the paths in dynamic.grid.css accordingly.
+3. Include the css file within the <head> tag of your html file:
+
+	<link rel="stylesheet" href="css/dynamic.grid.css" type="text/css" />
+	
+4. Include the js file in your html file, but after you include jQuery:
+
+	<script src="js/dynamic.grid.gallery.js"></script>
+	
+5. You are ready to start using the plugin!
+
+
+-------------------------------------
+2. How to use
+
+	First of all - you need to give the gallery some content. You have two choices - with an XML file, or HTML code.
+
+
+	2.1. Putting content with XML
+		
+		Start by creating a new .xml file and call it "gallery.xml" for example. The file needs to look like this:
+		
+			<?xml version="1.0"?>
+			<gallery>
+				<image>
+					<title>Image Title</title>
+					<src>path-to-image/img-01.jpg</src>
+					<description>Image Description</description>
+					<link>http://www.somelink.com/</link>
+				</image>
+			</gallery>
+			
+		That's it, looks very simple and clean. Put as many <image> tags as you want, and if you don't need a description, title, or a link you can just skip those tags. The plugin is smart enough to handle it properly.
+		
+		One more thing - you will need a root element in your HTML file to hold the gallery:
+		
+			<div id="my-gallery">
+			
+			</div>
+			
+		You can use whatever ID you want, it doesn't matter.
+	
+	
+	2.2. Putting content with HTML
+	
+		Create a new div element and give it a class or ID. You will need it later.
+		
+		Inside that element, you will put the data for all images, like this:
+		
+			<div id="my-gallery">
+				<div class="dg-cell">
+					<div class="dg-cell-src">path-to-image/img-00.jpg</div>
+					<div class="dg-cell-title">This is a title.</div>
+					<div class="dg-cell-description">This is a description.</div>
+					<div class="dg-cell-link">http://www.google.bg/</div>
+				</div>
+			</div>
+		
+		In this example, the div #my-gallery is the root element, on which we will call the plugin later. Inside it you put as many div elements with classname "dg-cell" and fill them with the additional information for the image. Note that all classnames need to be exactly as you see them above!
+		
+		If you don't need a description, title, or a link you can just skip those elements. The plugin is smart enough to handle it properly.
+		
+		
+	2.3. Launching the plugin
+		
+		To launch the plugin, open your site's .js file, or open a <script> tag in your html file. This is how you call the plugin:
+		
+			(function ($, undefined) {
+				$(document).ready(function() {
+					$('#my-gallery').dynamicGallery({
+						src : 'gallery.xml'
+					});
+				});
+			}(jQuery));
+			
+		Or if you are using HTML as a source for the data you can skip the 'src' parameter and just go like this:
+		
+			(function ($, undefined) {
+				$(document).ready(function() {
+					$('#my-gallery').dynamicGallery();
+				});
+			}(jQuery));
+		
+		NOTE: The first self-executing function and the $(document).ready() functions can be skipped altogether if you are putting that in a .js file and you already have such functions there. But you must use them if you are putting that code in an empty <script> tag.
+		
+	2.4. Settings
+	
+		You have 15 parameters to play with. This is where the power of the plugin comes from! One by one, explained:
+		
+		src 					- Path to the .xml file, including the filename. Skip that parameter if you are using HTML as a source;
+		width 					- The total width of the gallery. By default the width is liquid, which means that it will fill it's parent element and resize as that element resizes. In other words - it's the "responsive" mode. If you need to have fixed width, just say "width : 400" for example. You can't use "%";
+		height 					- The total height of the gallery;
+		cols 					- The number of columns;
+		min_rows 				- The minimum number of rows that each column can have. Note that if min_rows is different than max_rows, each column may end up with a different number of rows!
+		max_rows 				- The maximum number of rows that each column can have. Note that if min_rows is different than max_rows, each column may end up with a different number of rows!
+		random_heights 			- true/false - Specifies if each cell will have a unique height;
+		padding					- The padding, or spacing between the cells;
+		interval 				- The delay between each animation in milliseconds;
+		speed 					- The transition duration in milliseconds;
+		easing 					- The easing effect that will be used for the animations. Look for a list of all available effects below;
+		scale_images 			- true/false - If the image has different size than it's parent cell, the script will scale it accordingly, without stretching and showing as much of the image as possible;
+		center_images 			- true/false - Centers the image relative to it's parent cell;
+		click_action 			- "lightbox" or "link" - If set to "lightbox", a lightbox gallery will be launched when the user clicks an image. If set to "link", the user will go to the link that you specified when he clicks any of the images;
+		show_title_in_lightbox 	- true/false - Specifies wether to show the title of the image in the lightbox gallery.
+		
+		
+		List of all transition effects:
+		
+		swing
+		easeInQuad
+		easeOutQuad
+		easeInOutQuad
+		easeInCubic
+		easeOutCubic
+		easeInOutCubic
+		easeInQuart
+		easeOutQuart - default
+		easeInOutQuart
+		easeInQuint
+		easeOutQuint
+		easeInOutQuint
+		easeInSine
+		easeOutSine
+		easeInOutSine
+		easeInExpo
+		easeOutExpo
+		easeInOutExpo
+		easeInCirc
+		easeOutCirc
+		easeInOutCirc
+		easeInElastic
+		easeOutElastic
+		easeInOutElastic
+		easeInBack
+		easeOutBack
+		easeInOutBack
+		easeInBounce
+		easeOutBounce
+		easeInOutBounce
+		
+		
+-------------------------------------
+3. Support
+
+	If you ever need support, please use the dedicated support forum for that at http://support.nikolaydyankovdesign.com/
+
+
+
+Thank you for buying Dynamic Grid: XML Gallery! If you like my work, the best way to support me is to rate my products. To do that, go to your Downloads tab at CodeCanyon and click the stars next to my item. 
+
+That's all, enjoy!

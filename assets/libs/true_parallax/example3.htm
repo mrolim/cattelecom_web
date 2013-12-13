@@ -1,0 +1,262 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+	<meta name="description" content="Real Parallax effect jQuery plugin" />
+	<title>Parallax: properties</title>
+
+	  
+	<!-- Including styles -->
+	<link type="text/css" href="css/style.css" rel="stylesheet" />	
+	
+	<link type="text/css" href="css/ui-lightness/jquery-ui-1.8.18.custom.css" rel="stylesheet" />	
+	
+	<!-- Including jQuery -->
+	<script type="text/javascript" src="js/jquery-1.7.1.min.js"></script>
+	<script type="text/javascript" src="js/jquery-ui-1.8.18.custom.min.js"></script>
+
+	<!-- Including parallax plugin -->
+	<script type="text/javascript" src="js/jquery.real-parallax.js"></script>
+	
+	
+		
+	<script type="text/javascript">
+	   
+		$(document).ready(function() 
+			{ 
+				$("#parallax1").parallax({width: 640,  height: 280});
+				
+				// INIT UI SLIDERS
+				$('#easingCoefficient').slider({slide: update, create: init, min: 0, max: 20, step: 1});
+				$('#focusZ').slider({slide: update,create: init,min: -120,max: 120,step: 2 });
+				$('#sensitivityX, #sensitivityY').slider({slide: update,create: init,min: -1.2,max: 1.2,step: 0.02 });
+			
+			} 
+		);
+		
+		function toggle(showHideDiv) {
+			var ele = document.getElementById(showHideDiv);			
+			if(ele.style.display == "block") {
+				ele.style.display = "none";				
+			}
+			else {
+				ele.style.display = "block";				
+			}
+		} 
+		
+		
+		// UI SLIDERS FUNCTIONS for interaction with parallax
+		function update(event, ui){
+			var id = $(this).attr("id");
+			var nam = "#"+$(this).attr("id")+"_val";
+			var code = "#"+$(this).attr("id")+"_code";
+			$(nam).html($(this).slider( "option", "value" ));
+			var val=$(this).slider( "option", "value" );
+			$('#parallax1').parallax('option',id,val);						
+			$('#parallax1').parallax('reset');
+			$(code).html(val);
+			$(code+"2").html(val);
+		}
+		
+		function init(event, ui){
+			var id = $(this).attr("id");
+			var nam = "#"+$(this).attr("id")+"_val";
+			var code = "#"+$(this).attr("id")+"_code";
+			var val=$('#parallax1').parallax( 'option', id );				
+			$(nam).html(val);
+			$(this).slider( "option", "value", val);
+			$(code).html(val);
+			$(code+"2").html(val);
+		}
+		
+		
+		function mouseSwitch(){
+		  	var mouseEnabled=document.getElementById("mouseenable").checked;
+		  	document.getElementById("mousemove").disabled=!mouseEnabled;				
+			document.getElementById("mouseclick").disabled=!mouseEnabled;				
+			document.getElementById("codemousemove").innerHTML=mouseEnabled;				
+			document.getElementById("codemousemove2").innerHTML=mouseEnabled;				
+			$('#parallax1').parallax('option','enableMouse',mouseEnabled);						
+		}
+		
+		function mouseSwitchMode(){
+		  	var mouseClick=document.getElementById("mouseclick").checked;										
+			$('#parallax1').parallax('option','activateOnClick',mouseClick);
+			document.getElementById("codemouseclick").innerHTML=mouseClick;				
+			document.getElementById("codemouseclick2").innerHTML=mouseClick;				
+		}
+		
+		
+		
+	</script>	
+
+	
+</head>
+
+
+	<body>
+		
+		
+		
+		<div class="row">
+			
+			<div class="thumb_img border-box">
+			<p><a href="index.html">&lt;&lt; back to main page</a></p></br>
+			<h4>Contents</h4>
+			
+			<ul>			
+			<li><a href="#properties">Applying different properties</a></li>								
+			</ul>
+			
+			</div>
+					
+			
+			<h2>Changing the properties</h2>			
+			<p>
+			Below you will find working example(s) and complete, ready to use HTML code for each example.
+			</p>
+			<p>Remember: always include the correct path to jQuery library and the parallax plugin:</p>
+			
+			<!-- CODE -->
+			<div class="container_code">
+<pre class="dr_hl_lang_html"><span class="html_def"> </span><span class="html_com">&lt;!-- PROVIDE THE CORRECT PATH TO .js FILES --&gt;</span><span class="html_def">
+</span><span class="html_tagop">&lt;</span><span class="html_tag">script</span><span class="html_def"> </span><span class="html_attr">type</span><span class="html_attrop">=</span><span class="html_attrvalue">"text/javascript"</span><span class="html_def"> </span><span class="html_attr">src</span><span class="html_attrop">=</span><span class="html_attrvalue">"/path/to/jquery-latest.js"</span><span class="html_tagop">&gt;&lt;/</span><span class="html_tag">script</span><span class="html_tagop">&gt;</span><span class="html_def"> 
+</span><span class="html_tagop">&lt;</span><span class="html_tag">script</span><span class="html_def"> </span><span class="html_attr">type</span><span class="html_attrop">=</span><span class="html_attrvalue">"text/javascript"</span><span class="html_def"> </span><span class="html_attr">src</span><span class="html_attrop">=</span><span class="html_attrvalue">"/path/to/jquery.real-parallax.js"</span><span class="html_tagop">&gt;&lt;/</span><span class="html_tag">script</span><span class="html_tagop">&gt;</span></pre>
+                </div>
+			<!-- END OF CODE -->
+			
+		</div>
+		
+		
+		
+		<hr/><div class="clearfix"></div>
+		
+		
+		<div class="row">				
+			<a name="properties"></a>
+			<h2>Applying different properties</h2>			
+			<p>Parallax has many options you can pass in at initialization to achieve different effects.</p>
+			<div id="parallax1" class="box">        
+				<div style="left:-1px;top:-1px;height: 282px; width: 642px;" data-lock="yes"><img src="img/planets/stars.jpg"/></div>
+				<div style="left:50%;top:20%;" data-z="70"><p>Z=70</p><img src="img/planets/planet1.png" width="86px" height="87px"/></div>
+				<div style="left:40%;top:30%;" data-z="0"><p>Z=0</p><img src="img/planets/sun.png" width="118px" height="102px"/></div>
+				<div style="left:25%;top:30%;" data-z="-70"><p>Z=-70</p><img src="img/planets/planet2.png" width="190px" height="191px"/></div>
+			</div>
+			
+			
+			
+			<div class="column">
+       	
+				<!-- Sliders -->
+				<div>sensitivity X ( <span id="sensitivityX_val"></span> )</div>
+				<div id="sensitivityX"></div>
+				
+				<div>sensitivity Y ( <span id="sensitivityY_val"></span> )</div>
+				<div id="sensitivityY"></div>
+			
+				<div>easingCoefficient ( <span id="easingCoefficient_val"></span> )</div>
+				<div id="easingCoefficient"></div>
+				
+				<div>focusZ ( <span id="focusZ_val"></span> )</div>
+				<div id="focusZ"></div>
+				</br>
+				<form>
+					<input type="checkbox" id="mouseenable" checked onclick="mouseSwitch()"/><label for="mouseenable"> enable mouse</label><br>
+					<input type="radio" name="group1" value="1" id="mousemove" checked onchange="mouseSwitchMode()"/><label for="mousemove"> on mouse move</label><br>
+					<input type="radio" name="group1" value="2" id="mouseclick" onchange="mouseSwitchMode()"/><label for="mouseclick"> on mouse click</label>
+				</form>
+								
+			</div>
+			
+			<div class="column">
+			<p>Initialization code:</p>
+			<!-- CODE -->
+				<div class="container_code" style="width:100%;">
+<pre class="dr_hl_lang_jscript"><span class="jscript_def">$</span><span class="jscript_op">(</span><span class="jscript_string">"#parallaxID"</span><span class="jscript_op">).</span><span class="jscript_def">parallax</span><span class="jscript_op">({</span><span class="jscript_def">
+    width               </span><span class="jscript_op">:</span><span class="jscript_def"> </span><span class="jscript_number">840</span><span class="jscript_op">,</span><span class="jscript_def">
+    height              </span><span class="jscript_op">:</span><span class="jscript_def"> </span><span class="jscript_number">280</span><span class="jscript_op">,</span><span class="jscript_def">
+    enableMouse         </span><span class="jscript_op">:</span><span class="jscript_def"> </span><span class="jscript_keyword" id="codemousemove">true</span><span class="jscript_op">,</span><span class="jscript_def">
+    activateOnClick     </span><span class="jscript_op">:</span><span class="jscript_def"> </span><span class="jscript_keyword" id="codemouseclick">false</span><span class="jscript_op">,</span><span class="jscript_def">
+    sensitivityX        </span><span class="jscript_op">:</span><span class="jscript_def"> </span><span class="jscript_number" id="sensitivityX_code">0.5</span><span class="jscript_op">,</span><span class="jscript_def">  
+    sensitivityY        </span><span class="jscript_op">:</span><span class="jscript_def"> </span><span class="jscript_number" id="sensitivityY_code">0.4</span><span class="jscript_op">,</span><span class="jscript_def">
+    easingCoefficient   </span><span class="jscript_op">:</span><span class="jscript_def"> </span><span class="jscript_number" id="easingCoefficient_code">7</span><span class="jscript_op">,</span><span class="jscript_def">
+    autoZCoordinate     </span><span class="jscript_op">:</span><span class="jscript_def"> </span><span class="jscript_keyword">true</span><span class="jscript_op">,</span><span class="jscript_def"> 
+    useCustomZ          </span><span class="jscript_op">:</span><span class="jscript_def"> </span><span class="jscript_keyword">true</span><span class="jscript_op">,</span><span class="jscript_def">
+    focusZ              </span><span class="jscript_op">:</span><span class="jscript_def"> </span><span class="jscript_number" id="focusZ_code">0</span><span class="jscript_def">
+</span><span class="jscript_op">});</span></pre>
+                </div>
+			<!-- END OF CODE -->
+			</div>
+			
+			<div class="clearfix"></div>
+			<h4>HTML code</h4>
+			<p>Complete html code of example above (<a href="javascript:toggle('e1');">show / hide</a>)</p>
+			<div id="e1" style="display: none">
+			<!-- CODE -->
+			<div class="container_code">
+<pre class="dr_hl_lang_html"><span class="html_tagop">&lt;</span><span class="html_doctype">!DOCTYPE</span><span class="html_def"> </span><span class="html_doctype">html</span><span class="html_tagop">&gt;</span><span class="html_def">
+</span><span class="html_tagop">&lt;</span><span class="html_tag">html</span><span class="html_def"> </span><span class="html_attr">xmlns</span><span class="html_attrop">=</span><span class="html_attrvalue">"http://www.w3.org/1999/xhtml"</span><span class="html_tagop">&gt;</span><span class="html_def">
+    </span><span class="html_tagop">&lt;</span><span class="html_tag">head</span><span class="html_tagop">&gt;</span><span class="html_def">
+        </span><span class="html_tagop">&lt;</span><span class="html_tag">meta</span><span class="html_def"> </span><span class="html_attr">http-equiv</span><span class="html_attrop">=</span><span class="html_attrvalue">"Content-Type"</span><span class="html_def"> </span><span class="html_attr">content</span><span class="html_attrop">=</span><span class="html_attrvalue">"text/html; charset=UTF-8"</span><span class="html_def"> </span><span class="html_tagop">/&gt;</span><span class="html_def">
+        </span><span class="html_tagop">&lt;</span><span class="html_tag">meta</span><span class="html_def"> </span><span class="html_attr">name</span><span class="html_attrop">=</span><span class="html_attrvalue">"description"</span><span class="html_def"> </span><span class="html_attr">content</span><span class="html_attrop">=</span><span class="html_attrvalue">"Real Parallax effect jQuery plugin"</span><span class="html_def"> </span><span class="html_tagop">/&gt;</span><span class="html_def">
+        </span><span class="html_tagop">&lt;</span><span class="html_tag">title</span><span class="html_tagop">&gt;</span><span class="html_def">Parallax</span><span class="html_tagop">&lt;/</span><span class="html_tag">title</span><span class="html_tagop">&gt;</span><span class="html_def">
+        
+        </span><span class="html_tagop">&lt;</span><span class="html_tag">style</span><span class="html_def"> </span><span class="html_attr">type</span><span class="html_attrop">=</span><span class="html_attrvalue">"text/css"</span><span class="html_tagop">&gt;</span><span class="css_def">
+        </span><span class="css_id">#parallaxID</span><span class="css_def"> {
+            </span><span class="css_prop">position</span><span class="css_def">:</span><span class="css_propvalue"> relative</span><span class="css_def">;
+            </span><span class="css_prop">overflow</span><span class="css_def">:</span><span class="css_propvalue">hidden</span><span class="css_def">;
+            </span><span class="css_prop">padding</span><span class="css_def">:</span><span class="css_propvalue"> 0px</span><span class="css_def">;   
+            </span><span class="css_prop">margin</span><span class="css_def">:</span><span class="css_propvalue"> 0px</span><span class="css_def">;
+            </span><span class="css_prop">border</span><span class="css_def">:</span><span class="css_propvalue">1px solid #ccc</span><span class="css_def">;          
+        }
+        </span><span class="html_tagop">&lt;/</span><span class="html_tag">style</span><span class="html_tagop">&gt;</span><span class="html_def">
+        
+        </span><span class="html_com">&lt;!-- PROVIDE THE CORRECT PATH TO .js FILES --&gt;</span><span class="html_def">
+        </span><span class="html_tagop">&lt;</span><span class="html_tag">script</span><span class="html_def"> </span><span class="html_attr">type</span><span class="html_attrop">=</span><span class="html_attrvalue">"text/javascript"</span><span class="html_def"> </span><span class="html_attr">src</span><span class="html_attrop">=</span><span class="html_attrvalue">"/path/to/jquery-latest.js"</span><span class="html_tagop">&gt;&lt;/</span><span class="html_tag">script</span><span class="html_tagop">&gt;</span><span class="html_def"> 
+        </span><span class="html_tagop">&lt;</span><span class="html_tag">script</span><span class="html_def"> </span><span class="html_attr">type</span><span class="html_attrop">=</span><span class="html_attrvalue">"text/javascript"</span><span class="html_def"> </span><span class="html_attr">src</span><span class="html_attrop">=</span><span class="html_attrvalue">"/path/to/jquery.real-parallax.js"</span><span class="html_tagop">&gt;&lt;/</span><span class="html_tag">script</span><span class="html_tagop">&gt;</span><span class="html_def"> 
+            
+        </span><span class="html_tagop">&lt;</span><span class="html_tag">script</span><span class="html_def"> </span><span class="html_attr">type</span><span class="html_attrop">=</span><span class="html_attrvalue">"text/javascript"</span><span class="html_tagop">&gt;</span><span class="jscript_def">
+            $</span><span class="jscript_op">(</span><span class="jscript_prop">document</span><span class="jscript_op">).</span><span class="jscript_def">ready</span><span class="jscript_op">(</span><span class="jscript_keyword">function</span><span class="jscript_op">()</span><span class="jscript_def"> 
+                </span><span class="jscript_op">{</span><span class="jscript_def"> 
+                    $</span><span class="jscript_op">(</span><span class="jscript_string">"#parallaxID"</span><span class="jscript_op">).</span><span class="jscript_def">parallax</span><span class="jscript_op">({</span><span class="jscript_def">
+                        width               </span><span class="jscript_op">:</span><span class="jscript_def"> </span><span class="jscript_number">840</span><span class="jscript_op">,</span><span class="jscript_def">
+                        height              </span><span class="jscript_op">:</span><span class="jscript_def"> </span><span class="jscript_number">280</span><span class="jscript_op">,</span><span class="jscript_def">
+                        enableMouse         </span><span class="jscript_op">:</span><span class="jscript_def"> </span><span class="jscript_keyword" id="codemousemove2">true</span><span class="jscript_op">,</span><span class="jscript_def">
+                        activateOnClick     </span><span class="jscript_op">:</span><span class="jscript_def"> </span><span class="jscript_keyword" id="codemouseclick2">false</span><span class="jscript_op">,</span><span class="jscript_def">
+                        sensitivityX        </span><span class="jscript_op">:</span><span class="jscript_def"> </span><span class="jscript_number" id="sensitivityX_code2">0.5</span><span class="jscript_op">,</span><span class="jscript_def">  
+                        sensitivityY        </span><span class="jscript_op">:</span><span class="jscript_def"> </span><span class="jscript_number" id="sensitivityY_code2">0.4</span><span class="jscript_op">,</span><span class="jscript_def">
+                        easingCoefficient   </span><span class="jscript_op">:</span><span class="jscript_def"> </span><span class="jscript_number" id="easingCoefficient_code2">7</span><span class="jscript_op">,</span><span class="jscript_def">
+                        autoZCoordinate     </span><span class="jscript_op">:</span><span class="jscript_def"> </span><span class="jscript_keyword">true</span><span class="jscript_op">,</span><span class="jscript_def"> 
+                        useCustomZ          </span><span class="jscript_op">:</span><span class="jscript_def"> </span><span class="jscript_keyword">true</span><span class="jscript_op">,</span><span class="jscript_def">
+                        focusZ              </span><span class="jscript_op">:</span><span class="jscript_def"> </span><span class="jscript_number" id="focusZ_code2">0</span><span class="jscript_def">
+                    </span><span class="jscript_op">});</span><span class="jscript_def">
+                </span><span class="jscript_op">}</span><span class="jscript_def"> 
+            </span><span class="jscript_op">);</span><span class="jscript_def">
+        </span><span class="html_tagop">&lt;/</span><span class="html_tag">script</span><span class="html_tagop">&gt;</span><span class="html_def">   
+        
+    </span><span class="html_tagop">&lt;/</span><span class="html_tag">head</span><span class="html_tagop">&gt;</span><span class="html_def">
+    
+    </span><span class="html_tagop">&lt;</span><span class="html_tag">body</span><span class="html_tagop">&gt;</span><span class="html_def">    
+        </span><span class="html_tagop">&lt;</span><span class="html_tag">div</span><span class="html_def"> </span><span class="html_attr">id</span><span class="html_attrop">=</span><span class="html_attrvalue">"parallaxID"</span><span class="html_tagop">&gt;</span><span class="html_def">        
+            </span><span class="html_tagop">&lt;</span><span class="html_tag">div</span><span class="html_def"> </span><span class="html_attr">style</span><span class="html_attrop">=</span><span class="html_attrvalue">"left:-1px;top:-1px;height: 282px; width: 642px;"</span><span class="html_def"> </span><span class="html_attr">data-lock</span><span class="html_attrop">=</span><span class="html_attrvalue">"yes"</span><span class="html_tagop">&gt;&lt;</span><span class="html_tag">img</span><span class="html_def"> </span><span class="html_attr">src</span><span class="html_attrop">=</span><span class="html_attrvalue">"img/planets/stars.jpg"</span><span class="html_tagop">/&gt;&lt;/</span><span class="html_tag">div</span><span class="html_tagop">&gt;</span><span class="html_def">
+            </span><span class="html_tagop">&lt;</span><span class="html_tag">div</span><span class="html_def"> </span><span class="html_attr">style</span><span class="html_attrop">=</span><span class="html_attrvalue">"left:50%;top:20%;"</span><span class="html_def"> </span><span class="html_attr">data-z</span><span class="html_attrop">=</span><span class="html_attrvalue">"70"</span><span class="html_tagop">&gt;&lt;</span><span class="html_tag">p</span><span class="html_tagop">&gt;</span><span class="html_def">Z=70</span><span class="html_tagop">&lt;/</span><span class="html_tag">p</span><span class="html_tagop">&gt;&lt;</span><span class="html_tag">img</span><span class="html_def"> </span><span class="html_attr">src</span><span class="html_attrop">=</span><span class="html_attrvalue">"img/planets/planet1.png"</span><span class="html_tagop">/&gt;&lt;/</span><span class="html_tag">div</span><span class="html_tagop">&gt;</span><span class="html_def">
+            </span><span class="html_tagop">&lt;</span><span class="html_tag">div</span><span class="html_def"> </span><span class="html_attr">style</span><span class="html_attrop">=</span><span class="html_attrvalue">"left:40%;top:30%;"</span><span class="html_def"> </span><span class="html_attr">data-z</span><span class="html_attrop">=</span><span class="html_attrvalue">"0"</span><span class="html_tagop">&gt;&lt;</span><span class="html_tag">p</span><span class="html_tagop">&gt;</span><span class="html_def">Z=0</span><span class="html_tagop">&lt;/</span><span class="html_tag">p</span><span class="html_tagop">&gt;&lt;</span><span class="html_tag">img</span><span class="html_def"> </span><span class="html_attr">src</span><span class="html_attrop">=</span><span class="html_attrvalue">"img/planets/sun.png"</span><span class="html_tagop">/&gt;&lt;/</span><span class="html_tag">div</span><span class="html_tagop">&gt;</span><span class="html_def">
+            </span><span class="html_tagop">&lt;</span><span class="html_tag">div</span><span class="html_def"> </span><span class="html_attr">style</span><span class="html_attrop">=</span><span class="html_attrvalue">"left:25%;top:30%;"</span><span class="html_def"> </span><span class="html_attr">data-z</span><span class="html_attrop">=</span><span class="html_attrvalue">"-70"</span><span class="html_tagop">&gt;&lt;</span><span class="html_tag">p</span><span class="html_tagop">&gt;</span><span class="html_def">Z=-70</span><span class="html_tagop">&lt;/</span><span class="html_tag">p</span><span class="html_tagop">&gt;&lt;</span><span class="html_tag">img</span><span class="html_def"> </span><span class="html_attr">src</span><span class="html_attrop">=</span><span class="html_attrvalue">"img/planets/planet2.png"</span><span class="html_tagop">/&gt;&lt;/</span><span class="html_tag">div</span><span class="html_tagop">&gt;</span><span class="html_def">
+        </span><span class="html_tagop">&lt;/</span><span class="html_tag">div</span><span class="html_tagop">&gt;</span><span class="html_def">
+    </span><span class="html_tagop">&lt;/</span><span class="html_tag">body</span><span class="html_tagop">&gt;</span><span class="html_def">
+</span><span class="html_tagop">&lt;/</span><span class="html_tag">html</span><span class="html_tagop">&gt;</span></pre>
+                </div>
+			<!-- END OF CODE -->			
+			</div>
+			
+			
+			
+		</div>
+		
+		<hr/><div class="clearfix"></div>
+		
+		
+		
+	
+	</body>
+</html>
