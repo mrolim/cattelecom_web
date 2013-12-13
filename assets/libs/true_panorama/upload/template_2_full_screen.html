@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+	<meta name="description" content="Panorama effect jQuery plugin" />
+	<title>Template 2</title>
+
+	
+	<!-- EDIT the styles to fit your design-->	
+	<style type="text/css">	
+				
+		#mypanorama{			
+		 	background-image:url('img/pattern1.png');			
+		}	
+		
+		.panorama_titel{
+			padding:10px;			
+		}
+				
+	
+	</style>
+	
+	<!-- Including jQuery and panorama plugin -->
+	<script type="text/javascript" src="js/jquery-1.7.1.min.js"></script>
+	<script type="text/javascript" src="js/jquery.panorama.min.js"></script>
+	
+	<script type="text/javascript">
+	   
+		$(document).ready(function(){
+		
+			//START panorama			
+			$('#mypanorama').panorama({			        
+				size         : 'fullscreen',    //See 'Setting the size of the panorama' in HOW_TO            
+				speed        : 100,             //target speed px/sec (if negative - move to opposite direction on start, if zero - not moving at start)
+				move         : 600,      //max speed px/sec on mouse move (if negative - inverted sensitivity, if zero - not sensitive)
+				wheel        : 2,        //sensitivity on mouse wheel (if negative - inverted sensitivity, if zero - not sensitive)                    
+				drag         : 1         //sensitivity on drag (if negative - inverted sensitivity, if zero - not sensitive)            
+			}); 
+			
+		});
+		
+	</script>	
+	
+</head>
+
+	<body>
+		
+			<!-- begin panorama-->
+			<div id="mypanorama">
+				<div class="panorama_img"><img data-src="img/panorama.jpg"></div>
+				<div class="panorama_titel">
+					<img src="img/logo.png">
+					<p>Template: Constructing fullscreen panorama (see the source of this file)</p>
+				</div>
+				<div class="panorama_preloader" style="margin: 0 auto; width:32px; top:50%; margin-top: -16px;"><img src="img/loading.gif"></div>    
+			</div>		
+			<!-- end panorama-->			
+		
+		
+		
+	</body>
+</html>

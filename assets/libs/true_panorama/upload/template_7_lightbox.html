@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+	<meta name="description" content="Panorama effect jQuery plugin" />
+	<title>Template 7</title>
+
+	<!-- INCLUDE COLORBOX STYLE-->	
+	<link rel="stylesheet" href="css/colorbox.css" />
+		
+	<!-- SET THE WIDTH OF PANORAMA TO 100%-->	
+	<style type="text/css">	
+				
+		.panorama{
+			width:100%;	 		
+		}	
+				
+	</style>
+	
+	<!-- Including jQuery and panorama plugin -->
+	<script type="text/javascript" src="js/jquery-1.7.1.min.js"></script>
+	<script type="text/javascript" src="js/jquery.panorama.min.js"></script>
+	
+	<!-- Including COLORBOX plugin -->
+	<script type="text/javascript" src="js/jquery.colorbox-min.js"></script>
+	
+	
+	<script type="text/javascript">
+	   
+		$(document).ready(function(){
+		
+			//on click execute function openColorBox			
+			$('.link').click(openColorBox);
+			
+			
+			function openColorBox(event){
+				event.preventDefault();  //prevent default action
+				
+				//create panorama markup with corresponding href
+				var $mypanorama = $("<div class='panorama'><div class='panorama_img'><img src='"+this.href+"'></div></div>");
+				
+				//START PANORAMA PLUGIN with desired settings
+				$mypanorama.panorama({speed:20,fps:40});
+							
+				//Colorbox has many settings available (see colorbox help)
+				//START COLORBOX WITH "mypanorama" INSIDE as INLINE CONTENT
+				$.colorbox({
+					inline:true, 				//this should always be true			
+					href:$mypanorama,   		//reference to $mypanorama
+					opacity:0.5, 				//optional parameters	 
+					initialWidth:'500px',  
+					initialHeight:'300px',
+					width:"500px", 					
+					height:"300px",				
+					onComplete:function(){
+						 //resize colorbox then panorama image is loaded
+						 $(this).colorbox.resize(); 
+					},
+					onCleanup:function(){
+						//on close colorbox destroy panorama (free memory)
+						$mypanorama.panorama('destroy');	
+					}					
+				});	
+				//COLORBOX STARTED
+				
+			}
+			
+		});
+
+	</script>	
+	
+</head>
+
+	<body>
+		
+			<div>Advanced template: Using with colorbox (see the source of this file)</div>
+		
+			
+			<!-- use href to point on panoramic images -->		
+			<div>Click on any link below:
+				<ul>
+					<li><a href="img/panorama.jpg" class="link">panorama link</a></li>
+					<li><a href="img/panorama.jpg" class="link">panorama link</a></li>
+					<li><a href="img/panorama.jpg" class="link">panorama link</a></li>
+				</ul>
+			</div>
+		
+		
+		
+		
+	</body>
+</html>
