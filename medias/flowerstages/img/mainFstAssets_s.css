@@ -1,0 +1,71 @@
+@charset "utf-8";
+	.-------------------------_xA0_Image
+{
+	background-image : url(-------------------------_xA0_Image.png);
+	background-repeat : no-repeat;
+	position : absolute ;
+	left : 0px;
+	top : 0px;
+	width : 1440px;
+	height : 928px;
+}
+.training_xA0_Image
+{
+	background-image : url(training_xA0_Image.png);
+	background-repeat : no-repeat;
+	position : absolute ;
+	left : 199px;
+	top : 319px;
+	width : 269px;
+	height : 479px;
+}
+.button_faq_xA0_Image
+{
+	background-image : url(button_faq_xA0_Image.png);
+	background-repeat : no-repeat;
+	position : absolute ;
+	left : 31px;
+	top : 634px;
+	width : 163px;
+	height : 56px;
+}
+.button_categories_xA0_Image
+{
+	background-image : url(button_categories_xA0_Image.png);
+	background-repeat : no-repeat;
+	position : absolute ;
+	left : 60px;
+	top : 363px;
+	width : 123px;
+	height : 102px;
+}
+.Contact_xA0_Image
+{
+	background-image : url(Contact_xA0_Image.png);
+	background-repeat : no-repeat;
+	position : absolute ;
+	left : 50px;
+	top : 771px;
+	width : 64px;
+	height : 49px;
+}
+.button_article_xA0_Image
+{
+	background-image : url(button_article_xA0_Image.png);
+	background-repeat : no-repeat;
+	position : absolute ;
+	left : 0px;
+	top : 448px;
+	width : 141px;
+	height : 216px;
+}
+.About_Button_xA0_Image
+{
+	background-image : url(About_Button_xA0_Image.png);
+	background-repeat : no-repeat;
+	position : absolute ;
+	left : 86px;
+	top : 226px;
+	width : 136px;
+	height : 132px;
+}

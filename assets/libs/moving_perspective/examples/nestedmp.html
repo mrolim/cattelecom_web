@@ -1,0 +1,28 @@
+<!DOCTYPE HTML>
+<html>
+	<head>
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<link rel="stylesheet" href="./mp/css/mp.css" type="text/css" />
+		<script src="./mp/js/jquery.js"></script>
+		<script src="./mp/js/mp.js"></script>
+		<script>
+			$(function(){
+				
+				$('#main').MP();
+				$('.phone').MP();
+			});	
+		</script>
+	</head>
+	<body>
+		<div id="main" style="width: 1000px; height: 500px; margin:auto;" >
+			<img class="mp_element" src='./img/phone/back.jpg' style="width:1500px; height: 100%;" data-max_y='0' />
+			
+			<div class="mp_element" data-max_y='0' data-max_x="0" data-effect_duration="200" data-perspective="{size:'900px',x:40,y:30}"  data-x="center" data-y="center" >
+					<div class="phone" style="position:absolute; top:0px; width:156px; height:210px;" data-area="#main">
+						<img class="mp_element" data-max_y='3%' data-x='center' src="./img/phone/back.jpg" width="400px" data-reverse_x='false'/>
+					</div>
+					<img   style="position:absolute; top:-47px; left:-10px" src="./img/phone/phone.png"/>
+			</div>
+		</div>
+	</body>
+</html>

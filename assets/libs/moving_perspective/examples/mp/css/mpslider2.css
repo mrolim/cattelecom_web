@@ -1,0 +1,178 @@
+.border_sl {
+	position: relative;
+	text-shadow: 0 1px 0 #fff;
+}
+
+.border_sl:before, .border_sl:after {
+	z-index: -1;
+	position: absolute;
+	content: "";
+	bottom: 11px;
+	left: 15px;
+	width: 50%;
+	top: 80%;
+	max-width: 300px;
+	background: transparent;
+	-webkit-box-shadow: 0 15px 10px rgba(0,0,0, 0.7);
+	-moz-box-shadow: 0 15px 10px rgba(0, 0, 0, 0.7);
+	box-shadow: 0 15px 10px rgba(0, 0, 0, 0.7);
+	-webkit-transform: rotate(-3deg);
+	-moz-transform: rotate(-3deg);
+	-o-transform: rotate(-3deg);
+	-ms-transform: rotate(-3deg);
+	transform: rotate(-3deg);
+}
+
+.border_sl:after {
+	-webkit-transform: rotate(3deg);
+	-moz-transform: rotate(3deg);
+	-o-transform: rotate(3deg);
+	-ms-transform: rotate(3deg);
+	transform: rotate(3deg);
+	right: 15px;
+	left: auto;
+}
+
+
+.pagination {
+position: absolute;
+z-index: 10000;
+width: 100%;
+height: 33px;
+bottom: 0px;
+left: 0em;
+}
+.pagination .bg , .prev span,  .next span , .pagination .page {
+	background: url('../img/s_bg_2.png') 0px 0px no-repeat;	
+}
+
+.pagination .inner {
+position: relative;
+padding-top: 0px;
+height: 100%;
+margin: auto;
+}
+
+.pagination .bg {
+	display: block;
+	width: 58px;
+	height: 33px;
+}
+.pagination .bg.left {
+	background-position: 1px -52px;
+	float: left;
+}
+
+.pagination .bg.right {
+top: 0px;
+right: -57px;
+position: absolute;
+background-position: -17px 0px;
+}
+
+
+.pagination .cont_pag {
+float: left;
+height: 33px;
+background: #161616;
+width: auto;
+}
+.pagination  .page {
+	float:left;
+	
+}
+
+.pagination .inner_page {
+width: auto;
+margin: auto;
+padding: 0px 2em 0px 2em;
+overflow: hidden;
+float: left;
+}
+.prev {
+	width: 28px;
+	height: 100%;
+	z-index: 10000;
+}
+.prev span, .next span {
+	position: absolute;
+	font-size: 3em;
+	color: rgb(255, 255, 255);
+}
+
+.prev span {
+	padding-left: 10px;
+	top: 50%;
+	left: 0px;
+	margin-top: -25px;
+}
+.next span {
+	right: 0px;
+	padding-right: 11px;
+	left: auto;
+	top: 50%;
+	margin-top: -12px;
+}
+.next {
+	z-index: 10000;
+	width: 28px;
+	height: 100%;
+}
+ .prev span, .next span {
+	background-color: #161616;
+	display: block;
+	width: 40px;
+	height: 50px;
+	
+}
+  .prev{
+	float:left;
+	width: 40px;
+}
+ .next {
+ 	float:right;
+	width: 40px;
+ }
+
+.prev span {
+	background-position: 12px -358px;
+	-webkit-border-top-right-radius: 6px;
+	-webkit-border-bottom-right-radius: 6px;
+	-moz-border-radius-topright: 6px;
+	-moz-border-radius-bottomright: 6px;
+	border-top-right-radius: 6px;
+	border-bottom-right-radius: 6px;
+}
+.next span {
+	background-position: 19px -215px;
+	-webkit-border-top-left-radius: 6px;
+	-webkit-border-bottom-left-radius: 6px;
+	-moz-border-radius-topleft: 6px;
+	-moz-border-radius-bottomleft: 6px;
+	border-top-left-radius: 6px;
+	border-bottom-left-radius: 6px;
+}
+
+ .prev:hover span{
+ 	background-position:12px -429px;
+}
+ .next:hover span{
+ 	background-position:19px -286px;
+}
+
+.pagination .page {
+width: 21px;
+height: 19px;
+background-position: 0px -118px;
+float: left;
+margin: .7em 1em;
+cursor: pointer;
+}
+.pagination .page {
+	-moz-border-radius: 5em;
+	-webkit-border-radius: 5em;
+	border-radius: 5em;
+}
+.pagination .page.current {
+background-position: 0px -171px;
+}

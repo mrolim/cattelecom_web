@@ -1,0 +1,45 @@
+<!DOCTYPE HTML>
+<html>
+	<head>
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<link rel="stylesheet" href="./mp/css/mp.css" type="text/css" />
+		<script src="./mp/js/jquery.js"></script>
+		<script src="./mp/js/mp.js"></script>
+		<script>
+			$(function(){
+				
+				$('#start').MP();
+			});	
+		</script>
+	</head>
+	<body>
+		<div id="start" style="width:100%; height:500px; background: purple;"><!-- mp container -->
+			<div class="mp_element" data-x="center" data-y="70%" style="width:500px; height:100px; background: grey" data-perspective="{size:'1000px',x:500,y:0}"  data-max_x='100%' 
+			 data-show_effect="slideLeft"  ></div>
+			 <!-- single moving element with x,y,perspective,max_x,show_effect options TRY TO CHANGE IT AND SEE DIFFERENCE!-->
+			 
+			<div class="mp_element" data-x="10%" data-y="top" style="width:300px; height:100px; background: green" data-max_x="110%" data-max_y='110%' ></div>
+			<!-- single moving element with x,y,perspective,max_x,max_y options TRY TO CHANGE IT AND SEE DIFFERENCE!-->
+			
+			<div class="mp_element" data-x="center" data-y="center" style="width:300px; height:100px; background: black" data-max_x="100" data-max_y='0' data-show_effect="slideLeft" ></div><!-- single moving element -->
+			<!-- single moving element with options TRY TO CHANGE IT AND SEE DIFFERENCE!-->
+			
+			<div class="mp_element" data-x="left" data-y="center" style="width:100px; height:100px; background: red" data-max_x="200" data-max_y='100'  data-show_effect="slideRight"  ></div><!-- single moving element -->
+			<!-- single moving element with options TRY TO CHANGE IT AND SEE DIFFERENCE!-->
+			
+			<div class="mp_element" data-x="right" data-y="bottom" style="width:300px; height:100px; background: blue" data-max_x="0" data-max_y='{"top":"300","bottom":"0"}'  data-show_effect="slideUp"  ></div><!-- single moving element -->
+			<!-- single moving element with options TRY TO CHANGE IT AND SEE DIFFERENCE!-->
+			
+			<div class="mp_element" data-x="30%" data-y="30%" style="width:200px; height:200px; background: yellow" data-max_x='{"left":"10%","right":"20%"}' data-max_y='20%'  data-show_effect="fade"  ></div><!-- single moving element -->
+			<!-- single moving element with options TRY TO CHANGE IT AND SEE DIFFERENCE!-->
+			
+			<div class="mp_element" data-x="200" data-y="200" style="width:200px; height:200px; background: green" data-perspective="{size:'500px',x:40,y:30}"  data-max_x='{"left":"100","right":"200"}' 
+			 data-show_effect="slideDown"  ></div>
+			<!-- single moving element with options TRY TO CHANGE IT AND SEE DIFFERENCE!-->
+			
+			<div class="mp_element" data-x="500" data-y="200" style="width:200px; height:300px; background: pink" data-perspective="{size:'500px',x:0,y:100}"  data-max_x='{"left":"100","right":"200"}' 
+			 data-show_effect="slideDown"  ></div>
+			<!-- single moving element with options TRY TO CHANGE IT AND SEE DIFFERENCE!-->
+		</div>
+	</body>
+</html>

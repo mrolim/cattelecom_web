@@ -1,0 +1,136 @@
+.border_sl {
+	position: relative;
+	text-shadow: 0 1px 0 #fff;
+	background:#fff;
+}
+
+.border_sl:before, .border_sl:after {
+	z-index: -1;
+	position: absolute;
+	content: "";
+	bottom: 11px;
+	left: 15px;
+	width: 50%;
+	top: 80%;
+	max-width: 300px;
+	background:#fff;
+	-webkit-box-shadow: 0 15px 10px rgba(0,0,0, 0.7);
+	-moz-box-shadow: 0 15px 10px rgba(0, 0, 0, 0.7);
+	box-shadow: 0 15px 10px rgba(0, 0, 0, 0.7);
+	-webkit-transform: rotate(-3deg);
+	-moz-transform: rotate(-3deg);
+	-o-transform: rotate(-3deg);
+	-ms-transform: rotate(-3deg);
+	transform: rotate(-3deg);
+}
+
+.border_sl:after {
+	-webkit-transform: rotate(3deg);
+	-moz-transform: rotate(3deg);
+	-o-transform: rotate(3deg);
+	-ms-transform: rotate(3deg);
+	transform: rotate(3deg);
+	right: 15px;
+	left: auto;
+}
+
+/* SLIDER ARROW ------ 1 --- */
+.prev .lsf:before{
+  content: '\E080';
+}
+.next .lsf:before{
+  content: '\E112';
+}
+
+
+/* SLIDER ARROW -------- 1 --- */
+.ie7 .prev .lsf .before {*zoom: expression(this.runtimeStyle['zoom'] = '1', this.innerHTML = '\E080');}
+.ie7 .next .lsf .before {*zoom: expression(this.runtimeStyle['zoom'] = '1', this.innerHTML = '\E112');}
+
+
+/* 
+ * 1
+ */
+.prev {
+	position: absolute;
+	left: 0px;
+	top: 0px;
+	width: 61px;
+	height: 100%;
+	background: transparent url('../img/bg_arr_left.png') left -34px no-repeat;
+}
+.prev span, .next span {
+	position: absolute;
+	font-size: 3em;
+	color: rgb(255, 255, 255);
+}
+
+.prev span {
+	padding-left: 10px;
+	top: 8px;
+	left: 0px;
+}
+.next span {
+	right: 0px;
+	padding-right: 11px;
+	left: auto;
+	bottom: 7px;
+}
+.next {
+	position: absolute;
+	right: 0px;
+	top: 0px;
+	width: 61px;
+	height: 100%;
+	background: transparent url('../img/bg_arr_right.png') right 110% no-repeat;
+}
+
+.pagination {
+	position: absolute;
+	z-index: 10000;
+	width: 100%;
+	height: 42px;
+	bottom: 0px;
+}
+.pagination .current {
+	background-color: yellow;
+}
+.pagination .page {
+	width: 15px;
+	height: 15px;
+	background-color: rgb(255, 255, 255);
+	float: left;
+	margin: 1em;
+	cursor: pointer;
+}
+
+.pagination .page{
+	-moz-border-radius: 5em;
+	-webkit-border-radius: 5em;
+	border-radius: 5em;
+}
+.pagination .page.current {
+	background-color:#000;
+}
+.pagination .inner{
+	position: relative;
+	padding-top: 0px;
+	height: 100%;
+	margin: auto;
+}
+
+.pagination .cont_pag{
+	float: left;
+	height: 33px;
+	width: auto;
+}
+
+.pagination .inner_page {
+	float: left;
+	width: auto;
+	margin: auto;
+	padding: 0px 2em 0px 2em;
+	overflow: hidden;
+}
+
+

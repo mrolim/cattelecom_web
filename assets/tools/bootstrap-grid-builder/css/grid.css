@@ -1,0 +1,122 @@
+body {
+  background: url('tiny_grid.png') ;
+  padding-top: 20px;
+}
+
+/* Bootstrap Overwrite */
+
+nav.navbar-default {
+  background-color: transparent ;
+  border: 0
+}
+
+.navbar-nav{
+  background-color: white ;
+}
+
+nav.navbar-fixed-bottom{
+  width: 20%;
+  padding-top: 5px;
+  background-color: white;
+  border: 1px dashed rgba(0,0,0,0.3)
+}
+@media (min-width: 768px) {
+  .navbar-nav > li > a {
+    padding-top: 10px;
+    padding-bottom: 10px;
+  }
+  nav a.btn{
+    margin-left: 5px
+  }
+}
+
+#footer{
+  margin-bottom: 0
+}
+/* Bootstrap Overwrite end*/
+
+/* Grid Playground */
+
+.item {
+  height: 40px;
+  background-color: rgba(185, 74, 72, 0.15);
+  border: 1px solid rgba(185, 74, 72, 0.2);
+}
+
+.ineditor {
+  background-color: rgba(185, 74, 72, 0.3);
+  -moz-box-shadow:    inset 0 0 3px #000000;
+   -webkit-box-shadow: inset 0 0 3px #000000;
+   box-shadow:         inset 0 0 3px #000000;
+}
+
+.item:hover {
+  border-color: gray;
+}
+
+.item.is-dragging,
+.item.is-positioning-post-drag {
+  border-color: white;
+  background-color: rgba(185, 74, 72, 0.5);
+  z-index: 2;
+}
+
+.handle {
+  cursor: move;
+  background: #555;
+  background: rgba(199, 69, 69, 0.9);
+  margin-top: 2px;
+  width: 20px;
+  height: 20px;
+  margin-left: -12px;
+}
+
+/* Grid Playground End */
+
+/* Device Mockups  */
+
+.dabblet{
+  width: 100%;
+  margin: 0 auto;
+}
+.screen{
+  background-color: white;
+}
+
+#lg .screen {
+  padding : 5px;
+  background: -webkit-canvas(animation) white;
+}
+
+
+/* End Device Mockups */
+
+/*https://github.com/pixelsign/html5-device-mockups/
+* xs - Extra Small < 768px               >> 0 >> iPhone 5
+* sm - Small Devices >= 768px      >> 1 >> iPad
+* md - Medium Devices >= 992px >> 2 >> iPad Lanscape
+* lg - Large Devices >= 1200px      >> 3 >> iMac
+*/
+
+#xs{
+  max-width: 350px;
+}
+
+#sm{
+  max-width: 770px;
+}
+
+#md{
+ max-width: 1000px;
+}
+
+#lg{
+  max-width: 1300px;
+}
+
+/* Scrollbar */
+
+::-webkit-scrollbar-corner{background:transparent;display:none}
+::-webkit-scrollbar{width:8px;height:8px}
+::-webkit-scrollbar-track{background:#dbdbdb;}
+::-webkit-scrollbar-thumb{border-radius:30px;background:#ababab;-webkit-box-shadow:none}

@@ -1,0 +1,21 @@
+/*
+Google Maps&StreetView Presenter 1.2
+(c) stefan.barasso@loki.sk
+*/
+
+html, body {background:#413D34;text-align:center;color:#fff;}
+
+.gw_default {background:#F2B360;padding:5px;height:510px;width:820px;}
+
+.gw_main1 {margin:30px auto;width:840px;color:black;}
+	.gw_main1 .gw_streetview {margin:5px;float:left;height:500px;width:500px;}
+	.gw_main1 .gw_map {margin:5px;float:left;height:500px;width:300px;}
+
+.gw_main2 {margin:30px auto;width:1090px;height:500px;color:black;}
+    .gw_main2 .gw_default {height:260px;width:520px;float:left;}
+	.gw_main2 .gw_streetview {margin:5px;float:left;height:250px;width:250px;}
+	.gw_main2 .gw_map {margin:5px;float:left;height:250px;width:250px;}
+
+.gw_main3 {margin:30px auto;width:840px;color:black;}
+	.gw_main3 .custom2 {margin:5px;float:left;height:500px;width:500px;}
+	.gw_main3 .custom1 {margin:5px;float:left;height:500px;width:300px;}

@@ -1,38 +1,4 @@
-<!DOCTYPE html>
-<html xmlns="http://www.w3.org/1999/xhtml">
-<head>
-	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
-	<meta name="description" content="Panorama effect jQuery plugin" />
-	<title>Template 1</title>
 
-	
-	<!-- EDIT the styles to fit your design-->	
-	<style type="text/css">	
-				
-		#mypanorama{
-			width:500px;
-			border:1px solid #333;
-		 	background-image:url('img/pattern1.png');			
-		}	
-		
-		.panorama_titel{
-			padding:10px;			
-		}
-		
-		.shadow{	
-			margin:50px;
-			 -webkit-box-shadow: 0px 5px 15px 0px rgba(0, 0, 0, 0.6); 
-			 -moz-box-shadow: 0px 5px 15px 0px rgba(0, 0, 0, 0.6); 
-			 box-shadow: 0px 5px 15px 0px rgba(0, 0, 0, 0.6); 			
-		}
-		
-	
-	</style>
-	
-	<!-- Including jQuery and panorama plugin -->
-	<script type="text/javascript" src="js/jquery-1.7.1.min.js"></script>
-	<script type="text/javascript" src="js/jquery.panorama.min.js"></script>
-	
 	<script type="text/javascript">
 	   
 		$(document).ready(function(){
@@ -40,7 +6,7 @@
 			//START panorama
 			////all settings are optional, you can delete them or provide your values (default values are shown here)
 			
-			$('#mypanorama').panorama({
+			$('.mypanorama_simple').panorama({
 			        
 				size         : false,    //See 'Setting the size of the panorama' in HOW_TO            
 				speed        : 20,       //target speed px/sec (if negative - move to opposite direction on start, if zero - not moving at start)
@@ -93,27 +59,3 @@
 		
 	</script>	
 	
-</head>
-
-	<body>
-		
-			<div>Template: Constructing simple panorama (see the source of this file)</div>
-		
-		
-			<!-- begin panorama-->
-			<div id="mypanorama" class="shadow">
-				<div class="panorama_img"><img data-src="img/panorama.jpg"></div>
-				<div class="panorama_titel"><img src="img/logo.png"></div>
-				<div class="panorama_preloader" style="margin: 0 auto; width:32px; top:50%; margin-top: -16px;"><img src="img/loading.gif"></div>    
-			</div>		
-			<!-- end panorama-->	
-		
-		
-		<br>
-			<p>
-			<a href="http://www.publicdomainpictures.net/view-image.php?image=23250&picture=sonnenaufgang-panorama-6-23-12-ein">Sonnenaufgang Panorama 6-23-12 ein</a> von Ronald Carlson
-			</p>
-		
-		
-	</body>
-</html>

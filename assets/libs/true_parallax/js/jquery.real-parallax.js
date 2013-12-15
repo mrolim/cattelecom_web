@@ -10,8 +10,8 @@
 	
 	
 	function parallaxEffect($thisObj, params) {
-				
-		var effect=this;
+				jQuery=$; 
+		var effect=this; 
 		
 		var settings = jQuery.extend({},{
 			

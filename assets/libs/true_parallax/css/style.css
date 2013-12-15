@@ -49,7 +49,7 @@ ul, ol{padding-left:20px;}
 .block a{text-decoration: none;}
 .example {	background-color:#959595;height: 60px;width: 60px;-moz-border-radius: 30px;-webkit-border-radius: 30px;border-radius: 30px;text-align:center;}
 .example h5 {color:#fff;padding-top:20px;font-size: 16px;}
-.example:hover, .active {background-color:#474747;cursor:pointer;}
+.example:hover, .active {background-color: #7E7E7E;cursor:pointer;}
 .thumb_img {	float: right;margin: 0px 0px 0px 20px;}
 .description {display:block;	overflow: hidden;padding: 0px 0px 20px 0px;}
 .info {display:block; padding: 0px 0px 10px 15px;}

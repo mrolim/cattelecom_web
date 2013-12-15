@@ -1,0 +1,25 @@
+<!DOCTYPE HTML>
+<html>
+	<head>
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<link rel="stylesheet" href="./mp/css/mp.css" type="text/css" />
+		<script src="./mp/js/jquery.js"></script>
+		<script src="./mp/js/mp.js"></script>
+		<script>
+			$(function(){
+				
+				$('#simple').MP();
+			});	
+		</script>
+	</head>
+	<body>
+		<div id="simple" style="width:100%; height:100%; margin:auto;">
+			<img class="mp_element" width="60%" data-effect_duration="2000" data-perspective="{x:30,y:30,size:900}" data-show_effect="fade" src='img/simplemp/mp_shadow.png' data-x='center' data-y='center' data-max_x='0' data-max_y='0' />
+			<img class="mp_element" width="60%" data-effect_duration="2000"  data-perspective="{x:30,y:30,size:900}" data-show_effect="fade" src='img/simplemp/mp.png' data-x='center' data-y='center'  data-max_x='10%' data-max_y='10%'/>
+			<img class="mp_element" data-effect_duration="2000" data-show_effect="slideLeft" src='img/simplemp/fourth.png' width="110%" />
+			<img class="mp_element" data-effect_duration="2000" data-show_effect="slideRight" src='img/simplemp/third.png' width="120%" />
+			<img class="mp_element" data-reverse_x='false' data-effect_duration="2000" data-show_effect="slideUp" src='img/simplemp/second.png' width="150%" />
+			<img class="mp_element" data-effect_duration="2000" data-show_effect="slideDown" src='img/simplemp/fourth.png' width="200%" />
+		</div>
+	</body>
+</html>

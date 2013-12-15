@@ -1,0 +1,32 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta http-equiv="pragma" content="no-cache" />
+	<meta http-equiv="cache-control" content="no-cache" />
+	<link rel="stylesheet" type="text/css" href="gw_style.css" />
+	<script type="text/javascript" src="gw_main.js"></script>
+</head> 
+<body>
+	Example 3. A single instance, custom parameters and a marker
+    <div class="gw_main3">
+		<script type="text/javascript">
+			gW.Create({
+				Adress : "Rome, Italy",
+                ZoomLevel : 10,
+                MapClass : "custom1",
+                StreetViewClass : "custom2",
+				//StartingYaw : 100,
+				//StartingPitch : 90,
+                Markers : {
+                    Marker1 : {
+                        Adress : "Rome, Italy",
+                        Text : "Test text",
+                        DisplayText : true,
+						Directions : true
+                    }
+                }
+			});
+		</script>
+	</div>
+</body>
+</html>

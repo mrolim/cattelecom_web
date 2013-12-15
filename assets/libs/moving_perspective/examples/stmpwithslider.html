@@ -1,0 +1,39 @@
+<!DOCTYPE HTML>
+<html>
+	<head>
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		
+		<link rel="stylesheet" href="./mp/css/mp.css" type="text/css" />
+		<link rel="stylesheet" href="./mp/css/mpslider2.css" type="text/css" />
+		<script src="./mp/js/jquery.js"></script>
+		<script src="./mp/js/mp.js"></script>
+		<script>
+			$(function(){
+				
+				$('#land').MP();
+				$('#slider').MPSlider();
+			});	
+		</script>
+	</head>
+	<body>
+		<div id="land" style="width:1000px; height:440px; margin:auto;" >
+			<img class="mp_element" src='img/start/third.png' width='1050' />
+			<img class="mp_element" src='img/start/second.png' width='1200' />
+			<div class="mp_element" data-x="center" data-max_x="0" id="slider" style="width:1000px; height:440px;" data-area="#land">
+				<div class="mp">
+				<img class="mp_element" data-x="center" data-max_x="20" data-y="130" data-show_effect="slideRight" src='img/smowithslider/bout1.png' />
+				</div>
+				<div class="mp">
+				<img class="mp_element" data-x="center" data-max_x="20" data-y="130" data-show_effect="slideRight" src='img/smowithslider/bout2.png' />
+				</div>
+				<div class="mp">
+				<img class="mp_element" data-x="center" data-max_x="20" data-y="130" data-show_effect="slideRight" src='img/smowithslider/bout3.png' />
+				</div>
+				<div class="mp">
+				<img class="mp_element" data-x="center" data-max_x="20" data-y="130" data-show_effect="slideRight" src='img/smowithslider/bout4.png' />
+				</div>
+			</div>
+			<img class="mp_element" src='img/start/front.png' data-max_y='0' data-y='-100' width='1400' />
+		</div>
+	</body>
+</html>

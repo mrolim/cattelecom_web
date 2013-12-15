@@ -1,0 +1,33 @@
+header {
+  height: 65px;
+}
+header .navbar {
+  box-shadow: 5px 5px 10px darkgrey ;
+}
+header .navbar .navbar-nav {
+  background: rgba(255, 255, 255, 0.8);
+}
+header .navbar .navbar-nav li.active {
+  background-color: lightsalmon;
+  border-radius: 10px;
+  box-shadow: 2px 2px 6px lightgray;
+}
+header .navbar .navbar-nav li.active a {
+  color: lightgoldenrodyellow;
+}
+.page_home #Section-content {
+  background: url(../img/home_bg_lower.jpg);
+  background-size:  100%;
+  width: 100%;
+  max-width: none;
+  background-repeat: no-repeat;
+}
+.page_home #big_button {
+  font-family: cursive;
+}
+.page_home .btn.btn-md.btn-warning.pull-right.cta {
+  font-family: Open sans-serif;
+}
+.page_home .features_product div {
+  padding: 5px;
+}

@@ -1,0 +1,156 @@
+<html ng-app="bootstrap-grid-builder">
+<head>
+  <title>Bootstrap 3 Grid Builder using Angular js</title>
+  <meta charset="UTF-8" />
+  <meta name='description' content='Drag and Drop your way to create Bootstrap 3 layouts for all screen sizes'/>
+  <link rel="stylesheet" type="text/css" href="css/bootstrap.css">
+  <link rel="stylesheet" type="text/css" href="css/fonts/font-awesome.css">
+  <link rel="stylesheet" type="text/css" href="css/grid.css">
+  <link rel="stylesheet" href="css/device-mockups.css">
+  <link rel="stylesheet" type="text/css" href="css/chardinjs.css">
+  <script type="text/javascript" src="js/jquery.min.js"></script>
+  <script type="text/javascript" src="js/jquery-ui.min.js"></script>
+  <script type="text/javascript" src="js/bootstrap.min.js"></script>
+  <script type="text/javascript" src="js/draggabilly.pkgd.js"></script>
+  <script type="text/javascript" src="js/packery.pkgd.min.js"></script>
+  <script type="text/javascript" src="js/angular.unstable.min.js"></script>
+  <script type="text/javascript" src="js/angular-dragdrop.min.js"></script>
+  <script type="text/javascript" src="js/app.js"></script>
+
+</head>
+<body ng-controller="gridCtrl">
+
+    <!-- Navigation Start -->
+
+   <nav class="navbar navbar-default navbar-fixed-top" role="navigation">
+    <ul class="nav navbar-nav navbar-left">
+      <li><a  data-toggle="modal" href="#myModal" ng-click="generateHtml()">Generate Html</a></li>
+    </ul>
+    <ul class="nav navbar-nav navbar-left" style="opacity:0">
+      <li><a href="">Hidden</a></li>
+      <li><a href="">Hidden</a></li>
+    </ul>
+
+    <ul class="nav navbar-nav navbar-left">
+      <li data-position="bottom" data-intro="Change Col spans and Offsets from here "><a href="#">Span</a></li>
+      <li><a href="#">{{ model[current.index][current.prefix] }}</a></li>
+      <li ng-click="col.increaseWidth()"><a href="#">+</a></li>
+      <li ng-click="col.decreaseWidth()"><a href="#">-</a></li>
+    </ul>
+
+    <ul class="nav navbar-nav navbar-left" ng-show="current.dragEnabled">
+
+    <li><a href="#">Offset</a></li>
+    <li><a href="#">{{ model[current.index]['offset_'+current.prefix] }}</a></li>
+    <li ng-click="col.increaseOffset()"><a href="#">+</a></li>
+    <li ng-click="col.decreaseOffset()"><a href="#">-</a></li>
+
+    </ul>
+       <!-- Also Hide when drag is not enabled -->
+      <!--
+      <li data-intro="Stamp / Unstamp the element in place" data-position="left" ng-click="col.stamp()" ng-hide="current.stamped"><a href="#">Stamp</a></li>
+      <li ng-click="col.unstamp()"  ng-show="current.stamped"><a href="#">UnStamp</a></li>
+         -->
+
+    <ul class="nav navbar-nav navbar-right">
+      <li class="dropdown" style="display:none">
+      <a href="#" class="dropdown-toggle" data-toggle="dropdown">Templates <b class="caret"></b></a>
+      <ul class="dropdown-menu" role="menu">
+         <!-- Add List of Templates Here -->
+      </ul>
+    </li>
+    </ul>
+
+    <ul class="nav navbar-nav navbar-right">
+    <li ng-click="showInstructions()"><a href="#">How to Use</a></li>
+    <li data-intro="Change your devices from here" data-position="left" class="dropdown">
+      <a href="#" class="dropdown-toggle" data-toggle="dropdown">Devices <b class="caret"></b></a>
+      <ul class="dropdown-menu" role="menu">
+        <li ng-click=" changeViewport('lg') "><a href="#"><i class="icon-desktop"></i> Large</a></li>
+        <li ng-click=" changeViewport('md') "><a href="#"><i class="icon-tablet"></i> Medium</a></li>
+        <li ng-click=" changeViewport('sm') "><a href="#"><i class="icon-mobile-phone icon-large"></i> Small</a></li>
+        <li ng-click=" changeViewport('xs') "><a href="#"><i class="icon-mobile-phone"></i> Extra Small</a></li>
+      </ul>
+    </li>
+  </ul>
+  </nav>
+
+   <!-- Navigarion End -->
+
+  <!-- Grid Playground Start -->
+
+  <div class="dabblet" id="{{ current.prefix }}">
+    <div class="{{getDeviceClass()}}">
+      <div class="device">
+        <div data-intro="Drag and Drop Cols to Change the layout" data-position="top" class="screen" data-drop="true" ng-model="model" jqyoui-droppable="{onDrop : 'dropped' , multiple : true }" >
+          <div class="packery container-fluid"ng-init="init()">
+             <!-- !!! data-device is a dirty Hack used for generating html -->
+            <div ng-class="getFixClass($index,col)" ng-repeat-start="col in model track by $index | orderBy:col.reorder"></div>
+            <div data-jqyoui-options="{revert: 'invalid', helper: 'clone'}" ng-class="getColClass($index,col)" ng-click="showEditor($index,col,$event)" data-index="{{$index}}" data-info="{{getColInfo(col)}}">
+              <div ng-show="current.dragEnabled" class="handle pull-left"></div>
+              <p class="pull-right" ng-model="col.content" contenteditable="true">{{col.content}}</p>
+            </div>
+            <div ng-class="getFixClass($index,col)"  ng-repeat-end></div>
+            <div id="grid-sizer" class="col-xs-1"></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+   <!-- Grid Playgrond End -->
+
+  <!-- + Column Element -->
+  <nav class="navbar navbar-default navbar-fixed-bottom" role="navigation" id="dragcol" ng-show="current.dragEnabled" >
+      <a data-intro="Drag from here to add new Cols" data-position="top"  title="Drag to add Cols" type="button" class="navbar-left btn btn-default" >+</a>
+      <a type="button" class="navbar-left btn btn-danger " data-drag="true" ng-model="emptyCol.four" jqyoui-draggable="{ animate:true , placeholder : 'keep' } ">Small</a>
+      <a type="button" class="navbar-left btn btn-danger" data-drag="true" ng-model="emptyCol.eight" jqyoui-draggable="{ animate:true , placeholder : 'keep' } ">Medium</a>
+      <a type="button" class="navbar-left btn btn-danger" data-drag="true" ng-model="emptyCol.eight" jqyoui-draggable="{ animate:true , placeholder : 'keep' } ">Large</a>
+  </nav>
+  <!-- End Column Element -->
+
+  <!-- The Footer -->
+
+  <nav class="navbar navbar-default" id="footer" role="navigation">
+    <ul class="nav navbar-nav navbar-right">
+      <li><a href="http://jaykanakiya.com/bootstrap-grid-builder-v1/">The Bootstrap Grid Builder v1</a></li>
+      <li><a target="_blank" href="http://jaykanakiya.com">By Jay Kanakiya</a></li>
+      <li><a target="_blank" href="https://github.com/kanakiyajay/bootstrap-grid-builder">Fork on GitHub</a></li>
+      <li><a target="_blank" href="http://jquer.in" title="jQuery plugins">A jQuery plugin a Day</a></li>
+      <li><a target="_blank" href="http://www.facebook.com/sharer/sharer.php?u=http%3A%2F%2Fjaykanakiya.com/bootstrap-grid-builder/">Share on Facebook</a></li>
+      <li><a target="_blank" href="https://twitter.com/intent/tweet?text=The%20Bootstrap%203%20Grid%20Builder&url=http%3A%2F%2Fjaykanakiya.com/bootstrap-grid-builder/&via=techiejayk">Tweet</a></li>
+       <li><a target="_blank" href="https://plus.google.com/share?url=http%3A%2F%2Fjaykanakiya.com/bootstrap-grid-builder/">Google+</a></li>
+    </ul>
+  </nav>
+
+  <!-- End Footer -->
+
+  <!-- Modal Start -->
+  <!-- Modal -->
+  <div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+          <h4 class="modal-title">Bootstrap Grid Builder</h4>
+        </div>
+        <div class="modal-body">
+<pre><code class="language-markup" id="showHtml"></code></pre>
+        </div>
+        <div class="modal-footer">
+          <div class="btn-group pull-right">
+            <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+            <a target="_blank" class="btn btn-default" href="http://www.facebook.com/sharer/sharer.php?u=http%3A%2F%2Fjaykanakiya.com/bootstrap-grid-builder/">Share on Facebook</a>
+            <a target="_blank" class="btn btn-default" href="https://twitter.com/intent/tweet?text=The%20Bootstrap%203%20Grid%20Builder&url=http%3A%2F%2Fjaykanakiya.com/bootstrap-grid-builder/&via=techiejayk">Tweet</a>
+            <a target="_blank" class="btn btn-default" href="https://plus.google.com/share?url=http%3A%2F%2Fjaykanakiya.com/bootstrap-grid-builder/">Google+</a>
+          </div>
+        </div>
+      </div><!-- /.modal-content -->
+    </div><!-- /.modal-dialog -->
+  </div><!-- /.modal -->
+     <!-- Modal End -->
+     <script type="text/javascript" src="js/grid-overlay.js"></script>
+     <script type="text/javascript" src="js/jquery.bootstrap-growl.min.js"></script>
+     <script async defer type="text/javascript" src="js/chardinjs.min.js"></script>
+</body>
+</html>
